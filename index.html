@@ -1,0 +1,1546 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<title>Sarah Hammad — Product &amp; UX Designer, Cairo</title>
+<template id="__bundler_thumbnail" data-bg-color="#0a0a0a">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="800" fill="#0a0a0a"/>
+    <rect x="470" y="300" width="260" height="200" rx="24" fill="#faff69"/>
+    <text x="600" y="435" font-family="Helvetica, Arial, sans-serif" font-size="120" font-weight="700" fill="#0a0a0a" text-anchor="middle">SH</text>
+  </svg>
+</template>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;family=Outfit:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="components/fig-tokens.css">
+<link rel="stylesheet" href="components/fig-typography.css">
+<script src="./image-slot.js"></script>
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: #0a0a0a; color: #cccccc; font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; -webkit-font-smoothing: antialiased; text-wrap: pretty; }
+  h1, h2, h3, h4, p, ul, ol, figure { margin: 0; }
+  ul, ol { padding: 0; list-style: none; }
+  a { color: #faff69; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+  a:hover { color: #e6eb52; }
+  button { font: inherit; color: inherit; }
+  ::selection { background: #faff69; color: #0a0a0a; }
+  :focus-visible { outline: 2px solid #faff69; outline-offset: 3px; border-radius: 4px; }
+  @font-face { font-family: "SF Pro"; src: local("SF Pro Text"), local("SF Pro Display"), local("-apple-system"), local("Helvetica Neue"), local("Segoe UI"); }
+  @font-face { font-family: "SF Pro Text"; src: local("SF Pro Text"), local("-apple-system"), local("Helvetica Neue"), local("Segoe UI"); }
+  #talla-hero-stage, #talla-hero-stage * { -webkit-font-smoothing: antialiased; }
+  @keyframes rise { from { opacity: 0; transform: translateY(26px); } to { opacity: 1; transform: none; } }
+  [data-motion="off"] * { animation: none !important; }
+  @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
+</style>
+</helmet>
+
+<div data-motion="{{ motionAttr }}" style="background:#0a0a0a;min-height:100vh">
+
+<a href="#main" style="position:absolute;left:-9999px;top:0;background:#faff69;color:#0a0a0a;padding:12px 20px;border-radius:8px;font:600 14px/1 Inter,sans-serif;z-index:100" style-focus="left:16px;top:16px">Skip to content</a>
+
+<header style="position:sticky;top:0;z-index:50;background:#0a0a0a;border-bottom:1px solid #2a2a2a">
+  <nav style="max-width:1280px;margin:0 auto;padding:0 clamp(16px,3vw,24px);height:64px;display:flex;align-items:center;gap:clamp(10px,2vw,24px);min-width:0">
+    <button onClick="{{ goHome }}" aria-label="Sarah Hammad — home" style="display:flex;align-items:center;gap:10px;background:none;border:0;padding:0;cursor:pointer;flex:0 0 auto;min-width:0">
+      <span style="width:22px;height:22px;border-radius:4px;background:#faff69;display:block;flex:0 0 auto"></span>
+      <sc-if value="{{ isWide }}" hint-placeholder-val="{{ true }}">
+        <span style="font:700 15px/1 Inter,sans-serif;letter-spacing:-0.3px;color:#ffffff;white-space:nowrap">Sarah Hammad</span>
+      </sc-if>
+    </button>
+
+    <sc-if value="{{ isWide }}" hint-placeholder-val="{{ true }}">
+      <div style="display:flex;align-items:center;gap:4px;margin-left:8px">
+        <button onClick="{{ goWork }}" style="background:none;border:0;padding:8px 14px;border-radius:8px;cursor:pointer;font:500 14px/1.4 Inter,sans-serif;color:#888888;transition:color .18s ease,background .18s ease" style-hover="color:#ffffff;background:#1a1a1a">Work</button>
+        <button onClick="{{ goAbout }}" style="background:none;border:0;padding:8px 14px;border-radius:8px;cursor:pointer;font:500 14px/1.4 Inter,sans-serif;color:#888888;transition:color .18s ease,background .18s ease" style-hover="color:#ffffff;background:#1a1a1a">About</button>
+        <button onClick="{{ goContact }}" style="background:none;border:0;padding:8px 14px;border-radius:8px;cursor:pointer;font:500 14px/1.4 Inter,sans-serif;color:#888888;transition:color .18s ease,background .18s ease" style-hover="color:#ffffff;background:#1a1a1a">Contact</button>
+      </div>
+    </sc-if>
+
+    <div style="flex:1 1 auto"></div>
+
+    <a href="mailto:sarahhammad776@gmail.com" style="display:inline-flex;align-items:center;height:40px;padding:0 clamp(14px,3vw,20px);border-radius:8px;background:#faff69;color:#0a0a0a;font:600 14px/1 Inter,sans-serif;text-decoration:none;flex:0 0 auto;white-space:nowrap;transition:background .18s ease" style-hover="background:#e6eb52;color:#0a0a0a">Contact me</a>
+
+    <sc-if value="{{ isNarrow }}" hint-placeholder-val="{{ false }}">
+      <button onClick="{{ toggleMenu }}" aria-label="Menu" aria-expanded="{{ menuOpen }}" style="width:40px;height:40px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;background:#1a1a1a;border:1px solid #2a2a2a;border-radius:8px;cursor:pointer;flex:0 0 auto">
+        <span style="width:16px;height:1.5px;background:#ffffff;display:block"></span>
+        <span style="width:16px;height:1.5px;background:#ffffff;display:block"></span>
+      </button>
+    </sc-if>
+  </nav>
+
+  <sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
+    <div style="border-top:1px solid #2a2a2a;padding:8px 24px 20px;display:flex;flex-direction:column;gap:2px">
+      <button onClick="{{ goWork }}" style="text-align:left;background:none;border:0;padding:14px 4px;cursor:pointer;font:600 18px/1.4 Inter,sans-serif;color:#ffffff;border-bottom:1px solid #1a1a1a">Work</button>
+      <button onClick="{{ goAbout }}" style="text-align:left;background:none;border:0;padding:14px 4px;cursor:pointer;font:600 18px/1.4 Inter,sans-serif;color:#ffffff;border-bottom:1px solid #1a1a1a">About</button>
+      <button onClick="{{ goContact }}" style="text-align:left;background:none;border:0;padding:14px 4px;cursor:pointer;font:600 18px/1.4 Inter,sans-serif;color:#ffffff">Contact</button>
+    </div>
+  </sc-if>
+</header>
+
+<main id="main">
+
+<sc-if value="{{ isHome }}" hint-placeholder-val="{{ true }}">
+<div>
+
+  <section data-screen-label="Home — Hero" style="max-width:1280px;margin:0 auto;padding:clamp(56px,9vw,96px) 24px clamp(48px,7vw,80px)">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(420px,100%),1fr));gap:clamp(32px,5vw,64px);align-items:center">
+      <div>
+        <p style="font:600 12px/1.4 Inter,sans-serif;letter-spacing:1.5px;text-transform:uppercase;color:#888888;margin-bottom:24px">Sarah Hammad · Product &amp; UX Designer · Cairo</p>
+        <h1 style="font:700 clamp(38px,6.4vw,72px)/1.05 Inter,sans-serif;letter-spacing:-2.5px;color:#ffffff;max-width:15ch">I design flows that take people from confused to done.</h1>
+        <p style="font:400 clamp(16px,1.6vw,18px)/1.55 Inter,sans-serif;color:#cccccc;margin-top:24px;max-width:52ch">Booking, planning, scheduling. The screens people use when they are tired and just want the thing handled.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:32px">
+          <button onClick="{{ goWork }}" style="display:inline-flex;align-items:center;height:44px;padding:0 22px;border:0;border-radius:8px;background:#faff69;color:#0a0a0a;font:600 14px/1 Inter,sans-serif;cursor:pointer;transition:background .18s ease" style-hover="background:#e6eb52">See the work</button>
+          <a href="mailto:sarahhammad776@gmail.com" style="display:inline-flex;align-items:center;height:44px;padding:0 22px;border:1px solid #2a2a2a;border-radius:8px;background:#1a1a1a;color:#ffffff;font:600 14px/1 Inter,sans-serif;text-decoration:none;transition:border-color .18s ease,background .18s ease" style-hover="border-color:#3a3a3a;background:#242424;color:#ffffff">Contact me</a>
+        </div>
+        <p style="font:500 13px/1.4 Inter,sans-serif;color:#888888;margin-top:24px">Cairo, Egypt · Open to remote, hybrid, or relocation</p>
+      </div>
+
+      <div style="background:#1a1a1a;border:1px solid #2a2a2a;border-radius:12px;overflow:hidden">
+        <div style="display:flex;align-items:center;gap:8px;padding:14px 20px;border-bottom:1px solid #2a2a2a">
+          <span style="width:9px;height:9px;border-radius:9999px;background:#3a3a3a;display:block"></span>
+          <span style="width:9px;height:9px;border-radius:9999px;background:#3a3a3a;display:block"></span>
+          <span style="width:9px;height:9px;border-radius:9999px;background:#3a3a3a;display:block"></span>
+          <span style="font:400 12px/1 'JetBrains Mono',ui-monospace,monospace;color:#888888;margin-left:8px">sarah_hammad.profile</span>
+        </div>
+        <div style="padding:24px;font:400 14px/1.9 'JetBrains Mono',ui-monospace,monospace;overflow-x:auto">
+          <div><span style="color:#888888">role&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color:#e6e6e6">Product &amp; UX Designer</span></div>
+          <div><span style="color:#888888">based&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color:#e6e6e6">Cairo, EG</span></div>
+          <div><span style="color:#888888">remote&nbsp;&nbsp;&nbsp;</span><span style="color:#faff69">open</span></div>
+          <div><span style="color:#888888">now&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color:#e6e6e6">UX Design Intern, Flyrank</span></div>
+          <div><span style="color:#888888">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color:#888888">AI startup · since June 2026</span></div>
+          <div style="height:14px"></div>
+          <div><span style="color:#888888">focus&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color:#e6e6e6">research · information architecture</span></div>
+          <div><span style="color:#888888">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color:#e6e6e6">prototyping · design systems</span></div>
+          <div><span style="color:#888888">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color:#e6e6e6">Arabic RTL · accessibility</span></div>
+          <div style="height:14px"></div>
+          <div><span style="color:#888888">tools&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color:#e6e6e6">Figma · FigJam · Maze</span></div>
+          <div><span style="color:#888888">langs&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color:#e6e6e6">Arabic (native) · English (professional)</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Home — Proof strip" style="border-top:1px solid #2a2a2a;border-bottom:1px solid #2a2a2a;background:#121212">
+    <div style="max-width:1280px;margin:0 auto;padding:clamp(40px,5vw,56px) 24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr));gap:clamp(28px,4vw,48px)">
+      <div style="animation:rise .7s cubic-bezier(.22,1,.36,1) both;animation-timeline:view();animation-range:entry 0% cover 18%">
+        <div style="font:700 clamp(40px,5vw,56px)/1 Inter,sans-serif;letter-spacing:-1.5px;color:#faff69">01</div>
+        <p style="font:400 15px/1.55 Inter,sans-serif;color:#cccccc;margin-top:12px;max-width:32ch">Live UX design internship at an AI startup, running now.</p>
+      </div>
+      <div style="animation:rise .7s cubic-bezier(.22,1,.36,1) both;animation-timeline:view();animation-range:entry 0% cover 18%">
+        <div style="font:700 clamp(40px,5vw,56px)/1 Inter,sans-serif;letter-spacing:-1.5px;color:#faff69">02</div>
+        <p style="font:400 15px/1.55 Inter,sans-serif;color:#cccccc;margin-top:12px;max-width:32ch">Finished case studies, written end to end — Talla and CareNest.</p>
+      </div>
+      <div style="animation:rise .7s cubic-bezier(.22,1,.36,1) both;animation-timeline:view();animation-range:entry 0% cover 18%">
+        <div style="font:700 clamp(40px,5vw,56px)/1 Inter,sans-serif;letter-spacing:-1.5px;color:#faff69">AA</div>
+        <p style="font:400 15px/1.55 Inter,sans-serif;color:#cccccc;margin-top:12px;max-width:32ch">An Arabic RTL interface built to WCAG 2.1 AA.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="work" data-screen-label="Home — Selected work" style="max-width:1280px;margin:0 auto;padding:clamp(64px,8vw,96px) 24px 0">
+    <div style="display:flex;align-items:baseline;justify-content:space-between;gap:24px;flex-wrap:wrap;border-bottom:1px solid #2a2a2a;padding-bottom:24px;margin-bottom:48px">
+      <h2 style="font:700 clamp(30px,4vw,40px)/1.15 Inter,sans-serif;letter-spacing:-1.5px;color:#ffffff">Selected work</h2>
+      <p style="font:600 12px/1.4 Inter,sans-serif;letter-spacing:1.5px;text-transform:uppercase;color:#888888">Two finished · Two in progress</p>
+    </div>
+
+    <button onClick="{{ goTalla }}" style="display:block;width:100%;text-align:left;background:#1a1a1a;border:1px solid #2a2a2a;border-radius:12px;padding:0;overflow:hidden;cursor:pointer;transition:border-color .22s ease,transform .22s ease;animation:rise .7s cubic-bezier(.22,1,.36,1) both;animation-timeline:view();animation-range:entry 0% cover 16%" style-hover="border-color:#3a3a3a;transform:translateY(-3px)">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(360px,100%),1fr))">
+        <div style="padding:clamp(28px,4vw,48px);display:flex;flex-direction:column;justify-content:space-between;gap:32px;min-height:340px">
+          <div>
+            <span style="display:inline-block;font:600 12px/1.4 Inter,sans-serif;letter-spacing:1.5px;text-transform:uppercase;color:#0a0a0a;background:#faff69;border-radius:9999px;padding:4px 12px;margin-bottom:24px">Selected work 01</span>
+            <h3 style="font:700 clamp(30px,4vw,40px)/1.15 Inter,sans-serif;letter-spacing:-1.5px;color:#ffffff">Talla</h3>
+            <p style="font:600 15px/1.4 Inter,sans-serif;color:#888888;margin-top:8px">AI powered fashion styling app · iOS</p>
+            <p style="font:400 16px/1.55 Inter,sans-serif;color:#cccccc;margin-top:24px;max-width:46ch">A full wardrobe and no starting point. Talla turns an open question — what do I wear — into a short sequence with an obvious end.</p>
+            <p style="font:400 16px/1.55 Inter,sans-serif;color:#e6e6e6;margin-top:12px;max-width:46ch">Six competitor apps benchmarked before a single screen was drawn, and a component library built to hold the result together.</p>
+          </div>
+          <span style="font:600 14px/1 Inter,sans-serif;color:#faff69">Read the case study →</span>
+        </div>
+        <div style="position:relative;min-height:340px;background:#121212;border-left:1px solid #2a2a2a">
+          <img src="assets/talla-card.webp" alt="Talla — the Arabic wordmark and first screen of the styling flow" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
+        </div>
+      </div>
+    </button>
+
+    <button onClick="{{ goCare }}" style="display:block;width:100%;text-align:left;background:#1a1a1a;border:1px solid #2a2a2a;border-radius:12px;padding:0;overflow:hidden;cursor:pointer;margin-top:24px;transition:border-color .22s ease,transform .22s ease;animation:rise .7s cubic-bezier(.22,1,.36,1) both;animation-timeline:view();animation-range:entry 0% cover 16%" style-hover="border-color:#3a3a3a;transform:translateY(-3px)">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(360px,100%),1fr))">
+        <div style="position:relative;min-height:300px;background:#121212;border-right:1px solid #2a2a2a">
+          <img src="assets/carenest-card.webp" alt="CareNest booking screen, availability shown first" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
+        </div>
+        <div style="padding:clamp(28px,4vw,48px);display:flex;flex-direction:column;justify-content:space-between;gap:32px;min-height:300px">
+          <div>
+            <span style="display:inline-block;font:600 12px/1.4 Inter,sans-serif;letter-spacing:1.5px;text-transform:uppercase;color:#ffffff;background:#242424;border-radius:9999px;padding:4px 12px;margin-bottom:24px">Selected work 02</span>
+            <h3 style="font:700 clamp(26px,3.2vw,32px)/1.2 Inter,sans-serif;letter-spacing:-1px;color:#ffffff">CareNest</h3>
+            <p style="font:600 15px/1.4 Inter,sans-serif;color:#888888;margin-top:8px">Appointment booking platform, Egyptian market · Web and mobile</p>
+            <p style="font:400 16px/1.55 Inter,sans-serif;color:#cccccc;margin-top:24px;max-width:46ch">Booking a care appointment in Egypt is a phone call and a guess. CareNest makes the available slot the thing you look at first.</p>
+            <p style="font:400 16px/1.55 Inter,sans-serif;color:#e6e6e6;margin-top:12px;max-width:46ch">Built right to left in Arabic and checked against WCAG 2.1 AA, with annotated specs and tokens behind every component.</p>
+          </div>
+          <span style="font:600 14px/1 Inter,sans-serif;color:#faff69">Read the case study →</span>
+        </div>
+      </div>
+    </button>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr));gap:24px;margin-top:24px">
+      <button onClick="{{ goVelora }}" style="text-align:left;background:#1a1a1a;border:1px solid #2a2a2a;border-radius:12px;padding:32px;cursor:pointer;display:flex;flex-direction:column;gap:24px;transition:border-color .22s ease,transform .22s ease;animation:rise .7s cubic-bezier(.22,1,.36,1) both;animation-timeline:view();animation-range:entry 0% cover 16%" style-hover="border-color:#3a3a3a;transform:translateY(-3px)">
+        <div style="display:flex;align-items:center;gap:10px">
+          <span style="width:7px;height:7px;border-radius:9999px;background:#22c55e;display:block"></span>
+          <span style="font:600 12px/1.4 Inter,sans-serif;letter-spacing:1.5px;text-transform:uppercase;color:#888888">In progress</span>
+        </div>
+        <div>
+          <h3 style="font:700 24px/1.3 Inter,sans-serif;letter-spacing:-0.3px;color:#ffffff">Velora</h3>
+          <p style="font:600 14px/1.4 Inter,sans-serif;color:#888888;margin-top:6px">Bicycle rental platform, hybrid ownership model · Web</p>
+          <p style="font:400 15px/1.55 Inter,sans-serif;color:#cccccc;margin-top:16px">One decision, shown properly: a nine step rental flow reduced to five screens. Screens are partly done.</p>
+        </div>
+        <p style="font:400 13px/1.4 'JetBrains Mono',ui-monospace,monospace;color:#888888;margin-top:auto">next → remaining screens, {{ veloraDate }}</p>
+      </button>
+
+      <button onClick="{{ goFly }}" style="text-align:left;background:#1a1a1a;border:1px solid #2a2a2a;border-radius:12px;padding:32px;cursor:pointer;display:flex;flex-direction:column;gap:24px;transition:border-color .22s ease,transform .22s ease;animation:rise .7s cubic-bezier(.22,1,.36,1) both;animation-timeline:view();animation-range:entry 0% cover 16%" style-hover="border-color:#3a3a3a;transform:translateY(-3px)">
+        <div style="display:flex;align-items:center;gap:10px">
+          <span style="width:7px;height:7px;border-radius:9999px;background:#22c55e;display:block"></span>
+          <span style="font:600 12px/1.4 Inter,sans-serif;letter-spacing:1.5px;text-transform:uppercase;color:#888888">In progress</span>
+        </div>
+        <div>
+          <h3 style="font:700 24px/1.3 Inter,sans-serif;letter-spacing:-0.3px;color:#ffffff">Flyrank</h3>
+          <p style="font:600 14px/1.4 Inter,sans-serif;color:#888888;margin-top:6px">Trip planning product · UX design internship at an AI startup</p>
+          <p style="font:400 15px/1.55 Inter,sans-serif;color:#cccccc;margin-top:16px">Research phase, published as it happens. Competitor analysis, a live survey, and a persona pack built from real submissions.</p>
+        </div>
+        <p style="font:400 13px/1.4 'JetBrains Mono',ui-monospace,monospace;color:#888888;margin-top:auto">next → early direction, {{ flyDate }}</p>
+      </button>
+    </div>
+  </section>
+
+  <section data-screen-label="Home — How I work" style="max-width:1280px;margin:0 auto;padding:clamp(64px,8vw,96px) 24px 0">
+    <div style="border-bottom:1px solid #2a2a2a;padding-bottom:24px;margin-bottom:48px">
+      <h2 style="font:700 clamp(30px,4vw,40px)/1.15 Inter,sans-serif;letter-spacing:-1.5px;color:#ffffff">How I work</h2>
+      <p style="font:400 16px/1.55 Inter,sans-serif;color:#888888;margin-top:12px;max-width:56ch">Four steps in plain language. Not a diagram — this is what actually happens on a project.</p>
+    </div>
+    <sc-if value="{{ showDrafts }}" hint-placeholder-val="{{ false }}">
+      <p style="font:400 13px/1.6 'JetBrains Mono',ui-monospace,monospace;color:#faff69;border:1px dashed #3a3a3a;border-radius:8px;padding:12px 16px;margin-bottom:32px">draft · rewrite these four in your own words before publishing</p>
+    </sc-if>
+    <ol style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr));gap:1px;background:#2a2a2a;border:1px solid #2a2a2a;border-radius:12px;overflow:hidden">
+      <li style="background:#0a0a0a;padding:32px;animation:rise .7s cubic-bezier(.22,1,.36,1) both;animation-timeline:view();animation-range:entry 0% cover 16%">
+        <div style="font:400 13px/1 'JetBrains Mono',ui-monospace,monospace;color:#faff69;margin-bottom:20px">01</div>
+        <h3 style="font:600 18px/1.4 Inter,sans-serif;color:#ffffff">Find the task, not the feature</h3>
+        <p style="font:400 15px/1.55 Inter,sans-serif;color:#cccccc;margin-top:12px">I write down what the person is actually trying to finish, then count how many steps it takes them today.</p>
+      </li>
+      <li style="background:#0a0a0a;padding:32px;animation:rise .7s cubic-bezier(.22,1,.36,1) both;animation-timeline:view();animation-range:entry 0% cover 16%">
+        <div style="font:400 13px/1 'JetBrains Mono',ui-monospace,monospace;color:#faff69;margin-bottom:20px">02</div>
+        <h3 style="font:600 18px/1.4 Inter,sans-serif;color:#ffffff">Look at what already exists</h3>
+        <p style="font:400 15px/1.55 Inter,sans-serif;color:#cccccc;margin-top:12px">I benchmark the products people already use, so I know which conventions to keep and which ones are worth arguing with.</p>
+      </li>
+      <li style="background:#0a0a0a;padding:32px;animation:rise .7s cubic-bezier(.22,1,.36,1) both;animation-timeline:view();animation-range:entry 0% cover 16%">
+        <div style="font:400 13px/1 'JetBrains Mono',ui-monospace,monospace;color:#faff69;margin-bottom:20px">03</div>
+        <h3 style="font:600 18px/1.4 Inter,sans-serif;color:#ffffff">Get the sequence right first</h3>
+        <p style="font:400 15px/1.55 Inter,sans-serif;color:#cccccc;margin-top:12px">The flow comes before the screen. Once the order is right, I build the screens and the components they share.</p>
+      </li>
+      <li style="background:#0a0a0a;padding:32px;animation:rise .7s cubic-bezier(.22,1,.36,1) both;animation-timeline:view();animation-range:entry 0% cover 16%">
+        <div style="font:400 13px/1 'JetBrains Mono',ui-monospace,monospace;color:#faff69;margin-bottom:20px">04</div>
+        <h3 style="font:600 18px/1.4 Inter,sans-serif;color:#ffffff">Audit it honestly</h3>
+        <p style="font:400 15px/1.55 Inter,sans-serif;color:#cccccc;margin-top:12px">Heuristic evaluation, an accessibility pass, and a written list of what I would test next if I had users in front of me.</p>
+      </li>
+    </ol>
+  </section>
+
+  <section data-screen-label="Home — About short" style="max-width:1280px;margin:0 auto;padding:clamp(64px,8vw,96px) 24px 0">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:clamp(32px,5vw,64px);align-items:center;background:#121212;border:1px solid #2a2a2a;border-radius:12px;padding:clamp(28px,4vw,48px)">
+      <div style="position:relative;aspect-ratio:4/5;max-width:360px;width:100%;border-radius:12px;overflow:hidden;background:#1a1a1a">
+        <img src="uploads/Me.jpeg" alt="Sarah Hammad" style="width:100%;height:100%;object-fit:cover;display:block">
+      </div>
+      <div>
+        <p style="font:600 12px/1.4 Inter,sans-serif;letter-spacing:1.5px;text-transform:uppercase;color:#888888;margin-bottom:24px">About</p>
+        <p style="font:400 clamp(17px,2vw,20px)/1.55 Inter,sans-serif;color:#e6e6e6;max-width:48ch">I came into design from Business Administration, which is why I start with the task rather than the interface. I work on booking, planning and scheduling products Arabic and English, right to left and left to right. I care more about whether it works than whether it wins an award.</p>
+        <button onClick="{{ goAbout }}" style="margin-top:32px;display:inline-flex;align-items:center;height:40px;padding:0 20px;border:1px solid #2a2a2a;border-radius:8px;background:#1a1a1a;color:#ffffff;font:600 14px/1 Inter,sans-serif;cursor:pointer;transition:border-color .18s ease,background .18s ease" style-hover="border-color:#3a3a3a;background:#242424">Read more about me</button>
+      </div>
+    </div>
+  </section>
+
+  <section style="max-width:1280px;margin:0 auto;padding:clamp(64px,8vw,96px) 24px 0">
+    <div style="display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:16px">
+      <h2 style="font:700 clamp(28px,4vw,44px)/1.1 Inter,sans-serif;letter-spacing:-1.4px;color:#ffffff">Writing &amp; capstone</h2>
+      <p style="font:400 14px/1.4 'JetBrains Mono',ui-monospace,monospace;color:#888888">first posts, autumn 2026</p>
+    </div>
+    <p style="font:400 clamp(16px,1.8vw,18px)/1.6 Inter,sans-serif;color:#888888;margin-top:20px;max-width:56ch">Notes from the Flyrank internship as it runs, and the capstone project at the end of it. Published here as each one is finished.</p>
+    <ul style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:24px;margin-top:32px">
+      <li style="background:#111111;border:1px dashed #2a2a2a;border-radius:12px;padding:32px;display:flex;flex-direction:column;gap:12px">
+        <p style="font:600 12px/1.4 Inter,sans-serif;letter-spacing:1.5px;text-transform:uppercase;color:#faff69">Next post</p>
+        <h3 style="font:600 18px/1.4 Inter,sans-serif;color:#ffffff">What six competitor apps taught me about endings</h3>
+        <p style="font:400 15px/1.55 Inter,sans-serif;color:#888888">Why none of them let you finish, and what I did about it in Talla.</p>
+      </li>
+      <li style="background:#111111;border:1px dashed #2a2a2a;border-radius:12px;padding:32px;display:flex;flex-direction:column;gap:12px">
+        <p style="font:600 12px/1.4 Inter,sans-serif;letter-spacing:1.5px;text-transform:uppercase;color:#888888">In progress</p>
+        <h3 style="font:600 18px/1.4 Inter,sans-serif;color:#ffffff">Designing an Arabic interface that reads properly</h3>
+        <p style="font:400 15px/1.55 Inter,sans-serif;color:#888888">The parts of an RTL layout that should not be mirrored, and how I decided each one.</p>
+      </li>
+      <li style="background:#111111;border:1px dashed #2a2a2a;border-radius:12px;padding:32px;display:flex;flex-direction:column;gap:12px">
+        <p style="font:600 12px/1.4 Inter,sans-serif;letter-spacing:1.5px;text-transform:uppercase;color:#888888">Capstone</p>
+        <h3 style="font:600 18px/1.4 Inter,sans-serif;color:#ffffff">Flyrank capstone project</h3>
+        <p style="font:400 15px/1.55 Inter,sans-serif;color:#888888">The end of the internship track. Written up in full once it is approved.</p>
+      </li>
+    </ul>
+  </section>
+
+  <section style="max-width:1280px;margin:0 auto;padding:clamp(64px,8vw,96px) 24px 0">
+    <div style="background:#faff69;border-radius:12px;padding:clamp(32px,5vw,64px);display:flex;flex-wrap:wrap;gap:32px;align-items:flex-end;justify-content:space-between">
+      <div style="flex:1 1 420px;max-width:30ch">
+        <p style="font:600 12px/1.4 Inter,sans-serif;letter-spacing:1.5px;text-transform:uppercase;color:#0a0a0a;opacity:.6">Contact</p>
+        <h2 style="font:700 clamp(28px,4vw,40px)/1.15 Inter,sans-serif;letter-spacing:-1.5px;color:#0a0a0a;margin-top:20px">Tell me what you are trying to get people through.</h2>
+        <p style="font:400 16px/1.55 Inter,sans-serif;color:#0a0a0a;opacity:.78;margin-top:16px;max-width:40ch">Product or UX Designer roles. Remote, hybrid, or on site, open to relocation.</p>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center">
+        <a href="mailto:sarahhammad776@gmail.com" style="display:inline-flex;align-items:center;height:44px;padding:0 22px;border-radius:8px;background:#0a0a0a;color:#faff69;font:600 14px/1 Inter,sans-serif;text-decoration:none;transition:opacity .18s ease" style-hover="opacity:.85;color:#faff69">Contact me</a>
+        <a href="https://www.linkedin.com/in/sarah-hammad-b96a1a1a3/" target="_blank" rel="noreferrer noopener" style="display:inline-flex;align-items:center;height:44px;padding:0 22px;border-radius:8px;border:1px solid rgba(10,10,10,.3);color:#0a0a0a;font:600 14px/1 Inter,sans-serif;text-decoration:none;transition:background .18s ease" style-hover="background:rgba(10,10,10,.08);color:#0a0a0a">LinkedIn</a>
+        <a href="https://wa.me/201551327861" target="_blank" rel="noreferrer noopener" style="display:inline-flex;align-items:center;height:44px;padding:0 22px;border-radius:8px;border:1px solid rgba(10,10,10,.3);color:#0a0a0a;font:600 14px/1 Inter,sans-serif;text-decoration:none;transition:background .18s ease" style-hover="background:rgba(10,10,10,.08);color:#0a0a0a">WhatsApp</a>
+        <a href="https://drive.google.com/file/d/1tpr-YDaQdTnKyH2I2g_evaOG6aWZM1VG/view" target="_blank" rel="noreferrer noopener" style="display:inline-flex;align-items:center;height:44px;padding:0 22px;border-radius:8px;border:1px solid rgba(10,10,10,.3);color:#0a0a0a;font:600 14px/1 Inter,sans-serif;text-decoration:none;transition:background .18s ease" style-hover="background:rgba(10,10,10,.08);color:#0a0a0a">Preview CV</a>
+      </div>
+    </div>
+  </section>
+</div>
+</sc-if>
+
+<sc-if value="{{ isTalla }}" hint-placeholder-val="{{ false }}">
+<article data-screen-label="Case study — Talla">
+  <section style="max-width:1280px;margin:0 auto;padding:clamp(40px,6vw,72px) 24px 0">
+    <button onClick="{{ goHome }}" style="background:none;border:0;padding:0;cursor:pointer;font:500 14px/1.4 Inter,sans-serif;color:#888888;transition:color .18s ease" style-hover="color:#ffffff">← All work</button>
+    <p style="font:600 12px/1.4 Inter,sans-serif;letter-spacing:1.5px;text-transform:uppercase;color:#888888;margin-top:40px">Selected work 01 · Talla</p>
+    <h1 style="font:700 clamp(34px,5.6vw,56px)/1.1 Inter,sans-serif;letter-spacing:-2px;color:#ffffff;margin-top:20px;max-width:18ch">AI powered fashion styling app</h1>
+    <p style="font:400 clamp(17px,2vw,20px)/1.55 Inter,sans-serif;color:#cccccc;margin-top:20px;max-width:60ch">A full wardrobe and no starting point. Talla turns an open question — what do I wear — into a short sequence with an obvious end.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:28px">
+      <span style="font:500 13px/1.4 Inter,sans-serif;color:#ffffff;background:#1a1a1a;border:1px solid #2a2a2a;border-radius:9999px;padding:5px 14px">iOS · iPhone</span>
+      <span style="font:500 13px/1.4 Inter,sans-serif;color:#ffffff;background:#1a1a1a;border:1px solid #2a2a2a;border-radius:9999px;padding:5px 14px">{{ tallaContext }}</span>
+    </div>
+    <div style="margin-top:48px;border-radius:12px;border:1px solid #2a2a2a;background:#121212;padding:clamp(28px,4vw,64px)">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(210px,100%),1fr));gap:clamp(24px,3.5vw,48px);max-width:900px;margin:0 auto">
+      <figure style="margin:0">
+        <div style="position:relative;aspect-ratio:393/852;border-radius:12.72% / 5.87%;overflow:hidden;background:#ffffff;border:1px solid #2a2a2a">
+          <img src="uploads/Profile - Wardrobe Regular user.png" alt="Wardrobe" style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block">
+        </div>
+        <figcaption style="font:400 13px/1.5 'JetBrains Mono',ui-monospace,monospace;color:#888888;text-align:center;margin-top:16px">Wardrobe</figcaption>
+      </figure>
+      <figure style="margin:0">
+        <div style="position:relative;aspect-ratio:393/852;border-radius:12.72% / 5.87%;overflow:hidden;background:#ffffff;border:1px solid #2a2a2a">
+          <img src="uploads/Search - outfit items - Item Removed.png" alt="Generating an outfit" style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block">
+        </div>
+        <figcaption style="font:400 13px/1.5 'JetBrains Mono',ui-monospace,monospace;color:#888888;text-align:center;margin-top:16px">Generating an outfit</figcaption>
+      </figure>
+      <figure style="margin:0">
+        <div style="position:relative;aspect-ratio:393/852;border-radius:12.72% / 5.87%;overflow:hidden;background:#ffffff;border:1px solid #2a2a2a">
+          <img src="uploads/Shop.png" alt="Shop" style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block">
+        </div>
+        <figcaption style="font:400 13px/1.5 'JetBrains Mono',ui-monospace,monospace;color:#888888;text-align:center;margin-top:16px">Shop</figcaption>
+      </figure>
+      </div>
+    </div>
+  </section>
+
+  <section style="max-width:1280px;margin:0 auto;padding:clamp(48px,6vw,72px) 24px 0">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(220px,100%),1fr));gap:1px;background:#2a2a2a;border:1px solid #2a2a2a;border-radius:12px;overflow:hidden">
+      <div style="background:#0a0a0a;padding:28px">
+        <p style="font:600 12px/1.4 Inter,sans-serif;letter-spacing:1.5px;text-transform:uppercase;color:#888888">Role</p>
+        <p style="font:600 16px/1.4 Inter,sans-serif;color:#ffffff;margin-top:10px">Product &amp; UX Designer</p>
+        <p style="font:400 14px/1.55 Inter,sans-serif;color:#888888;margin-top:4px">Research through UI, solo</p>
+      </div>
+      <div style="background:#0a0a0a;padding:28px">
+        <p style="font:600 12px/1.4 Inter,sans-serif;letter-spacing:1.5px;text-transform:uppercase;color:#888888">Timeline</p>
+        <p style="font:600 16px/1.4 Inter,sans-serif;color:#ffffff;margin-top:10px">{{ tallaTimeline }}</p>
+        <p style="font:400 14px/1.55 Inter,sans-serif;color:#888888;margin-top:4px">Complete</p>
+      </div>
+      <div style="background:#0a0a0a;padding:28px">
+        <p style="font:600 12px/1.4 Inter,sans-serif;letter-spacing:1.5px;text-transform:uppercase;color:#888888">Tools</p>
+        <p style="font:600 16px/1.4 Inter,sans-serif;color:#ffffff;margin-top:10px">Figma · FigJam · Maze</p>
+        <p style="font:400 14px/1.55 Inter,sans-serif;color:#888888;margin-top:4px">Prototype linked below</p>
+      </div>
+      <div style="background:#0a0a0a;padding:28px">
+        <p style="font:600 12px/1.4 Inter,sans-serif;letter-spacing:1.5px;text-transform:uppercase;color:#888888">Platform</p>
+        <p style="font:600 16px/1.4 Inter,sans-serif;color:#ffffff;margin-top:10px">iOS</p>
+        <p style="font:400 14px/1.55 Inter,sans-serif;color:#888888;margin-top:4px">iPhone, native patterns</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="max-width:1280px;margin:0 auto;padding:clamp(64px,8vw,96px) 24px 0">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:clamp(32px,5vw,64px)">
+      <div>
+        <p style="font:600 12px/1.4 Inter,sans-serif;letter-spacing:1.5px;text-transform:uppercase;color:#faff69">03 · The problem</p>
+        <h2 style="font:700 clamp(26px,3.2vw,32px)/1.2 Inter,sans-serif;letter-spacing:-1px;color:#ffffff;margin-top:20px;max-width:22ch">Getting dressed is a decision with no obvious first step.</h2>
+        <p style="font:400 16px/1.55 Inter,sans-serif;color:#cccccc;margin-top:20px;max-width:58ch">People do not lack clothes. They lack a place to start. Most styling apps answer this by showing more, more inspiration, more feeds, more options which is the same problem in a nicer typeface.</p>
+        <p style="font:400 16px/1.55 Inter,sans-serif;color:#cccccc;margin-top:16px;max-width:58ch">Talla had to do the opposite. Narrow fast, decide once, and end the session rather than extend it.</p>
+      </div>
+      <div>
+        <p style="font:600 12px/1.4 Inter,sans-serif;letter-spacing:1.5px;text-transform:uppercase;color:#faff69">04 · Who it is for</p>
+        <h2 style="font:700 clamp(26px,3.2vw,32px)/1.2 Inter,sans-serif;letter-spacing:-1px;color:#ffffff;margin-top:20px;max-width:22ch">People deciding in the two minutes before they leave.</h2>
+        <p style="font:400 16px/1.55 Inter,sans-serif;color:#cccccc;margin-top:20px;max-width:58ch">Not people browsing for pleasure. The design assumes a short session, on the one hand, and a person who already owns the clothes on screen or wants a personalized shopping experience.</p>
+        <p style="font:400 16px/1.55 Inter,sans-serif;color:#cccccc;margin-top:16px;max-width:58ch">That assumption decided nearly everything downstream: how many taps the flow gets, how much the AI is allowed to ask, and what happens when it is wrong.</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="max-width:1280px;margin:0 auto;padding:clamp(64px,8vw,96px) 24px 0">
+    <p style="font:600 12px/1.4 Inter,sans-serif;letter-spacing:1.5px;text-transform:uppercase;color:#faff69">05 · What I found out, and how</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr));gap:clamp(24px,4vw,48px);align-items:start;margin-top:20px">
+      <div>
+        <div style="display:flex;align-items:baseline;gap:16px">
+          <span style="font:700 clamp(40px,5vw,56px)/1 Inter,sans-serif;letter-spacing:-1.5px;color:#faff69">6</span>
+          <span style="font:600 18px/1.4 Inter,sans-serif;color:#ffffff">styling and wardrobe apps benchmarked</span>
+        </div>
+        <p style="font:400 16px/1.55 Inter,sans-serif;color:#cccccc;margin-top:20px;max-width:56ch">Before drawing anything I walked six competing apps end to end and recorded, for each, how long it took to reach one decided outfit and where the flow lost me.</p>
+      </div>
+      <div>
+        <p style="font:400 16px/1.55 Inter,sans-serif;color:#cccccc;max-width:56ch">The pattern held across all six: every app was built for browsing, and none of them had an ending. That produced the single requirement: the rest of the design hangs off the flow; the flow must terminate.</p>
+        <p style="font:400 14px/1.55 Inter,sans-serif;color:#888888;margin-top:16px;max-width:56ch">Stated plainly: this is a competitive benchmark, not moderated user testing. The full analysis is below so you can check it.</p>
+      </div>
+    </div>
+
+    <figure style="margin:40px 0 0">
+      <div style="border-radius:12px;overflow:hidden;border:1px solid #2a2a2a;background:#121212">
+        <img src="uploads/Codex Image Aug 2, 2026, 03_10_10 PM.png" alt="Competitive benchmark of six styling and wardrobe apps, each scored across six criteria" style="width:100%;height:auto;display:block">
+      </div>
+      <figcaption style="font:400 14px/1.55 Inter,sans-serif;color:#888888;margin-top:16px;max-width:72ch">Each app scored on the same six criteria — wardrobe, generation, shopping, conversation, planning and saving. The composite sits on the right.</figcaption>
+    </figure>
+
+    <div style="margin-top:48px;border:1px solid #2a2a2a;border-radius:12px;overflow-x:auto">
+      <table style="width:100%;border-collapse:collapse;text-align:left">
+        <caption style="font:600 12px/1.4 Inter,sans-serif;letter-spacing:1.5px;text-transform:uppercase;color:#888888;text-align:left;padding:24px 20px 8px">The six, and what each one leaves open</caption>
+        <thead>
+          <tr>
+            <th scope="col" style="padding:12px 20px;font:600 12px/1.4 Inter,sans-serif;letter-spacing:1.5px;text-transform:uppercase;color:#888888;text-align:left">Competitor</th>
+            <th scope="col" style="padding:12px 20px;font:600 12px/1.4 Inter,sans-serif;letter-spacing:1.5px;text-transform:uppercase;color:#888888;text-align:left">Strength</th>
+            <th scope="col" style="padding:12px 20px;font:600 12px/1.4 Inter,sans-serif;letter-spacing:1.5px;text-transform:uppercase;color:#888888;text-align:left">Gap</th>
+            <th scope="col" style="padding:12px 20px;font:600 12px/1.4 Inter,sans-serif;letter-spacing:1.5px;text-transform:uppercase;color:#888888;text-align:left">Opening for Talla</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row" style="padding:20px;vertical-align:top;border-top:1px solid #2a2a2a;text-align:left;font:600 15px/1.4 Inter,sans-serif;color:#ffffff;min-width:150px">Whering<span style="display:block;font:400 13px/1.5 Inter,sans-serif;color:#888888;margin-top:6px">Social digital wardrobe and styling app</span></th>
+            <td style="padding:20px;vertical-align:top;border-top:1px solid #2a2a2a;font:400 14px/1.55 Inter,sans-serif;color:#cccccc;min-width:180px">Uses clothes people already own; clear sustainability angle</td>
+            <td style="padding:20px;vertical-align:top;border-top:1px solid #2a2a2a;font:400 14px/1.55 Inter,sans-serif;color:#cccccc;min-width:180px">Feature-heavy — the social layer competes with a quick decision</td>
+            <td style="padding:20px;vertical-align:top;border-top:1px solid #2a2a2a;font:400 14px/1.55 Inter,sans-serif;color:#faff69;min-width:190px">Make generation faster and calmer, aimed at daily confidence</td>
+          </tr>
+          <tr>
+            <th scope="row" style="padding:20px;vertical-align:top;border-top:1px solid #2a2a2a;text-align:left;font:600 15px/1.4 Inter,sans-serif;color:#ffffff;min-width:150px">Acloset<span style="display:block;font:400 13px/1.5 Inter,sans-serif;color:#888888;margin-top:6px">AI fashion assistant and digital wardrobe</span></th>
+            <td style="padding:20px;vertical-align:top;border-top:1px solid #2a2a2a;font:400 14px/1.55 Inter,sans-serif;color:#cccccc;min-width:180px">Strong AI positioning and personalisation</td>
+            <td style="padding:20px;vertical-align:top;border-top:1px solid #2a2a2a;font:400 14px/1.55 Inter,sans-serif;color:#cccccc;min-width:180px">Free tier caps the wardrobe; onboarding turns into setup work</td>
+            <td style="padding:20px;vertical-align:top;border-top:1px solid #2a2a2a;font:400 14px/1.55 Inter,sans-serif;color:#faff69;min-width:190px">Give value before the closet is fully uploaded</td>
+          </tr>
+          <tr>
+            <th scope="row" style="padding:20px;vertical-align:top;border-top:1px solid #2a2a2a;text-align:left;font:600 15px/1.4 Inter,sans-serif;color:#ffffff;min-width:150px">Cladwell<span style="display:block;font:400 13px/1.5 Inter,sans-serif;color:#888888;margin-top:6px">Smart closet and capsule wardrobe planner</span></th>
+            <td style="padding:20px;vertical-align:top;border-top:1px solid #2a2a2a;font:400 14px/1.55 Inter,sans-serif;color:#cccccc;min-width:180px">Excellent for capsule wardrobes and intentional buying</td>
+            <td style="padding:20px;vertical-align:top;border-top:1px solid #2a2a2a;font:400 14px/1.55 Inter,sans-serif;color:#cccccc;min-width:180px">Interface feels dated and not AI-native</td>
+            <td style="padding:20px;vertical-align:top;border-top:1px solid #2a2a2a;font:400 14px/1.55 Inter,sans-serif;color:#faff69;min-width:190px">A premium, mobile-first AI styling experience</td>
+          </tr>
+          <tr>
+            <th scope="row" style="padding:20px;vertical-align:top;border-top:1px solid #2a2a2a;text-align:left;font:600 15px/1.4 Inter,sans-serif;color:#ffffff;min-width:150px">Stylebook<span style="display:block;font:400 13px/1.5 Inter,sans-serif;color:#888888;margin-top:6px">Closet organisation and outfit planning</span></th>
+            <td style="padding:20px;vertical-align:top;border-top:1px solid #2a2a2a;font:400 14px/1.55 Inter,sans-serif;color:#cccccc;min-width:180px">Comprehensive wardrobe management, one-time purchase</td>
+            <td style="padding:20px;vertical-align:top;border-top:1px solid #2a2a2a;font:400 14px/1.55 Inter,sans-serif;color:#cccccc;min-width:180px">Largely manual; little conversation or AI</td>
+            <td style="padding:20px;vertical-align:top;border-top:1px solid #2a2a2a;font:400 14px/1.55 Inter,sans-serif;color:#faff69;min-width:190px">Use AI to remove the manual planning entirely</td>
+          </tr>
+          <tr>
+            <th scope="row" style="padding:20px;vertical-align:top;border-top:1px solid #2a2a2a;text-align:left;font:600 15px/1.4 Inter,sans-serif;color:#ffffff;min-width:150px">Indyx<span style="display:block;font:400 13px/1.5 Inter,sans-serif;color:#888888;margin-top:6px">Digital wardrobe with human styling and resale</span></th>
+            <td style="padding:20px;vertical-align:top;border-top:1px solid #2a2a2a;font:400 14px/1.55 Inter,sans-serif;color:#cccccc;min-width:180px">Style-from-what-you-own philosophy, done properly</td>
+            <td style="padding:20px;vertical-align:top;border-top:1px solid #2a2a2a;font:400 14px/1.55 Inter,sans-serif;color:#cccccc;min-width:180px">Human styling costs money and takes time</td>
+            <td style="padding:20px;vertical-align:top;border-top:1px solid #2a2a2a;font:400 14px/1.55 Inter,sans-serif;color:#faff69;min-width:190px">An always-available stylist for the everyday decision</td>
+          </tr>
+          <tr>
+            <th scope="row" style="padding:20px;vertical-align:top;border-top:1px solid #2a2a2a;text-align:left;font:600 15px/1.4 Inter,sans-serif;color:#ffffff;min-width:150px">Combyne<span style="display:block;font:400 13px/1.5 Inter,sans-serif;color:#888888;margin-top:6px">Social outfit creator and inspiration feed</span></th>
+            <td style="padding:20px;vertical-align:top;border-top:1px solid #2a2a2a;font:400 14px/1.55 Inter,sans-serif;color:#cccccc;min-width:180px">Genuinely fun, creative outfit building</td>
+            <td style="padding:20px;vertical-align:top;border-top:1px solid #2a2a2a;font:400 14px/1.55 Inter,sans-serif;color:#cccccc;min-width:180px">Inspiration and shopping outrank the real wardrobe</td>
+            <td style="padding:20px;vertical-align:top;border-top:1px solid #2a2a2a;font:400 14px/1.55 Inter,sans-serif;color:#faff69;min-width:190px">Stay centred on the user's own clothes, not trends</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div style="margin-top:48px">
+      <p style="font:600 12px/1.4 Inter,sans-serif;letter-spacing:1.5px;text-transform:uppercase;color:#faff69">What it added up to</p>
+      <ul style="margin-top:16px">
+      <li style="display:flex;gap:16px;padding:16px 0;border-top:1px solid #2a2a2a">
+        <span style="font:400 13px/1.6 'JetBrains Mono',ui-monospace,monospace;color:#faff69;flex:0 0 auto">01</span>
+        <span style="font:400 16px/1.55 Inter,sans-serif;color:#cccccc">Digital wardrobes are table stakes — but most still demand heavy manual setup.</span>
+      </li>
+      <li style="display:flex;gap:16px;padding:16px 0;border-top:1px solid #2a2a2a">
+        <span style="font:400 13px/1.6 'JetBrains Mono',ui-monospace,monospace;color:#faff69;flex:0 0 auto">02</span>
+        <span style="font:400 16px/1.55 Inter,sans-serif;color:#cccccc">AI styling is common now. Trust and explainability are not.</span>
+      </li>
+      <li style="display:flex;gap:16px;padding:16px 0;border-top:1px solid #2a2a2a">
+        <span style="font:400 13px/1.6 'JetBrains Mono',ui-monospace,monospace;color:#faff69;flex:0 0 auto">03</span>
+        <span style="font:400 16px/1.55 Inter,sans-serif;color:#cccccc">Community features are popular and pull attention away from “what do I wear today”.</span>
+      </li>
+      <li style="display:flex;gap:16px;padding:16px 0;border-top:1px solid #2a2a2a">
+        <span style="font:400 13px/1.6 'JetBrains Mono',ui-monospace,monospace;color:#faff69;flex:0 0 auto">04</span>
+        <span style="font:400 16px/1.55 Inter,sans-serif;color:#cccccc">Shop-your-closet and sustainability are the sharpest differentiators in the set.</span>
+      </li>
+      <li style="display:flex;gap:16px;padding:16px 0;border-top:1px solid #2a2a2a">
+        <span style="font:400 13px/1.6 'JetBrains Mono',ui-monospace,monospace;color:#faff69;flex:0 0 auto">05</span>
+        <span style="font:400 16px/1.55 Inter,sans-serif;color:#cccccc">The opening is fast generation plus explainability, on the wardrobe you already own.</span>
+      </li>
+      </ul>
+      <p style="font:400 13px/1.8 Inter,sans-serif;color:#888888;margin-top:24px;display:flex;flex-wrap:wrap;gap:16px">
+      <a href="https://www.whering.co/" target="_blank" rel="noreferrer noopener" style="font:400 13px/1.5 Inter,sans-serif">Whering</a>
+      <a href="https://apps.apple.com/us/app/acloset-ai-fashion-assistant/id1542311809" target="_blank" rel="noreferrer noopener" style="font:400 13px/1.5 Inter,sans-serif">Acloset</a>
+      <a href="https://cladwell.com/app" target="_blank" rel="noreferrer noopener" style="font:400 13px/1.5 Inter,sans-serif">Cladwell</a>
+      <a href="https://stylebookapp.com/features.html" target="_blank" rel="noreferrer noopener" style="font:400 13px/1.5 Inter,sans-serif">Stylebook</a>
+      <a href="https://www.myindyx.com/home" target="_blank" rel="noreferrer noopener" style="font:400 13px/1.5 Inter,sans-serif">Indyx</a>
+      <a href="https://apps.apple.com/us/app/combyne-your-perfect-outfit/id989727742" target="_blank" rel="noreferrer noopener" style="font:400 13px/1.5 Inter,sans-serif">Combyne</a>
+      </p>
+    </div>
+  </section>
+
+  <section style="max-width:1280px;margin:0 auto;padding:clamp(64px,8vw,96px) 24px 0">
+    <sc-if value="{{ showDrafts }}" hint-placeholder-val="{{ false }}">
+      <p style="font:400 13px/1.6 'JetBrains Mono',ui-monospace,monospace;color:#faff69;border:1px dashed #3a3a3a;border-radius:8px;padding:12px 16px;margin-bottom:32px">draft · the two decisions below are placeholders. Swap in the real before and after, and describe what changed.</p>
+    </sc-if>
+    <p style="font:600 12px/1.4 Inter,sans-serif;letter-spacing:1.5px;text-transform:uppercase;color:#faff69">06 · Key decisions</p>
+    <h2 style="font:700 clamp(26px,3.2vw,32px)/1.2 Inter,sans-serif;letter-spacing:-1px;color:#ffffff;margin-top:20px;max-width:24ch">Where the thinking becomes visible.</h2>
+    <div style="display:flex;flex-direction:column;gap:24px;margin-top:40px">
+      <figure style="background:#1a1a1a;border:1px solid #2a2a2a;border-radius:12px;padding:clamp(24px,3vw,32px);margin:0">
+        <span style="display:inline-block;font:500 13px/1.4 Inter,sans-serif;color:#888888;background:#242424;border-radius:9999px;padding:4px 12px">Before</span>
+        <div style="display:flex;flex-wrap:wrap;gap:clamp(16px,2.5vw,32px);margin-top:24px">
+          <figure style="margin:0;flex:1 1 0;min-width:150px;max-width:220px">
+            <div style="position:relative;aspect-ratio:393/852;border-radius:12.72% / 5.87%;overflow:hidden;background:#ffffff;border:1px solid #2a2a2a">
+              <img src="uploads/Onboarding - Both - Gender-12f3753c.png" alt="Before, step 1 of 4 — Who are you shopping for?" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block;filter:saturate(.85)">
+            </div>
+            <figcaption style="margin-top:16px">
+              <span style="display:block;font:400 13px/1.5 'JetBrains Mono',ui-monospace,monospace;color:#888888">1/4</span>
+              <span style="display:block;font:400 14px/1.5 Inter,sans-serif;color:#888888;margin-top:4px">Who are you shopping for?</span>
+            </figcaption>
+          </figure>
+          <figure style="margin:0;flex:1 1 0;min-width:150px;max-width:220px">
+            <div style="position:relative;aspect-ratio:393/852;border-radius:12.72% / 5.87%;overflow:hidden;background:#ffffff;border:1px solid #2a2a2a">
+              <img src="uploads/Onboarding - Men - Style Type.png" alt="Before, step 2 of 4 — How would you describe your style?" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block;filter:saturate(.85)">
+            </div>
+            <figcaption style="margin-top:16px">
+              <span style="display:block;font:400 13px/1.5 'JetBrains Mono',ui-monospace,monospace;color:#888888">2/4</span>
+              <span style="display:block;font:400 14px/1.5 Inter,sans-serif;color:#888888;margin-top:4px">How would you describe your style?</span>
+            </figcaption>
+          </figure>
+          <figure style="margin:0;flex:1 1 0;min-width:150px;max-width:220px">
+            <div style="position:relative;aspect-ratio:393/852;border-radius:12.72% / 5.87%;overflow:hidden;background:#ffffff;border:1px solid #2a2a2a">
+              <img src="uploads/Onboarding - Men - Fit.png" alt="Before, step 3 of 4 — Which fits do you prefer?" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block;filter:saturate(.85)">
+            </div>
+            <figcaption style="margin-top:16px">
+              <span style="display:block;font:400 13px/1.5 'JetBrains Mono',ui-monospace,monospace;color:#888888">3/4</span>
+              <span style="display:block;font:400 14px/1.5 Inter,sans-serif;color:#888888;margin-top:4px">Which fits do you prefer?</span>
+            </figcaption>
+          </figure>
+          <figure style="margin:0;flex:1 1 0;min-width:150px;max-width:220px">
+            <div style="position:relative;aspect-ratio:393/852;border-radius:12.72% / 5.87%;overflow:hidden;background:#ffffff;border:1px solid #2a2a2a">
+              <img src="uploads/Onboarding - Men - Color.png" alt="Before, step 4 of 4 — What colors do you wear the most?" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block;filter:saturate(.85)">
+            </div>
+            <figcaption style="margin-top:16px">
+              <span style="display:block;font:400 13px/1.5 'JetBrains Mono',ui-monospace,monospace;color:#888888">4/4</span>
+              <span style="display:block;font:400 14px/1.5 Inter,sans-serif;color:#888888;margin-top:4px">What colors do you wear the most?</span>
+            </figcaption>
+          </figure>
+          <figure style="margin:0;flex:1 1 0;min-width:150px;max-width:220px">
+            <div style="position:relative;aspect-ratio:393/852;border-radius:12.72% / 5.87%;overflow:hidden;background:#ffffff;border:1px solid #2a2a2a">
+              <img src="uploads/Onboarding - Men - Last screen-50b3746b.png" alt="Before, end of onboarding — Ready to upgrade your style?" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block;filter:saturate(.85)">
+            </div>
+            <figcaption style="margin-top:16px">
+              <span style="display:block;font:400 13px/1.5 'JetBrains Mono',ui-monospace,monospace;color:#888888">end</span>
+              <span style="display:block;font:400 14px/1.5 Inter,sans-serif;color:#888888;margin-top:4px">Four answers later, still no outfit</span>
+            </figcaption>
+          </figure>
+        </div>
+        <figcaption style="font:400 15px/1.55 Inter,sans-serif;color:#cccccc;margin-top:24px;max-width:72ch">The original flow asked users to answer multiple questions (occasion, weather, style, and colors) before generating an outfit. User testing showed this felt slow and created friction before users experienced the product's value.</figcaption>
+      </figure>
+      <figure style="background:#1a1a1a;border:1px solid #2a2a2a;border-radius:12px;padding:clamp(24px,3vw,32px);margin:0">
+        <span style="display:inline-block;font:600 12px/1.4 Inter,sans-serif;letter-spacing:1.5px;text-transform:uppercase;color:#0a0a0a;background:#faff69;border-radius:9999px;padding:4px 12px">After</span>
+        <div style="display:flex;flex-wrap:wrap;gap:clamp(16px,2.5vw,32px);margin-top:24px">
+          <figure style="margin:0;flex:1 1 0;min-width:160px;max-width:240px">
+            <div style="position:relative;aspect-ratio:393/852;border-radius:12.72% / 5.87%;overflow:hidden;background:#ffffff;border:1px solid #2a2a2a">
+              <img src="uploads/Generate - Ask - Stye preference.png" alt="One optional style question, with live weather above it" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block">
+            </div>
+            <figcaption style="margin-top:16px">
+              <span style="display:block;font:400 13px/1.5 'JetBrains Mono',ui-monospace,monospace;color:#faff69">01</span>
+              <span style="display:block;font:400 14px/1.5 Inter,sans-serif;color:#888888;margin-top:4px">One question, already answered by default</span>
+            </figcaption>
+          </figure>
+          <figure style="margin:0;flex:1 1 0;min-width:160px;max-width:240px">
+            <div style="position:relative;aspect-ratio:393/852;border-radius:12.72% / 5.87%;overflow:hidden;background:#ffffff;border:1px solid #2a2a2a">
+              <img src="uploads/Search - outfit Items - Delete Item.png" alt="AI generating at 75 percent over the outfit taking shape" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block">
+            </div>
+            <figcaption style="margin-top:16px">
+              <span style="display:block;font:400 13px/1.5 'JetBrains Mono',ui-monospace,monospace;color:#faff69">02</span>
+              <span style="display:block;font:400 14px/1.5 Inter,sans-serif;color:#888888;margin-top:4px">The wait happens over the answer, not instead of it</span>
+            </figcaption>
+          </figure>
+          <figure style="margin:0;flex:1 1 0;min-width:160px;max-width:240px">
+            <div style="position:relative;aspect-ratio:393/852;border-radius:12.72% / 5.87%;overflow:hidden;background:#ffffff;border:1px solid #2a2a2a">
+              <div tabindex="0" aria-label="Scrollable screen: the generated outfit, its reasoning, size picker and add to cart" style="position:absolute;inset:0;overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch;overscroll-behavior:contain">
+                <div style="overflow:hidden;aspect-ratio:786/2010">
+                  <img src="uploads/Search - outfit items - Selecting size-aeb2f111.png" alt="The generated outfit with a reason, size picker and add to cart" loading="lazy" style="width:100%;height:auto;display:block">
+                </div>
+                <div aria-hidden="true" style="height:12.2%"></div>
+              </div>
+              <div aria-hidden="true" style="position:absolute;left:0;right:0;bottom:0;height:12.2%;background-image:url('uploads/Search - outfit items - Selecting size-aeb2f111.png');background-size:100% auto;background-position:bottom center;background-repeat:no-repeat;background-color:#ffffff;pointer-events:none"></div>
+            </div>
+            <figcaption style="margin-top:16px">
+              <span style="display:block;font:400 13px/1.5 'JetBrains Mono',ui-monospace,monospace;color:#faff69">03</span>
+              <span style="display:block;font:400 14px/1.5 Inter,sans-serif;color:#888888;margin-top:4px">The outfit, its reasoning, and one decision left <span style="color:#faff69">· scroll</span></span>
+            </figcaption>
+          </figure>
+        </div>
+        <figcaption style="font:400 15px/1.55 Inter,sans-serif;color:#cccccc;margin-top:24px;max-width:72ch">The redesigned flow generates an outfit immediately using default preferences. Users can then refine the recommendation by adjusting occasion, weather, or style. This delivers value faster while maintaining personalization.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section style="max-width:1280px;margin:0 auto;padding:clamp(64px,8vw,96px) 24px 0">
+    <p style="font:600 12px/1.4 Inter,sans-serif;letter-spacing:1.5px;text-transform:uppercase;color:#faff69">07 · Flows and design system</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr));gap:clamp(24px,4vw,48px);align-items:start;margin-top:20px">
+      <div>
+        <h2 style="font:700 clamp(26px,3.2vw,32px)/1.2 Inter,sans-serif;letter-spacing:-1px;color:#ffffff;max-width:20ch">A component library, not a page of screens.</h2>
+        <p style="font:400 16px/1.55 Inter,sans-serif;color:#cccccc;margin-top:20px;max-width:56ch">Every repeated element in Talla is a component with defined states, spacing and type styles. Building the library first is what let the flow change three times without the screens falling apart.</p>
+        <ul style="display:flex;flex-direction:column;gap:12px;margin-top:24px">
+          <li style="font:400 15px/1.55 Inter,sans-serif;color:#cccccc;display:flex;gap:12px"><span style="color:#faff69">·</span><span>Named tokens for colour, type and spacing, so a change happens in one place.</span></li>
+          <li style="font:400 15px/1.55 Inter,sans-serif;color:#cccccc;display:flex;gap:12px"><span style="color:#faff69">·</span><span>Every component documented with its states, not just its default.</span></li>
+          <li style="font:400 15px/1.55 Inter,sans-serif;color:#cccccc;display:flex;gap:12px"><span style="color:#faff69">·</span><span>Built to iOS conventions throughout — native controls, sheets and navigation.</span></li>
+        </ul>
+      </div>
+      <div style="border:1px solid #2a2a2a;border-radius:12px;background:#121212;padding:clamp(20px,2.5vw,28px)">
+        <div style="display:flex;align-items:baseline;justify-content:space-between;gap:16px;flex-wrap:wrap">
+          <span style="font:400 13px/1 'JetBrains Mono',ui-monospace,monospace;color:#faff69">Colour tokens</span>
+          <span style="font:400 13px/1 'JetBrains Mono',ui-monospace,monospace;color:#888888">5 roles · 196 variables</span>
+        </div>
+        <ul style="display:flex;flex-direction:column;gap:14px;margin-top:20px">
+          <li style="display:flex;align-items:center;gap:16px">
+            <span style="flex:0 0 auto;width:64px;height:44px;border-radius:6px;background:#0F172A;border:1px solid #2a2a2a"></span>
+            <span style="flex:1 1 auto;min-width:0"><span style="display:block;font:600 14px/1.3 Inter,sans-serif;color:#ffffff">Slate 900 <span style="font:400 13px/1.3 'JetBrains Mono',ui-monospace,monospace;color:#888888">#0F172A</span></span><span style="display:block;font:400 13px/1.4 Inter,sans-serif;color:#888888;margin-top:3px">App shell, header, navigation</span></span>
+          </li>
+          <li style="display:flex;align-items:center;gap:16px">
+            <span style="flex:0 0 auto;width:64px;height:44px;border-radius:6px;background:#6B7280;border:1px solid #2a2a2a"></span>
+            <span style="flex:1 1 auto;min-width:0"><span style="display:block;font:600 14px/1.3 Inter,sans-serif;color:#ffffff">Cool Grey <span style="font:400 13px/1.3 'JetBrains Mono',ui-monospace,monospace;color:#888888">#6B7280</span></span><span style="display:block;font:400 13px/1.4 Inter,sans-serif;color:#888888;margin-top:3px">Secondary text, descriptions, metadata</span></span>
+          </li>
+          <li style="display:flex;align-items:center;gap:16px">
+            <span style="flex:0 0 auto;width:64px;height:44px;border-radius:6px;background:#7C6EE6;border:1px solid #2a2a2a"></span>
+            <span style="flex:1 1 auto;min-width:0"><span style="display:block;font:600 14px/1.3 Inter,sans-serif;color:#ffffff">Violet <span style="font:400 13px/1.3 'JetBrains Mono',ui-monospace,monospace;color:#888888">#7C6EE6</span></span><span style="display:block;font:400 13px/1.4 Inter,sans-serif;color:#888888;margin-top:3px">Primary CTA, AI highlights, selected states</span></span>
+          </li>
+          <li style="display:flex;align-items:center;gap:16px">
+            <span style="flex:0 0 auto;width:64px;height:44px;border-radius:6px;background:#E5E7EB;border:1px solid #2a2a2a"></span>
+            <span style="flex:1 1 auto;min-width:0"><span style="display:block;font:600 14px/1.3 Inter,sans-serif;color:#ffffff">Gray 200 <span style="font:400 13px/1.3 'JetBrains Mono',ui-monospace,monospace;color:#888888">#E5E7EB</span></span><span style="display:block;font:400 13px/1.4 Inter,sans-serif;color:#888888;margin-top:3px">Borders, dividers, input outlines</span></span>
+          </li>
+          <li style="display:flex;align-items:center;gap:16px">
+            <span style="flex:0 0 auto;width:64px;height:44px;border-radius:6px;background:#F1F5FD;border:1px solid #2a2a2a"></span>
+            <span style="flex:1 1 auto;min-width:0"><span style="display:block;font:600 14px/1.3 Inter,sans-serif;color:#ffffff">Light Grey <span style="font:400 13px/1.3 'JetBrains Mono',ui-monospace,monospace;color:#888888">#F1F5FD</span></span><span style="display:block;font:400 13px/1.4 Inter,sans-serif;color:#888888;margin-top:3px">Dividers only</span></span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div style="margin-top:40px;border:1px solid #2a2a2a;border-radius:12px;background:#121212;padding:clamp(24px,3.5vw,40px)">
+      <div style="display:flex;align-items:baseline;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-bottom:28px">
+        <h3 style="font:600 18px/1.4 Inter,sans-serif;color:#ffffff">The library itself, at real values</h3>
+        <p style="font:400 14px/1.5 Inter,sans-serif;color:#888888;max-width:44ch">128 component sets and 196 variables. These are the ones the outfit flow leans on — rebuilt here from the Figma file, not screenshotted.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(340px,100%),1fr));gap:1px;background:#2a2a2a;border:1px solid #2a2a2a;border-radius:12px;overflow:hidden">
+
+        <div style="background:#0a0a0a;padding:clamp(20px,2.5vw,28px)">
+          <div style="display:flex;align-items:baseline;justify-content:space-between;gap:12px">
+            <span style="font:400 13px/1 'JetBrains Mono',ui-monospace,monospace;color:#faff69">Type scale</span>
+            <span style="font:400 12px/1 'JetBrains Mono',ui-monospace,monospace;color:#888888">SF Pro · 8 styles</span>
+          </div>
+          <div style="margin-top:18px;background:#ffffff;border-radius:8px;padding:20px;display:flex;flex-direction:column;gap:14px">
+            <div style="display:flex;align-items:baseline;justify-content:space-between;gap:16px"><span style="font-family:-apple-system,BlinkMacSystemFont,'SF Pro Text','Helvetica Neue',Arial,sans-serif;font-weight:600;font-size:32px;line-height:1.2;color:#121621;white-space:nowrap;flex:0 1 auto">Header 1</span><span style="font:400 11px/1.3 'JetBrains Mono',ui-monospace,monospace;color:#6B7280;text-align:right;white-space:nowrap;flex:0 0 auto">Semibold 32</span></div>
+            <div style="display:flex;align-items:baseline;justify-content:space-between;gap:16px"><span style="font-family:-apple-system,BlinkMacSystemFont,'SF Pro Text','Helvetica Neue',Arial,sans-serif;font-weight:700;font-size:28px;line-height:1.2;color:#121621;white-space:nowrap;flex:0 1 auto">Header 2</span><span style="font:400 11px/1.3 'JetBrains Mono',ui-monospace,monospace;color:#6B7280;text-align:right;white-space:nowrap;flex:0 0 auto">Bold 28</span></div>
+            <div style="display:flex;align-items:baseline;justify-content:space-between;gap:16px"><span style="font-family:-apple-system,BlinkMacSystemFont,'SF Pro Text','Helvetica Neue',Arial,sans-serif;font-weight:500;font-size:24px;line-height:1.2;color:#121621;white-space:nowrap;flex:0 1 auto">Header 3</span><span style="font:400 11px/1.3 'JetBrains Mono',ui-monospace,monospace;color:#6B7280;text-align:right;white-space:nowrap;flex:0 0 auto">Medium 24</span></div>
+            <div style="display:flex;align-items:baseline;justify-content:space-between;gap:16px"><span style="font-family:-apple-system,BlinkMacSystemFont,'SF Pro Text','Helvetica Neue',Arial,sans-serif;font-weight:500;font-size:20px;line-height:1.2;color:#121621;white-space:nowrap;flex:0 1 auto">Header 4</span><span style="font:400 11px/1.3 'JetBrains Mono',ui-monospace,monospace;color:#6B7280;text-align:right;white-space:nowrap;flex:0 0 auto">Medium 20</span></div>
+            <div style="height:1px;background:#ECF1F4"></div>
+            <div style="display:flex;align-items:baseline;justify-content:space-between;gap:16px"><span style="font-family:-apple-system,BlinkMacSystemFont,'SF Pro Text','Helvetica Neue',Arial,sans-serif;font-weight:400;font-size:16px;line-height:24px;color:#121621">Body / Regular</span><span style="font:400 11px/1.3 'JetBrains Mono',ui-monospace,monospace;color:#6B7280;text-align:right;white-space:nowrap;flex:0 0 auto">Regular 16</span></div>
+            <div style="display:flex;align-items:baseline;justify-content:space-between;gap:16px"><span style="font-family:-apple-system,BlinkMacSystemFont,'SF Pro Text','Helvetica Neue',Arial,sans-serif;font-weight:400;font-size:14px;line-height:22px;letter-spacing:.0025em;color:#121621">Body / Small</span><span style="font:400 11px/1.3 'JetBrains Mono',ui-monospace,monospace;color:#6B7280;text-align:right;white-space:nowrap;flex:0 0 auto">Regular 14 · +0.25%</span></div>
+            <div style="display:flex;align-items:baseline;justify-content:space-between;gap:16px"><span style="font-family:-apple-system,BlinkMacSystemFont,'SF Pro Text','Helvetica Neue',Arial,sans-serif;font-weight:500;font-size:12px;line-height:16px;letter-spacing:.005em;color:#121621">Micro</span><span style="font:400 11px/1.3 'JetBrains Mono',ui-monospace,monospace;color:#6B7280;text-align:right;white-space:nowrap;flex:0 0 auto">Medium 12 · +0.5%</span></div>
+            <div style="display:flex;align-items:baseline;justify-content:space-between;gap:16px"><span style="font-family:-apple-system,BlinkMacSystemFont,'SF Pro Text','Helvetica Neue',Arial,sans-serif;font-weight:600;font-size:16px;line-height:24px;letter-spacing:.0025em;color:#121621">Button text</span><span style="font:400 11px/1.3 'JetBrains Mono',ui-monospace,monospace;color:#6B7280;text-align:right;white-space:nowrap;flex:0 0 auto">Semibold 16 · +0.25%</span></div>
+          </div>
+        </div>
+
+        <div style="background:#0a0a0a;padding:clamp(20px,2.5vw,28px)">
+          <div style="display:flex;align-items:baseline;justify-content:space-between;gap:12px">
+            <span style="font:400 13px/1 'JetBrains Mono',ui-monospace,monospace;color:#faff69">Button</span>
+            <span style="font:400 12px/1 'JetBrains Mono',ui-monospace,monospace;color:#888888">4 of 87 variants</span>
+          </div>
+          <div style="margin-top:18px;background:#ffffff;border-radius:8px;padding:20px;display:flex;flex-direction:column;gap:16px">
+            <div style="display:flex;flex-direction:column;gap:8px">
+              <span style="font:400 11px/1 'JetBrains Mono',ui-monospace,monospace;color:#6B7280">Button=Primary</span>
+              <div style="height:44px;border-radius:6px;background:#0F172A;display:flex;gap:8px;padding:8px 32px;justify-content:center;align-items:center">
+                <svg width="16" height="16" viewBox="0 0 13.667 14.667" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="display:block;flex:0 0 auto;color:#ffffff"><path d="M 6.833 0 C 8.601 0 10.073 1.355 10.22 3.116 L 10.296 4.046 C 10.365 4.052 10.433 4.056 10.497 4.064 C 11.031 4.131 11.485 4.275 11.872 4.603 C 12.257 4.93 12.474 5.355 12.632 5.872 C 12.784 6.37 12.897 7.007 13.036 7.796 L 13.292 9.248 C 13.486 10.344 13.639 11.22 13.663 11.912 C 13.688 12.626 13.581 13.238 13.163 13.744 C 12.743 14.251 12.164 14.468 11.462 14.569 C 10.784 14.667 9.904 14.667 8.806 14.667 L 4.861 14.667 C 3.763 14.667 2.884 14.667 2.205 14.569 C 1.504 14.468 0.924 14.251 0.505 13.744 C 0.087 13.238 -0.022 12.626 0.003 11.912 C 0.027 11.22 0.182 10.344 0.375 9.248 L 0.631 7.796 C 0.77 7.007 0.883 6.37 1.036 5.872 C 1.194 5.355 1.411 4.93 1.796 4.603 C 2.183 4.275 2.637 4.131 3.17 4.064 C 3.235 4.056 3.301 4.052 3.37 4.046 L 3.447 3.116 C 3.593 1.355 5.066 0 6.833 0 Z M 5.145 5 C 4.314 5 3.736 5.001 3.294 5.057 C 2.867 5.11 2.626 5.21 2.443 5.365 C 2.259 5.521 2.12 5.745 1.992 6.164 C 1.859 6.596 1.757 7.173 1.611 8.002 L 1.368 9.383 C 1.166 10.527 1.025 11.333 1.003 11.947 C 0.982 12.548 1.081 12.871 1.276 13.106 C 1.47 13.341 1.764 13.495 2.348 13.579 C 2.947 13.665 3.754 13.667 4.902 13.667 L 8.766 13.667 C 9.914 13.667 10.721 13.665 11.32 13.579 C 11.904 13.495 12.198 13.341 12.392 13.106 C 12.587 12.871 12.685 12.547 12.664 11.947 C 12.643 11.333 12.502 10.527 12.3 9.383 L 12.057 8.002 C 11.911 7.173 11.808 6.596 11.676 6.164 C 11.548 5.745 11.408 5.521 11.224 5.365 C 11.041 5.21 10.8 5.11 10.372 5.057 C 9.93 5.001 9.353 5 8.522 5 L 5.145 5 Z M 8.879 6.002 C 9.154 6.027 9.357 6.271 9.331 6.546 C 9.217 7.784 8.094 8.667 6.833 8.667 C 5.573 8.667 4.45 7.784 4.336 6.546 C 4.311 6.271 4.513 6.027 4.788 6.002 C 5.062 5.977 5.306 6.179 5.331 6.454 C 5.391 7.1 6.007 7.667 6.833 7.667 C 7.66 7.667 8.277 7.1 8.336 6.454 C 8.362 6.179 8.605 5.977 8.879 6.002 Z M 6.833 1 C 5.586 1 4.547 1.956 4.444 3.199 L 4.375 4.006 C 4.605 4.004 4.85 4 5.112 4 L 8.555 4 C 8.816 4 9.061 4.004 9.29 4.006 L 9.223 3.199 C 9.119 1.956 8.081 1 6.833 1 Z" fill="currentColor" fill-rule="evenodd"></path></svg>
+                <span style="font-family:-apple-system,BlinkMacSystemFont,'SF Pro Text','Helvetica Neue',Arial,sans-serif;font-weight:500;font-size:14px;line-height:20px;color:#ffffff">Add To Cart</span>
+              </div>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:8px">
+              <span style="font:400 11px/1 'JetBrains Mono',ui-monospace,monospace;color:#6B7280">Button=Secondary</span>
+              <div style="height:44px;border-radius:6px;background:#FAFAFA;box-shadow:inset 0 0 0 1px #E5E7EB;display:flex;gap:8px;padding:8px 32px;justify-content:center;align-items:center">
+                <span style="font-family:-apple-system,BlinkMacSystemFont,'SF Pro Text','Helvetica Neue',Arial,sans-serif;font-weight:500;font-size:14px;line-height:20px;color:#0F172A">Secondary</span>
+              </div>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:8px">
+              <span style="font:400 11px/1 'JetBrains Mono',ui-monospace,monospace;color:#6B7280">Button=Active / Button=Disabled</span>
+              <div style="display:flex;flex-direction:column;gap:10px">
+                <div style="height:48px;display:flex;justify-content:space-between;align-items:center">
+                  <span style="width:48px;height:48px;opacity:.5;border-radius:6px;display:flex;justify-content:center;align-items:center"><svg width="24" height="24" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="display:block;color:#0F172A"><path d="M 5.293 12.707 C 5.683 13.098 6.317 13.098 6.707 12.707 C 7.098 12.317 7.098 11.683 6.707 11.293 L 6 12 L 5.293 12.707 Z M 0 6 L -0.707 5.293 C -1.098 5.683 -1.098 6.317 -0.707 6.707 L 0 6 Z M 6.707 0.707 C 7.098 0.317 7.098 -0.317 6.707 -0.707 C 6.317 -1.098 5.683 -1.098 5.293 -0.707 L 6 0 L 6.707 0.707 Z M 6 12 L 6.707 11.293 L 0.707 5.293 L 0 6 L -0.707 6.707 L 5.293 12.707 L 6 12 Z M 0 6 L 0.707 6.707 L 6.707 0.707 L 6 0 L 5.293 -0.707 L -0.707 5.293 L 0 6 Z" fill="currentColor" fill-rule="nonzero"></path></svg></span>
+                  <span style="width:48px;height:48px;border-radius:6px;background:#0F172A;display:flex;justify-content:center;align-items:center"><svg width="24" height="24" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="display:block;color:#ffffff"><path d="M -0.707 11.293 C -1.098 11.683 -1.098 12.317 -0.707 12.707 C -0.317 13.098 0.317 13.098 0.707 12.707 L 0 12 L -0.707 11.293 Z M 6 6 L 6.707 6.707 C 7.098 6.317 7.098 5.683 6.707 5.293 L 6 6 Z M 0.707 -0.707 C 0.317 -1.098 -0.317 -1.098 -0.707 -0.707 C -1.098 -0.317 -1.098 0.317 -0.707 0.707 L 0 0 L 0.707 -0.707 Z M 0 12 L 0.707 12.707 L 6.707 6.707 L 6 6 L 5.293 5.293 L -0.707 11.293 L 0 12 Z M 6 6 L 6.707 5.293 L 0.707 -0.707 L 0 0 L -0.707 0.707 L 5.293 6.707 L 6 6 Z" fill="currentColor" fill-rule="nonzero"></path></svg></span>
+                </div>
+                <div style="height:48px;display:flex;justify-content:space-between;align-items:center;opacity:.5">
+                  <span style="width:48px;height:48px;opacity:.5;border-radius:6px;display:flex;justify-content:center;align-items:center"><svg width="24" height="24" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="display:block;color:#0F172A"><path d="M 5.293 12.707 C 5.683 13.098 6.317 13.098 6.707 12.707 C 7.098 12.317 7.098 11.683 6.707 11.293 L 6 12 L 5.293 12.707 Z M 0 6 L -0.707 5.293 C -1.098 5.683 -1.098 6.317 -0.707 6.707 L 0 6 Z M 6.707 0.707 C 7.098 0.317 7.098 -0.317 6.707 -0.707 C 6.317 -1.098 5.683 -1.098 5.293 -0.707 L 6 0 L 6.707 0.707 Z M 6 12 L 6.707 11.293 L 0.707 5.293 L 0 6 L -0.707 6.707 L 5.293 12.707 L 6 12 Z M 0 6 L 0.707 6.707 L 6.707 0.707 L 6 0 L 5.293 -0.707 L -0.707 5.293 L 0 6 Z" fill="currentColor" fill-rule="nonzero"></path></svg></span>
+                  <span style="width:48px;height:48px;border-radius:6px;background:#0F172A;display:flex;justify-content:center;align-items:center"><svg width="24" height="24" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="display:block;color:#ffffff"><path d="M -0.707 11.293 C -1.098 11.683 -1.098 12.317 -0.707 12.707 C -0.317 13.098 0.317 13.098 0.707 12.707 L 0 12 L -0.707 11.293 Z M 6 6 L 6.707 6.707 C 7.098 6.317 7.098 5.683 6.707 5.293 L 6 6 Z M 0.707 -0.707 C 0.317 -1.098 -0.317 -1.098 -0.707 -0.707 C -1.098 -0.317 -1.098 0.317 -0.707 0.707 L 0 0 L 0.707 -0.707 Z M 0 12 L 0.707 12.707 L 6.707 6.707 L 6 6 L 5.293 5.293 L -0.707 11.293 L 0 12 Z M 6 6 L 6.707 5.293 L 0.707 -0.707 L 0 0 L -0.707 0.707 L 5.293 6.707 L 6 6 Z" fill="currentColor" fill-rule="nonzero"></path></svg></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="background:#0a0a0a;padding:clamp(20px,2.5vw,28px)">
+          <div style="display:flex;align-items:baseline;justify-content:space-between;gap:12px">
+            <span style="font:400 13px/1 'JetBrains Mono',ui-monospace,monospace;color:#faff69">Input field</span>
+            <span style="font:400 12px/1 'JetBrains Mono',ui-monospace,monospace;color:#888888">3 of 4 states</span>
+          </div>
+          <div style="margin-top:18px;background:#ffffff;border-radius:8px;padding:20px;display:flex;flex-direction:column;gap:20px">
+            <div style="display:flex;flex-direction:column;gap:12px">
+              <span style="font-family:-apple-system,BlinkMacSystemFont,'SF Pro Text','Helvetica Neue',Arial,sans-serif;font-weight:400;font-size:14px;line-height:22px;color:#333333">Email <span style="font:400 11px 'JetBrains Mono',ui-monospace,monospace;color:#6B7280">Place holder</span></span>
+              <div style="height:40px;border-radius:8px;box-shadow:inset 0 0 0 1px #E6E6E6;display:flex;gap:8px;padding:10px 16px;align-items:center;overflow:hidden">
+                <svg width="16" height="16" viewBox="0 0 14.334 12.333" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="display:block;flex:0 0 auto;color:#0F172A"><path d="M 5.221 0.025 C 6.522 -0.008 7.811 -0.008 9.113 0.025 L 9.152 0.026 C 10.169 0.051 10.987 0.072 11.642 0.186 C 12.329 0.305 12.887 0.535 13.358 1.008 C 13.827 1.479 14.055 2.029 14.173 2.704 C 14.284 3.347 14.301 4.145 14.322 5.134 L 14.323 5.173 C 14.337 5.837 14.337 6.497 14.323 7.161 L 14.322 7.2 C 14.301 8.189 14.284 8.987 14.173 9.63 C 14.055 10.305 13.827 10.855 13.358 11.326 C 12.887 11.799 12.329 12.028 11.642 12.148 C 10.987 12.262 10.169 12.282 9.152 12.308 L 9.113 12.309 C 7.811 12.341 6.522 12.341 5.221 12.309 L 5.182 12.308 C 4.165 12.282 3.347 12.262 2.691 12.148 C 2.005 12.028 1.448 11.799 0.976 11.326 C 0.507 10.855 0.278 10.305 0.161 9.63 C 0.049 8.987 0.033 8.189 0.012 7.2 L 0.011 7.161 C -0.004 6.497 -0.004 5.837 0.011 5.173 L 0.012 5.134 C 0.033 4.145 0.049 3.347 0.161 2.704 C 0.278 2.029 0.507 1.479 0.976 1.008 C 1.448 0.535 2.005 0.305 2.691 0.186 C 3.347 0.071 4.165 0.051 5.182 0.026 L 5.221 0.025 Z M 1.114 3.087 C 1.045 3.615 1.03 4.283 1.011 5.193 C 0.997 5.843 0.997 6.49 1.011 7.14 C 1.033 8.177 1.049 8.899 1.146 9.459 C 1.239 9.995 1.4 10.334 1.684 10.62 C 1.967 10.904 2.311 11.067 2.863 11.163 C 3.437 11.263 4.181 11.283 5.245 11.31 C 6.53 11.342 7.803 11.342 9.089 11.31 C 10.153 11.283 10.897 11.263 11.471 11.163 C 12.022 11.067 12.366 10.904 12.649 10.62 C 12.934 10.334 13.094 9.995 13.187 9.459 C 13.285 8.899 13.301 8.177 13.323 7.14 C 13.337 6.49 13.337 5.844 13.323 5.194 C 13.304 4.284 13.288 3.616 13.219 3.088 L 9.472 5.211 C 8.609 5.699 7.908 5.998 7.167 5.998 C 6.425 5.998 5.725 5.699 4.863 5.211 L 1.114 3.087 Z M 9.089 1.025 C 7.803 0.992 6.53 0.992 5.245 1.025 C 4.181 1.051 3.437 1.071 2.863 1.171 C 2.311 1.267 1.967 1.43 1.684 1.714 C 1.569 1.83 1.475 1.955 1.396 2.098 L 5.355 4.341 C 6.192 4.815 6.7 4.998 7.167 4.998 C 7.634 4.998 8.142 4.815 8.978 4.341 L 12.936 2.098 C 12.858 1.955 12.765 1.83 12.649 1.714 C 12.366 1.43 12.022 1.267 11.471 1.171 C 10.897 1.071 10.153 1.051 9.089 1.025 Z" fill="currentColor" fill-rule="evenodd"></path></svg>
+                <span style="font-family:-apple-system,BlinkMacSystemFont,'SF Pro Text','Helvetica Neue',Arial,sans-serif;font-weight:400;font-size:14px;line-height:22px;color:#B3B3B3;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">sarahhammad776@gmail.com</span>
+              </div>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:12px">
+              <span style="font:400 14px/20px Outfit,sans-serif;color:#121621">Email <span style="font:400 11px 'JetBrains Mono',ui-monospace,monospace;color:#6B7280">Focus</span></span>
+              <div style="height:40px;border-radius:8px;box-shadow:inset 0 0 0 1px #E6E6E6;display:flex;gap:8px;padding:10px 16px;align-items:center;overflow:hidden">
+                <svg width="16" height="16" viewBox="0 0 14.334 12.333" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="display:block;flex:0 0 auto;color:#0F172A"><path d="M 5.221 0.025 C 6.522 -0.008 7.811 -0.008 9.113 0.025 L 9.152 0.026 C 10.169 0.051 10.987 0.072 11.642 0.186 C 12.329 0.305 12.887 0.535 13.358 1.008 C 13.827 1.479 14.055 2.029 14.173 2.704 C 14.284 3.347 14.301 4.145 14.322 5.134 L 14.323 5.173 C 14.337 5.837 14.337 6.497 14.323 7.161 L 14.322 7.2 C 14.301 8.189 14.284 8.987 14.173 9.63 C 14.055 10.305 13.827 10.855 13.358 11.326 C 12.887 11.799 12.329 12.028 11.642 12.148 C 10.987 12.262 10.169 12.282 9.152 12.308 L 9.113 12.309 C 7.811 12.341 6.522 12.341 5.221 12.309 L 5.182 12.308 C 4.165 12.282 3.347 12.262 2.691 12.148 C 2.005 12.028 1.448 11.799 0.976 11.326 C 0.507 10.855 0.278 10.305 0.161 9.63 C 0.049 8.987 0.033 8.189 0.012 7.2 L 0.011 7.161 C -0.004 6.497 -0.004 5.837 0.011 5.173 L 0.012 5.134 C 0.033 4.145 0.049 3.347 0.161 2.704 C 0.278 2.029 0.507 1.479 0.976 1.008 C 1.448 0.535 2.005 0.305 2.691 0.186 C 3.347 0.071 4.165 0.051 5.182 0.026 L 5.221 0.025 Z M 1.114 3.087 C 1.045 3.615 1.03 4.283 1.011 5.193 C 0.997 5.843 0.997 6.49 1.011 7.14 C 1.033 8.177 1.049 8.899 1.146 9.459 C 1.239 9.995 1.4 10.334 1.684 10.62 C 1.967 10.904 2.311 11.067 2.863 11.163 C 3.437 11.263 4.181 11.283 5.245 11.31 C 6.53 11.342 7.803 11.342 9.089 11.31 C 10.153 11.283 10.897 11.263 11.471 11.163 C 12.022 11.067 12.366 10.904 12.649 10.62 C 12.934 10.334 13.094 9.995 13.187 9.459 C 13.285 8.899 13.301 8.177 13.323 7.14 C 13.337 6.49 13.337 5.844 13.323 5.194 C 13.304 4.284 13.288 3.616 13.219 3.088 L 9.472 5.211 C 8.609 5.699 7.908 5.998 7.167 5.998 C 6.425 5.998 5.725 5.699 4.863 5.211 L 1.114 3.087 Z M 9.089 1.025 C 7.803 0.992 6.53 0.992 5.245 1.025 C 4.181 1.051 3.437 1.071 2.863 1.171 C 2.311 1.267 1.967 1.43 1.684 1.714 C 1.569 1.83 1.475 1.955 1.396 2.098 L 5.355 4.341 C 6.192 4.815 6.7 4.998 7.167 4.998 C 7.634 4.998 8.142 4.815 8.978 4.341 L 12.936 2.098 C 12.858 1.955 12.765 1.83 12.649 1.714 C 12.366 1.43 12.022 1.267 11.471 1.171 C 10.897 1.071 10.153 1.051 9.089 1.025 Z" fill="currentColor" fill-rule="evenodd"></path></svg>
+                <span style="font:400 16px/24px Outfit,sans-serif;color:#121621;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">sarahhammad776@gmail.com</span>
+              </div>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:12px">
+              <span style="font-family:-apple-system,BlinkMacSystemFont,'SF Pro Text','Helvetica Neue',Arial,sans-serif;font-weight:400;font-size:14px;line-height:22px;color:#333333">Email <span style="font:400 11px 'JetBrains Mono',ui-monospace,monospace;color:#6B7280">Error</span></span>
+              <div style="height:40px;border-radius:8px;box-shadow:0 0 0 1px #E6E6E6;display:flex;padding:10px 16px;justify-content:space-between;align-items:center;gap:8px;overflow:hidden">
+                <span style="display:flex;gap:8px;align-items:center;min-width:0">
+                  <svg width="16" height="16" viewBox="0 0 14.334 12.333" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="display:block;flex:0 0 auto;color:#0F172A"><path d="M 5.221 0.025 C 6.522 -0.008 7.811 -0.008 9.113 0.025 L 9.152 0.026 C 10.169 0.051 10.987 0.072 11.642 0.186 C 12.329 0.305 12.887 0.535 13.358 1.008 C 13.827 1.479 14.055 2.029 14.173 2.704 C 14.284 3.347 14.301 4.145 14.322 5.134 L 14.323 5.173 C 14.337 5.837 14.337 6.497 14.323 7.161 L 14.322 7.2 C 14.301 8.189 14.284 8.987 14.173 9.63 C 14.055 10.305 13.827 10.855 13.358 11.326 C 12.887 11.799 12.329 12.028 11.642 12.148 C 10.987 12.262 10.169 12.282 9.152 12.308 L 9.113 12.309 C 7.811 12.341 6.522 12.341 5.221 12.309 L 5.182 12.308 C 4.165 12.282 3.347 12.262 2.691 12.148 C 2.005 12.028 1.448 11.799 0.976 11.326 C 0.507 10.855 0.278 10.305 0.161 9.63 C 0.049 8.987 0.033 8.189 0.012 7.2 L 0.011 7.161 C -0.004 6.497 -0.004 5.837 0.011 5.173 L 0.012 5.134 C 0.033 4.145 0.049 3.347 0.161 2.704 C 0.278 2.029 0.507 1.479 0.976 1.008 C 1.448 0.535 2.005 0.305 2.691 0.186 C 3.347 0.071 4.165 0.051 5.182 0.026 L 5.221 0.025 Z M 1.114 3.087 C 1.045 3.615 1.03 4.283 1.011 5.193 C 0.997 5.843 0.997 6.49 1.011 7.14 C 1.033 8.177 1.049 8.899 1.146 9.459 C 1.239 9.995 1.4 10.334 1.684 10.62 C 1.967 10.904 2.311 11.067 2.863 11.163 C 3.437 11.263 4.181 11.283 5.245 11.31 C 6.53 11.342 7.803 11.342 9.089 11.31 C 10.153 11.283 10.897 11.263 11.471 11.163 C 12.022 11.067 12.366 10.904 12.649 10.62 C 12.934 10.334 13.094 9.995 13.187 9.459 C 13.285 8.899 13.301 8.177 13.323 7.14 C 13.337 6.49 13.337 5.844 13.323 5.194 C 13.304 4.284 13.288 3.616 13.219 3.088 L 9.472 5.211 C 8.609 5.699 7.908 5.998 7.167 5.998 C 6.425 5.998 5.725 5.699 4.863 5.211 L 1.114 3.087 Z M 9.089 1.025 C 7.803 0.992 6.53 0.992 5.245 1.025 C 4.181 1.051 3.437 1.071 2.863 1.171 C 2.311 1.267 1.967 1.43 1.684 1.714 C 1.569 1.83 1.475 1.955 1.396 2.098 L 5.355 4.341 C 6.192 4.815 6.7 4.998 7.167 4.998 C 7.634 4.998 8.142 4.815 8.978 4.341 L 12.936 2.098 C 12.858 1.955 12.765 1.83 12.649 1.714 C 12.366 1.43 12.022 1.267 11.471 1.171 C 10.897 1.071 10.153 1.051 9.089 1.025 Z" fill="currentColor" fill-rule="evenodd"></path></svg>
+                  <span style="font-family:-apple-system,BlinkMacSystemFont,'SF Pro Text','Helvetica Neue',Arial,sans-serif;font-weight:400;font-size:14px;line-height:22px;color:#B3B3B3;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">sarahhammad776@gmail.com</span>
+                </span>
+                <svg width="20" height="20" viewBox="0 0 10.333 10.333" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="display:block;flex:0 0 auto;color:#0F172A"><path d="M 0.146 0.146 C 0.342 -0.049 0.658 -0.049 0.854 0.146 L 5.167 4.46 L 9.48 0.146 C 9.675 -0.049 9.992 -0.049 10.187 0.146 C 10.382 0.342 10.382 0.658 10.187 0.854 L 5.874 5.167 L 10.187 9.48 C 10.382 9.675 10.382 9.992 10.187 10.187 C 9.992 10.382 9.675 10.382 9.48 10.187 L 5.167 5.874 L 0.854 10.187 C 0.658 10.382 0.342 10.382 0.146 10.187 C -0.049 9.992 -0.049 9.675 0.146 9.48 L 4.46 5.167 L 0.146 0.854 C -0.049 0.658 -0.049 0.342 0.146 0.146 Z" fill="currentColor" fill-rule="evenodd"></path></svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="background:#0a0a0a;padding:clamp(20px,2.5vw,28px)">
+          <div style="display:flex;align-items:baseline;justify-content:space-between;gap:12px">
+            <span style="font:400 13px/1 'JetBrains Mono',ui-monospace,monospace;color:#faff69">Progress</span>
+            <span style="font:400 12px/1 'JetBrains Mono',ui-monospace,monospace;color:#888888">6 steps, 0 → 100%</span>
+          </div>
+          <div style="margin-top:18px;background:#ffffff;border-radius:8px;padding:20px;display:flex;flex-direction:column;gap:16px">
+            <div style="display:flex;align-items:center;gap:12px"><span style="flex:1 1 auto;height:10px;border-radius:9999px;background:#F5F5F5;overflow:hidden"><span style="display:block;width:0%;height:10px;border-radius:20px;background:#18181B"></span></span><span style="flex:0 0 auto;width:40px;text-align:right;font:400 11px 'JetBrains Mono',ui-monospace,monospace;color:#6B7280">0%</span></div>
+            <div style="display:flex;align-items:center;gap:12px"><span style="flex:1 1 auto;height:10px;border-radius:9999px;background:#F5F5F5;overflow:hidden"><span style="display:block;width:20%;height:10px;border-radius:20px;background:#18181B"></span></span><span style="flex:0 0 auto;width:40px;text-align:right;font:400 11px 'JetBrains Mono',ui-monospace,monospace;color:#6B7280">20%</span></div>
+            <div style="display:flex;align-items:center;gap:12px"><span style="flex:1 1 auto;height:10px;border-radius:9999px;background:#F5F5F5;overflow:hidden"><span style="display:block;width:40%;height:10px;border-radius:20px;background:#18181B"></span></span><span style="flex:0 0 auto;width:40px;text-align:right;font:400 11px 'JetBrains Mono',ui-monospace,monospace;color:#6B7280">40%</span></div>
+            <div style="display:flex;align-items:center;gap:12px"><span style="flex:1 1 auto;height:10px;border-radius:9999px;background:#F5F5F5;overflow:hidden"><span style="display:block;width:60%;height:10px;border-radius:20px;background:#18181B"></span></span><span style="flex:0 0 auto;width:40px;text-align:right;font:400 11px 'JetBrains Mono',ui-monospace,monospace;color:#6B7280">60%</span></div>
+            <div style="display:flex;align-items:center;gap:12px"><span style="flex:1 1 auto;height:10px;border-radius:9999px;background:#F5F5F5;overflow:hidden"><span style="display:block;width:80%;height:10px;border-radius:20px;background:#18181B"></span></span><span style="flex:0 0 auto;width:40px;text-align:right;font:400 11px 'JetBrains Mono',ui-monospace,monospace;color:#6B7280">80%</span></div>
+            <div style="display:flex;align-items:center;gap:12px"><span style="flex:1 1 auto;height:10px;border-radius:9999px;background:#F5F5F5;overflow:hidden"><span style="display:block;width:100%;height:10px;border-radius:20px;background:#18181B"></span></span><span style="flex:0 0 auto;width:40px;text-align:right;font:400 11px 'JetBrains Mono',ui-monospace,monospace;color:#6B7280">100%</span></div>
+          </div>
+        </div>
+
+        <div style="background:#0a0a0a;padding:clamp(20px,2.5vw,28px)">
+          <div style="display:flex;align-items:baseline;justify-content:space-between;gap:12px">
+            <span style="font:400 13px/1 'JetBrains Mono',ui-monospace,monospace;color:#faff69">Tab bar</span>
+            <span style="font:400 12px/1 'JetBrains Mono',ui-monospace,monospace;color:#888888">Item=Home of 5</span>
+          </div>
+          <div style="margin-top:18px;background:#ffffff;border-radius:8px;padding:20px;display:flex;flex-direction:column;justify-content:center;gap:12px">
+            <div style="height:60px;background:#ffffff;display:flex;justify-content:center;align-items:flex-end">
+              <span style="flex:1 1 0;display:flex;flex-direction:column;gap:2px;padding:12px 0;justify-content:center;align-items:center"><svg width="20" height="20" viewBox="0 0 21.499 21.500" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="display:block;color:#171717"><path d="M 10.75 0 C 11.616 0 12.39 0.277 13.226 0.746 C 14.035 1.201 14.964 1.871 16.131 2.715 L 17.64 3.807 C 18.576 4.484 19.325 5.024 19.889 5.524 C 20.471 6.041 20.907 6.557 21.184 7.205 C 21.461 7.855 21.527 8.52 21.49 9.288 C 21.454 10.029 21.317 10.923 21.146 12.037 L 20.83 14.089 C 20.587 15.673 20.393 16.934 20.108 17.916 C 19.814 18.932 19.399 19.739 18.658 20.355 C 17.92 20.969 17.041 21.243 15.967 21.373 C 14.922 21.5 13.603 21.5 11.938 21.5 L 9.561 21.5 C 7.896 21.5 6.578 21.5 5.533 21.373 C 4.459 21.243 3.579 20.969 2.841 20.355 C 2.1 19.739 1.685 18.932 1.391 17.916 C 1.106 16.934 0.912 15.673 0.669 14.089 L 0.354 12.037 C 0.182 10.923 0.045 10.029 0.009 9.288 C -0.028 8.52 0.039 7.855 0.316 7.205 C 0.593 6.557 1.028 6.041 1.61 5.524 C 2.174 5.024 2.923 4.484 3.859 3.807 L 5.368 2.715 C 6.535 1.871 7.464 1.201 8.273 0.746 C 9.109 0.277 9.884 0 10.75 0 Z M 10.75 1.5 C 10.233 1.5 9.716 1.656 9.008 2.054 C 8.282 2.461 7.423 3.081 6.21 3.958 L 4.771 4.999 C 3.795 5.704 3.108 6.202 2.606 6.646 C 2.117 7.081 1.853 7.424 1.695 7.794 C 1.538 8.163 1.476 8.581 1.507 9.216 C 1.538 9.869 1.664 10.686 1.843 11.85 L 2.144 13.809 C 2.397 15.457 2.577 16.621 2.831 17.499 C 3.079 18.354 3.373 18.847 3.8 19.202 C 4.23 19.56 4.789 19.771 5.714 19.884 C 6.658 19.998 7.885 20 9.611 20 L 11.889 20 C 13.615 20 14.842 19.998 15.786 19.884 C 16.711 19.771 17.27 19.56 17.699 19.202 C 18.126 18.847 18.42 18.354 18.668 17.499 C 18.922 16.621 19.102 15.457 19.355 13.809 L 19.657 11.85 C 19.836 10.686 19.961 9.869 19.992 9.216 C 20.023 8.58 19.961 8.163 19.804 7.794 C 19.646 7.424 19.382 7.081 18.893 6.646 C 18.391 6.202 17.705 5.704 16.729 4.999 L 15.289 3.958 C 14.076 3.081 13.218 2.461 12.492 2.054 C 11.784 1.656 11.267 1.5 10.75 1.5 Z M 13.289 15.158 C 13.616 14.904 14.087 14.962 14.342 15.289 C 14.596 15.616 14.537 16.087 14.21 16.342 C 13.276 17.068 12.064 17.5 10.75 17.5 C 9.436 17.5 8.223 17.068 7.289 16.342 C 6.962 16.087 6.904 15.616 7.158 15.289 C 7.413 14.963 7.883 14.904 8.21 15.158 C 8.875 15.676 9.764 16 10.75 16 C 11.736 16 12.624 15.676 13.289 15.158 Z" fill="currentColor" fill-rule="nonzero"></path></svg><span style="font-family:-apple-system,BlinkMacSystemFont,'SF Pro Text','Helvetica Neue',Arial,sans-serif;font-weight:400;font-size:10px;line-height:14px;color:#171717">Home</span></span>
+              <span style="flex:1 1 0;display:flex;flex-direction:column;gap:2px;padding:12px 0;justify-content:center;align-items:center"><svg width="20" height="20" viewBox="0 0 21.500 21.500" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="display:block;color:#ADADAD"><path d="M 11.75 0 C 17.135 0 21.5 4.365 21.5 9.75 C 21.5 15.135 17.135 19.5 11.75 19.5 C 9.327 19.5 7.113 18.614 5.408 17.151 L 1.28 21.28 C 0.987 21.573 0.513 21.573 0.22 21.28 C -0.073 20.987 -0.073 20.513 0.22 20.22 L 4.348 16.091 C 2.886 14.386 2 12.172 2 9.75 C 2 4.365 6.365 0 11.75 0 Z M 11.75 1.5 C 7.194 1.5 3.5 5.194 3.5 9.75 C 3.5 14.306 7.194 18 11.75 18 C 16.306 18 20 14.306 20 9.75 C 20 5.194 16.306 1.5 11.75 1.5 Z" fill="currentColor" fill-rule="nonzero"></path></svg><span style="font-family:-apple-system,BlinkMacSystemFont,'SF Pro Text','Helvetica Neue',Arial,sans-serif;font-weight:400;font-size:10px;line-height:14px;color:#ADADAD">Search</span></span>
+              <span style="flex:1 1 0;align-self:stretch;display:flex;padding:6px;justify-content:center;align-items:stretch"><span style="flex:1 1 auto;border-radius:12px;background:#000000;box-shadow:0 2px 8px rgba(0,0,0,.16);display:flex;flex-direction:column;gap:2px;justify-content:center;align-items:center"><svg width="20" height="20" viewBox="0 0 19.500 19.500" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="display:block;color:#ffffff"><path d="M 15.75 12 C 16.064 12 16.344 12.195 16.453 12.489 L 16.675 13.087 C 16.989 13.935 17.079 14.136 17.222 14.278 C 17.364 14.421 17.565 14.511 18.413 14.825 L 19.011 15.047 C 19.305 15.156 19.5 15.436 19.5 15.75 C 19.5 16.064 19.305 16.344 19.011 16.453 L 18.413 16.675 C 17.565 16.989 17.364 17.079 17.222 17.222 C 17.079 17.364 16.989 17.565 16.675 18.413 L 16.453 19.011 C 16.344 19.305 16.064 19.5 15.75 19.5 C 15.436 19.5 15.156 19.305 15.047 19.011 L 14.825 18.413 C 14.511 17.565 14.421 17.364 14.278 17.222 C 14.136 17.079 13.935 16.989 13.087 16.675 L 12.489 16.453 C 12.195 16.344 12 16.064 12 15.75 C 12 15.436 12.195 15.156 12.489 15.047 L 13.087 14.825 C 13.935 14.511 14.136 14.421 14.278 14.278 C 14.421 14.136 14.511 13.935 14.825 13.087 L 15.047 12.489 C 15.156 12.195 15.436 12 15.75 12 Z M 15.75 14.773 C 15.636 14.984 15.505 15.173 15.339 15.339 C 15.173 15.505 14.984 15.636 14.773 15.75 C 14.984 15.864 15.173 15.995 15.339 16.161 C 15.505 16.327 15.636 16.516 15.75 16.727 C 15.864 16.516 15.995 16.327 16.161 16.161 C 16.327 15.995 16.516 15.864 16.727 15.75 C 16.516 15.636 16.327 15.505 16.161 15.339 C 15.995 15.173 15.864 14.984 15.75 14.773 Z M 7.75 0 C 8.064 0 8.344 0.195 8.453 0.489 L 8.969 1.884 C 9.669 3.776 9.954 4.499 10.478 5.022 C 11.001 5.546 11.724 5.831 13.616 6.531 L 15.011 7.047 C 15.305 7.156 15.5 7.436 15.5 7.75 C 15.5 8.064 15.305 8.344 15.011 8.453 L 13.616 8.969 C 11.724 9.669 11.001 9.954 10.478 10.478 C 9.954 11.001 9.669 11.724 8.969 13.616 L 8.453 15.011 C 8.344 15.305 8.064 15.5 7.75 15.5 C 7.436 15.5 7.156 15.305 7.047 15.011 L 6.531 13.616 C 5.831 11.724 5.546 11.001 5.022 10.478 C 4.499 9.954 3.776 9.669 1.884 8.969 L 0.489 8.453 C 0.195 8.344 0 8.064 0 7.75 C 0 7.436 0.195 7.156 0.489 7.047 L 1.884 6.531 C 3.776 5.831 4.499 5.546 5.022 5.022 C 5.546 4.499 5.831 3.776 6.531 1.884 L 7.047 0.489 C 7.156 0.195 7.436 0 7.75 0 Z M 7.75 2.911 C 7.203 4.385 6.812 5.354 6.083 6.083 C 5.354 6.812 4.385 7.203 2.911 7.75 C 4.385 8.297 5.354 8.688 6.083 9.417 C 6.812 10.146 7.203 11.115 7.75 12.589 C 8.297 11.115 8.688 10.146 9.417 9.417 C 10.146 8.688 11.115 8.297 12.589 7.75 C 11.115 7.203 10.146 6.812 9.417 6.083 C 8.688 5.354 8.297 4.385 7.75 2.911 Z" fill="currentColor" fill-rule="nonzero"></path></svg><span style="font:400 10px/14px Outfit,sans-serif;color:#ffffff">Tools</span></span></span>
+              <span style="flex:1 1 0;display:flex;flex-direction:column;gap:2px;padding:12px 0;justify-content:center;align-items:center"><svg width="20" height="20" viewBox="0 0 20.500 22" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="display:block;color:#ADADAD"><path d="M 10.249 0 C 12.9 0 15.109 2.032 15.329 4.674 L 15.444 6.063 C 15.548 6.073 15.649 6.084 15.746 6.097 C 16.545 6.197 17.226 6.411 17.806 6.902 C 18.384 7.393 18.711 8.032 18.948 8.808 C 19.176 9.554 19.345 10.51 19.554 11.693 L 19.938 13.872 C 20.227 15.516 20.459 16.829 20.495 17.867 C 20.532 18.938 20.37 19.857 19.743 20.615 C 19.114 21.376 18.245 21.702 17.192 21.854 C 16.174 22 14.856 22 13.209 22 L 7.291 22 C 5.644 22 4.326 22 3.308 21.854 C 2.255 21.702 1.386 21.376 0.757 20.615 C 0.13 19.857 -0.032 18.938 0.005 17.867 C 0.041 16.829 0.273 15.516 0.563 13.872 L 0.946 11.693 C 1.155 10.51 1.324 9.554 1.552 8.808 C 1.789 8.032 2.116 7.393 2.694 6.902 C 3.274 6.411 3.955 6.197 4.754 6.097 C 4.851 6.085 4.951 6.073 5.054 6.063 L 5.17 4.674 C 5.39 2.032 7.598 0 10.249 0 Z M 7.718 7.5 C 6.471 7.5 5.605 7.502 4.941 7.585 C 4.3 7.666 3.939 7.814 3.664 8.047 C 3.388 8.281 3.179 8.617 2.986 9.246 C 2.788 9.895 2.634 10.759 2.415 12.002 L 2.05 14.073 C 1.747 15.79 1.536 16.999 1.504 17.92 C 1.473 18.821 1.621 19.305 1.913 19.659 C 2.204 20.011 2.645 20.242 3.521 20.368 C 4.42 20.498 5.63 20.5 7.353 20.5 L 13.147 20.5 C 14.87 20.5 16.08 20.498 16.979 20.368 C 17.855 20.242 18.296 20.011 18.587 19.659 C 18.879 19.305 19.027 18.821 18.996 17.92 C 18.964 16.999 18.753 15.79 18.45 14.073 L 18.085 12.002 C 17.866 10.759 17.712 9.895 17.514 9.246 C 17.321 8.617 17.112 8.281 16.836 8.047 C 16.561 7.814 16.2 7.666 15.559 7.585 C 14.895 7.502 14.029 7.5 12.782 7.5 L 7.718 7.5 Z M 13.318 9.003 C 13.731 9.041 14.035 9.406 13.997 9.818 C 13.826 11.676 12.141 13 10.25 13 C 8.359 13 6.674 11.676 6.503 9.818 C 6.465 9.406 6.769 9.041 7.182 9.003 C 7.594 8.965 7.959 9.269 7.997 9.682 C 8.086 10.65 9.01 11.5 10.25 11.5 C 11.49 11.5 12.414 10.65 12.503 9.682 C 12.541 9.269 12.906 8.965 13.318 9.003 Z M 10.249 1.5 C 8.378 1.5 6.82 2.935 6.665 4.799 L 6.563 6.005 C 6.908 6.001 7.276 6 7.668 6 L 12.832 6 C 13.224 6 13.591 6.001 13.935 6.005 L 13.834 4.799 C 13.679 2.934 12.12 1.5 10.249 1.5 Z" fill="currentColor" fill-rule="nonzero"></path></svg><span style="font-family:-apple-system,BlinkMacSystemFont,'SF Pro Text','Helvetica Neue',Arial,sans-serif;font-weight:400;font-size:10px;line-height:14px;color:#ADADAD">Cart</span></span>
+              <span style="flex:1 1 0;display:flex;flex-direction:column;gap:2px;padding:12px 0;justify-content:center;align-items:center"><span style="width:20px;height:20px;border-radius:100px;background:#E5E7EB"></span><span style="font-family:-apple-system,BlinkMacSystemFont,'SF Pro Text','Helvetica Neue',Arial,sans-serif;font-weight:400;font-size:10px;line-height:14px;color:#ADADAD">Profile</span></span>
+            </div>
+            <p style="font:400 12px/1.5 Inter,sans-serif;color:#6B7280;margin:0">The one raised control is the AI. Everything else stays flat, so the thing the app is for is never in doubt.</p>
+          </div>
+        </div>
+
+        <div style="background:#0a0a0a;padding:clamp(20px,2.5vw,28px)">
+          <div style="display:flex;align-items:baseline;justify-content:space-between;gap:12px">
+            <span style="font:400 13px/1 'JetBrains Mono',ui-monospace,monospace;color:#faff69">Product card</span>
+            <span style="font:400 12px/1 'JetBrains Mono',ui-monospace,monospace;color:#888888">Card=Picked</span>
+          </div>
+          <div style="margin-top:18px;background:#ffffff;border-radius:8px;padding:20px;display:flex;justify-content:center">
+            <div style="width:177px;display:flex;flex-direction:column;gap:12px">
+              <div style="display:flex;flex-direction:column;gap:8px">
+                <div style="position:relative;height:219px;border-radius:6px;overflow:hidden;background:#F0F0F0">
+                  <img src="assets/talla-ds/product-coat.jpg" alt="Oversize coat with wool" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">
+                  <span style="position:absolute;right:8px;top:8px;width:32px;height:32px;border-radius:100px;background:rgba(15,23,42,.4);display:flex;justify-content:center;align-items:center"><svg width="16" height="16" viewBox="0 0 21.499 19.500" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="display:block;color:#ffffff"><path d="M 2.895 1.105 C 5.876 -0.723 8.55 0.005 10.166 1.219 C 10.431 1.418 10.614 1.555 10.75 1.647 C 10.885 1.555 11.068 1.418 11.334 1.219 C 12.949 0.005 15.623 -0.723 18.604 1.105 C 20.666 2.37 21.825 5.011 21.418 8.045 C 21.009 11.094 19.036 14.543 14.856 17.636 C 14.821 17.662 14.787 17.688 14.752 17.714 C 13.301 18.788 12.34 19.5 10.75 19.5 C 9.16 19.5 8.198 18.788 6.747 17.714 C 6.713 17.688 6.678 17.662 6.643 17.636 C 2.463 14.543 0.49 11.094 0.081 8.045 C -0.326 5.011 0.834 2.37 2.895 1.105 Z M 10.593 1.744 C 10.59 1.745 10.59 1.745 10.594 1.743 C 10.594 1.743 10.593 1.744 10.593 1.744 Z M 10.905 1.743 C 10.909 1.745 10.91 1.745 10.906 1.744 C 10.906 1.744 10.905 1.743 10.905 1.743 Z M 9.265 2.418 C 8.068 1.519 6.062 0.922 3.679 2.384 C 2.221 3.278 1.223 5.277 1.567 7.846 C 1.91 10.399 3.597 13.516 7.535 16.431 C 9.118 17.602 9.695 18 10.75 18 C 11.804 18 12.382 17.602 13.964 16.431 C 17.902 13.516 19.589 10.399 19.932 7.846 C 20.276 5.277 19.278 3.278 17.82 2.384 C 15.438 0.922 13.431 1.519 12.234 2.418 L 12.213 2.434 C 11.943 2.637 11.711 2.811 11.525 2.933 C 11.428 2.996 11.322 3.06 11.211 3.111 C 11.105 3.158 10.943 3.218 10.75 3.218 C 10.556 3.218 10.394 3.158 10.289 3.111 C 10.178 3.06 10.071 2.996 9.974 2.933 C 9.788 2.811 9.556 2.637 9.286 2.434 L 9.265 2.418 Z" fill="currentColor" fill-rule="evenodd"></path></svg></span>
+                  <span style="position:absolute;right:8px;bottom:8px;width:32px;height:32px;border-radius:100px;background:rgba(15,23,42,.4);display:flex;justify-content:center;align-items:center"><svg width="16" height="16" viewBox="0 0 20.500 21.500" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="display:block;color:#ffffff"><path d="M 1.688 0 C 2.95 0 4.05 0.859 4.356 2.083 L 4.359 2.097 L 6.858 13.997 L 13.514 13.997 C 14.559 13.997 15.328 13.832 15.911 13.562 C 16.485 13.295 16.917 12.908 17.266 12.399 C 17.997 11.332 18.353 9.765 18.775 7.668 C 18.899 7.054 18.975 6.666 18.995 6.381 C 19.004 6.246 18.998 6.169 18.989 6.126 C 18.983 6.097 18.978 6.087 18.976 6.084 C 18.969 6.08 18.949 6.069 18.904 6.058 C 18.783 6.026 18.587 6.006 18.236 6 C 17.822 5.992 17.492 5.65 17.5 5.236 C 17.508 4.822 17.85 4.492 18.264 4.5 C 18.62 4.507 18.976 4.525 19.287 4.607 C 19.628 4.697 19.949 4.872 20.188 5.201 C 20.483 5.606 20.521 6.064 20.492 6.483 C 20.465 6.879 20.367 7.364 20.256 7.917 L 20.246 7.964 C 19.841 9.978 19.441 11.877 18.503 13.247 C 18.017 13.957 17.384 14.531 16.543 14.922 C 15.71 15.308 14.711 15.497 13.514 15.497 L 7.188 15.497 C 7.169 15.499 7.149 15.5 7.13 15.5 L 6.719 15.5 C 5.896 15.5 5.171 16.128 5.026 17 L 15.75 17 C 16.993 17 18 18.007 18 19.25 C 18 20.493 16.993 21.5 15.75 21.5 C 14.507 21.5 13.5 20.493 13.5 19.25 C 13.5 18.987 13.548 18.735 13.631 18.5 L 10.869 18.5 C 10.952 18.735 11 18.987 11 19.25 C 11 20.493 9.993 21.5 8.75 21.5 C 7.507 21.5 6.5 20.493 6.5 19.25 C 6.5 18.987 6.548 18.735 6.631 18.5 L 4.661 18.5 C 3.991 18.5 3.5 17.943 3.5 17.321 C 3.5 15.993 4.264 14.821 5.388 14.295 L 2.898 2.435 C 2.755 1.885 2.258 1.5 1.688 1.5 L 0.75 1.5 C 0.336 1.5 0 1.164 0 0.75 C 0 0.336 0.336 0 0.75 0 L 1.688 0 Z M 8.75 18.5 C 8.336 18.5 8 18.836 8 19.25 C 8 19.664 8.336 20 8.75 20 C 9.164 20 9.5 19.664 9.5 19.25 C 9.5 18.836 9.164 18.5 8.75 18.5 Z M 15.75 18.5 C 15.336 18.5 15 18.836 15 19.25 C 15 19.664 15.336 20 15.75 20 C 16.164 20 16.5 19.664 16.5 19.25 C 16.5 18.836 16.164 18.5 15.75 18.5 Z M 11.25 0.5 C 11.664 0.5 12 0.836 12 1.25 L 12 4.5 L 15.25 4.5 C 15.664 4.5 16 4.836 16 5.25 C 16 5.664 15.664 6 15.25 6 L 12 6 L 12 9.25 C 12 9.664 11.664 10 11.25 10 C 10.836 10 10.5 9.664 10.5 9.25 L 10.5 6 L 7.25 6 C 6.836 6 6.5 5.664 6.5 5.25 C 6.5 4.836 6.836 4.5 7.25 4.5 L 10.5 4.5 L 10.5 1.25 C 10.5 0.836 10.836 0.5 11.25 0.5 Z" fill="currentColor" fill-rule="nonzero"></path></svg></span>
+                </div>
+                <div style="display:flex;flex-direction:column">
+                  <span style="font-family:-apple-system,BlinkMacSystemFont,'SF Pro Text','Helvetica Neue',Arial,sans-serif;font-weight:400;font-size:12px;line-height:16px;letter-spacing:.003em;color:#6B7280">Oversize Coat With Wool</span>
+                  <span style="font:400 14px/20px Outfit,sans-serif;color:#000000">7700 EGP</span>
+                </div>
+              </div>
+              <div style="height:32px;border-radius:2px;background:#0F172A;display:flex;gap:6px;padding:8px 24px;justify-content:center;align-items:center">
+                <span style="font-family:-apple-system,BlinkMacSystemFont,'SF Pro Text','Helvetica Neue',Arial,sans-serif;font-weight:500;font-size:14px;line-height:20px;letter-spacing:.25px;color:#ffffff">Add To Cart</span>
+                <svg width="16" height="16" viewBox="0 0 13.667 14.667" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="display:block;color:#ffffff"><path d="M 6.833 0 C 8.601 0 10.073 1.355 10.22 3.116 L 10.296 4.046 C 10.365 4.052 10.433 4.056 10.497 4.064 C 11.031 4.131 11.485 4.275 11.872 4.603 C 12.257 4.93 12.474 5.355 12.632 5.872 C 12.784 6.37 12.897 7.007 13.036 7.796 L 13.292 9.248 C 13.486 10.344 13.639 11.22 13.663 11.912 C 13.688 12.626 13.581 13.238 13.163 13.744 C 12.743 14.251 12.164 14.468 11.462 14.569 C 10.784 14.667 9.904 14.667 8.806 14.667 L 4.861 14.667 C 3.763 14.667 2.884 14.667 2.205 14.569 C 1.504 14.468 0.924 14.251 0.505 13.744 C 0.087 13.238 -0.022 12.626 0.003 11.912 C 0.027 11.22 0.182 10.344 0.375 9.248 L 0.631 7.796 C 0.77 7.007 0.883 6.37 1.036 5.872 C 1.194 5.355 1.411 4.93 1.796 4.603 C 2.183 4.275 2.637 4.131 3.17 4.064 C 3.235 4.056 3.301 4.052 3.37 4.046 L 3.447 3.116 C 3.593 1.355 5.066 0 6.833 0 Z M 5.145 5 C 4.314 5 3.736 5.001 3.294 5.057 C 2.867 5.11 2.626 5.21 2.443 5.365 C 2.259 5.521 2.12 5.745 1.992 6.164 C 1.859 6.596 1.757 7.173 1.611 8.002 L 1.368 9.383 C 1.166 10.527 1.025 11.333 1.003 11.947 C 0.982 12.548 1.081 12.871 1.276 13.106 C 1.47 13.341 1.764 13.495 2.348 13.579 C 2.947 13.665 3.754 13.667 4.902 13.667 L 8.766 13.667 C 9.914 13.667 10.721 13.665 11.32 13.579 C 11.904 13.495 12.198 13.341 12.392 13.106 C 12.587 12.871 12.685 12.547 12.664 11.947 C 12.643 11.333 12.502 10.527 12.3 9.383 L 12.057 8.002 C 11.911 7.173 11.808 6.596 11.676 6.164 C 11.548 5.745 11.408 5.521 11.224 5.365 C 11.041 5.21 10.8 5.11 10.372 5.057 C 9.93 5.001 9.353 5 8.522 5 L 5.145 5 Z M 8.879 6.002 C 9.154 6.027 9.357 6.271 9.331 6.546 C 9.217 7.784 8.094 8.667 6.833 8.667 C 5.573 8.667 4.45 7.784 4.336 6.546 C 4.311 6.271 4.513 6.027 4.788 6.002 C 5.062 5.977 5.306 6.179 5.331 6.454 C 5.391 7.1 6.007 7.667 6.833 7.667 C 7.66 7.667 8.277 7.1 8.336 6.454 C 8.362 6.179 8.605 5.977 8.879 6.002 Z M 6.833 1 C 5.586 1 4.547 1.956 4.444 3.199 L 4.375 4.006 C 4.605 4.004 4.85 4 5.112 4 L 8.555 4 C 8.816 4 9.061 4.004 9.29 4.006 L 9.223 3.199 C 9.119 1.956 8.081 1 6.833 1 Z" fill="currentColor" fill-rule="evenodd"></path></svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div style="margin-top:40px;border:1px solid #2a2a2a;border-radius:12px;background:#121212;padding:clamp(24px,3.5vw,40px)">
+      <div style="display:flex;align-items:baseline;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-bottom:28px">
+        <h3 style="font:600 18px/1.4 Inter,sans-serif;color:#ffffff">Onboarding — six questions, then it starts working</h3>
+        <p style="font:400 14px/1.5 Inter,sans-serif;color:#888888;max-width:44ch">Every step is skippable and the progress bar never lies about how much is left. Answers narrow the first generation; none of them block it.</p>
+      </div>
+      <div style="display:flex;gap:clamp(16px,2.5vw,28px);overflow-x:auto;padding-bottom:8px">
+        <figure style="margin:0;flex:0 0 auto;width:clamp(180px,20vw,224px)">
+          <div style="position:relative;aspect-ratio:393/852;border-radius:12.72% / 5.87%;overflow:hidden;background:#ffffff;border:1px solid #2a2a2a">
+            <img src="uploads/Onboarding - Both - Gender-5c577b70.png" alt="Talla onboarding step 1/6 — Who are you shopping for?" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block">
+          </div>
+          <figcaption style="margin-top:16px">
+            <span style="display:block;font:400 13px/1.5 'JetBrains Mono',ui-monospace,monospace;color:#faff69">1/6</span>
+            <span style="display:block;font:400 14px/1.5 Inter,sans-serif;color:#888888;margin-top:4px">Who are you shopping for?</span>
+          </figcaption>
+        </figure>
+        <figure style="margin:0;flex:0 0 auto;width:clamp(180px,20vw,224px)">
+          <div style="position:relative;aspect-ratio:393/852;border-radius:12.72% / 5.87%;overflow:hidden;background:#ffffff;border:1px solid #2a2a2a">
+            <img src="uploads/Onboarding - Women - Lifestyle-74ae8da4.png" alt="Talla onboarding step 3/6 — What are you shopping for today?" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block">
+          </div>
+          <figcaption style="margin-top:16px">
+            <span style="display:block;font:400 13px/1.5 'JetBrains Mono',ui-monospace,monospace;color:#faff69">3/6</span>
+            <span style="display:block;font:400 14px/1.5 Inter,sans-serif;color:#888888;margin-top:4px">What are you shopping for today?</span>
+          </figcaption>
+        </figure>
+        <figure style="margin:0;flex:0 0 auto;width:clamp(180px,20vw,224px)">
+          <div style="position:relative;aspect-ratio:393/852;border-radius:12.72% / 5.87%;overflow:hidden;background:#ffffff;border:1px solid #2a2a2a">
+            <img src="uploads/Onboarding - Women - Style-706f1275.png" alt="Talla onboarding step 4/6 — Which styles feel most like you?" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block">
+          </div>
+          <figcaption style="margin-top:16px">
+            <span style="display:block;font:400 13px/1.5 'JetBrains Mono',ui-monospace,monospace;color:#faff69">4/6</span>
+            <span style="display:block;font:400 14px/1.5 Inter,sans-serif;color:#888888;margin-top:4px">Which styles feel most like you?</span>
+          </figcaption>
+        </figure>
+        <figure style="margin:0;flex:0 0 auto;width:clamp(180px,20vw,224px)">
+          <div style="position:relative;aspect-ratio:393/852;border-radius:12.72% / 5.87%;overflow:hidden;background:#ffffff;border:1px solid #2a2a2a">
+            <img src="uploads/Onboarding - Women - Color-3df81e15.png" alt="Talla onboarding step 5/6 — What colors do you wear the most?" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block">
+          </div>
+          <figcaption style="margin-top:16px">
+            <span style="display:block;font:400 13px/1.5 'JetBrains Mono',ui-monospace,monospace;color:#faff69">5/6</span>
+            <span style="display:block;font:400 14px/1.5 Inter,sans-serif;color:#888888;margin-top:4px">What colors do you wear the most?</span>
+          </figcaption>
+        </figure>
+        <figure style="margin:0;flex:0 0 auto;width:clamp(180px,20vw,224px)">
+          <div style="position:relative;aspect-ratio:393/852;border-radius:12.72% / 5.87%;overflow:hidden;background:#ffffff;border:1px solid #2a2a2a">
+            <img src="uploads/Onboarding - Women - Bodyshape-0d2e8b59.png" alt="Talla onboarding step 6/6 — What's your body shape?" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block">
+          </div>
+          <figcaption style="margin-top:16px">
+            <span style="display:block;font:400 13px/1.5 'JetBrains Mono',ui-monospace,monospace;color:#faff69">6/6</span>
+            <span style="display:block;font:400 14px/1.5 Inter,sans-serif;color:#888888;margin-top:4px">What's your body shape?</span>
+          </figcaption>
+        </figure>
+        <figure style="margin:0;flex:0 0 auto;width:clamp(180px,20vw,224px)">
+          <div style="position:relative;aspect-ratio:393/852;border-radius:12.72% / 5.87%;overflow:hidden;background:#ffffff;border:1px solid #2a2a2a">
+            <img src="uploads/Onboarding - Men - Last screen.png" alt="Talla onboarding — Ready to upgrade your style?" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block">
+          </div>
+          <figcaption style="margin-top:16px">
+            <span style="display:block;font:400 13px/1.5 'JetBrains Mono',ui-monospace,monospace;color:#faff69">End</span>
+            <span style="display:block;font:400 14px/1.5 Inter,sans-serif;color:#888888;margin-top:4px">Ready to upgrade your style?</span>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section style="max-width:1280px;margin:0 auto;padding:clamp(64px,8vw,96px) 24px 0">
+    <p style="font:600 12px/1.4 Inter,sans-serif;letter-spacing:1.5px;text-transform:uppercase;color:#faff69">08 · What I would test next</p>
+    <h2 style="font:700 clamp(26px,3.2vw,32px)/1.2 Inter,sans-serif;letter-spacing:-1px;color:#ffffff;margin-top:20px;max-width:26ch">Three hypotheses I have not proven yet.</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(280px,100%),1fr));gap:24px;margin-top:40px">
+      <div style="background:#1a1a1a;border:1px solid #2a2a2a;border-radius:12px;padding:32px">
+        <div style="font:400 13px/1 'JetBrains Mono',ui-monospace,monospace;color:#faff69;margin-bottom:20px">H1</div>
+        <p style="font:600 18px/1.4 Inter,sans-serif;color:#ffffff">Answer first beats questions first.</p>
+        <p style="font:400 15px/1.55 Inter,sans-serif;color:#888888;margin-top:12px">Test: unmoderated task in Maze, both versions, measuring time to a decided outfit and drop-off before the first suggestion.</p>
+      </div>
+      <div style="background:#1a1a1a;border:1px solid #2a2a2a;border-radius:12px;padding:32px">
+        <div style="font:400 13px/1 'JetBrains Mono',ui-monospace,monospace;color:#faff69;margin-bottom:20px">H2</div>
+        <p style="font:600 18px/1.4 Inter,sans-serif;color:#ffffff">People will correct a wrong suggestion rather than abandon it.</p>
+        <p style="font:400 15px/1.55 Inter,sans-serif;color:#888888;margin-top:12px">Test: seed a deliberately poor first suggestion and watch whether people adjust, reroll, or leave.</p>
+      </div>
+      <div style="background:#1a1a1a;border:1px solid #2a2a2a;border-radius:12px;padding:32px">
+        <div style="font:400 13px/1 'JetBrains Mono',ui-monospace,monospace;color:#faff69;margin-bottom:20px">H3</div>
+        <p style="font:600 18px/1.4 Inter,sans-serif;color:#ffffff">The ending is what brings people back.</p>
+        <p style="font:400 15px/1.55 Inter,sans-serif;color:#888888;margin-top:12px">Test: a short diary study over two weeks, tracking whether sessions that reached a decision predict a return.</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="max-width:1280px;margin:0 auto;padding:clamp(64px,8vw,96px) 24px 0">
+    <div style="background:#faff69;border-radius:12px;padding:clamp(32px,5vw,64px);display:flex;flex-wrap:wrap;gap:32px;align-items:flex-end;justify-content:space-between">
+      <div style="flex:1 1 420px;max-width:30ch">
+        <p style="font:600 12px/1.4 Inter,sans-serif;letter-spacing:1.5px;text-transform:uppercase;color:#0a0a0a;opacity:.6">Contact</p>
+        <h2 style="font:700 clamp(28px,4vw,40px)/1.15 Inter,sans-serif;letter-spacing:-1.5px;color:#0a0a0a;margin-top:20px">Tell me what you are trying to get people through.</h2>
+        <p style="font:400 16px/1.55 Inter,sans-serif;color:#0a0a0a;opacity:.78;margin-top:16px;max-width:40ch">Product or UX Designer roles. Remote, hybrid, or on site, open to relocation.</p>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center">
+        <a href="mailto:sarahhammad776@gmail.com" style="display:inline-flex;align-items:center;height:44px;padding:0 22px;border-radius:8px;background:#0a0a0a;color:#faff69;font:600 14px/1 Inter,sans-serif;text-decoration:none;transition:opacity .18s ease" style-hover="opacity:.85;color:#faff69">Contact me</a>
+        <a href="https://www.linkedin.com/in/sarah-hammad-b96a1a1a3/" target="_blank" rel="noreferrer noopener" style="display:inline-flex;align-items:center;height:44px;padding:0 22px;border-radius:8px;border:1px solid rgba(10,10,10,.3);color:#0a0a0a;font:600 14px/1 Inter,sans-serif;text-decoration:none;transition:background .18s ease" style-hover="background:rgba(10,10,10,.08);color:#0a0a0a">LinkedIn</a>
+        <a href="https://wa.me/201551327861" target="_blank" rel="noreferrer noopener" style="display:inline-flex;align-items:center;height:44px;padding:0 22px;border-radius:8px;border:1px solid rgba(10,10,10,.3);color:#0a0a0a;font:600 14px/1 Inter,sans-serif;text-decoration:none;transition:background .18s ease" style-hover="background:rgba(10,10,10,.08);color:#0a0a0a">WhatsApp</a>
+        <a href="https://drive.google.com/file/d/1tpr-YDaQdTnKyH2I2g_evaOG6aWZM1VG/view" target="_blank" rel="noreferrer noopener" style="display:inline-flex;align-items:center;height:44px;padding:0 22px;border-radius:8px;border:1px solid rgba(10,10,10,.3);color:#0a0a0a;font:600 14px/1 Inter,sans-serif;text-decoration:none;transition:background .18s ease" style-hover="background:rgba(10,10,10,.08);color:#0a0a0a">Preview CV</a>
+      </div>
+    </div>
+  </section>
+  <div style="max-width:1280px;margin:0 auto;padding:0 24px 24px">
+    <button onClick="{{ goCare }}" style="background:none;border:0;padding:0;cursor:pointer;font:500 15px/1.4 Inter,sans-serif;color:#888888;transition:color .18s ease" style-hover="color:#faff69">Read CareNest next →</button>
+  </div>
+</article>
+</sc-if>
+
+<sc-if value="{{ isCare }}" hint-placeholder-val="{{ false }}">
+<article data-screen-label="Case study — CareNest">
+  <section style="max-width:1280px;margin:0 auto;padding:clamp(40px,6vw,72px) 24px 0">
+    <button onClick="{{ goHome }}" style="background:none;border:0;padding:0;cursor:pointer;font:500 14px/1.4 Inter,sans-serif;color:#888888;transition:color .18s ease" style-hover="color:#ffffff">← All work</button>
+    <p style="font:600 12px/1.4 Inter,sans-serif;letter-spacing:1.5px;text-transform:uppercase;color:#888888;margin-top:40px">Selected work 02 · CareNest</p>
+    <h1 style="font:700 clamp(34px,5.6vw,56px)/1.1 Inter,sans-serif;letter-spacing:-2px;color:#ffffff;margin-top:20px;max-width:18ch">Helping families find trusted childcare</h1>
+    <p style="font:400 clamp(17px,2vw,20px)/1.55 Inter,sans-serif;color:#cccccc;margin-top:20px;max-width:60ch">CareNest is a childcare marketplace that simplifies finding, comparing, and booking verified babysitters through a transparent, trustworthy, and localized experience.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:28px">
+      <span style="font:500 13px/1.4 Inter,sans-serif;color:#ffffff;background:#1a1a1a;border:1px solid #2a2a2a;border-radius:9999px;padding:5px 14px">Web and mobile</span>
+      <span style="font:500 13px/1.4 Inter,sans-serif;color:#ffffff;background:#1a1a1a;border:1px solid #2a2a2a;border-radius:9999px;padding:5px 14px">Supported LTR and RTL</span>
+      <span style="font:500 13px/1.4 Inter,sans-serif;color:#ffffff;background:#1a1a1a;border:1px solid #2a2a2a;border-radius:9999px;padding:5px 14px">{{ careContext }}</span>
+    </div>
+    <div style="margin-top:48px;border-radius:12px;overflow:hidden;border:1px solid #2a2a2a;background:#f8f6f2">
+      <img src="assets/carenest-arabic-hero.png" alt="CareNest booking screen in Arabic, right to left" style="display:block;width:100%;height:auto">
+    </div>
+  </section>
+
+  <section style="max-width:1280px;margin:0 auto;padding:clamp(48px,6vw,72px) 24px 0">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(220px,100%),1fr));gap:1px;background:#2a2a2a;border:1px solid #2a2a2a;border-radius:12px;overflow:hidden">
+      <div style="background:#0a0a0a;padding:28px">
+        <p style="font:600 12px/1.4 Inter,sans-serif;letter-spacing:1.5px;text-transform:uppercase;color:#888888">Role</p>
+        <p style="font:600 16px/1.4 Inter,sans-serif;color:#ffffff;margin-top:10px">Product &amp; UX Designer</p>
+        <p style="font:400 14px/1.55 Inter,sans-serif;color:#888888;margin-top:4px">Research through handoff</p>
+      </div>
+      <div style="background:#0a0a0a;padding:28px">
+        <p style="font:600 12px/1.4 Inter,sans-serif;letter-spacing:1.5px;text-transform:uppercase;color:#888888">Timeline</p>
+        <p style="font:600 16px/1.4 Inter,sans-serif;color:#ffffff;margin-top:10px">{{ careTimeline }}</p>
+        <p style="font:400 14px/1.55 Inter,sans-serif;color:#888888;margin-top:4px">Complete</p>
+      </div>
+      <div style="background:#0a0a0a;padding:28px">
+        <p style="font:600 12px/1.4 Inter,sans-serif;letter-spacing:1.5px;text-transform:uppercase;color:#888888">Tools</p>
+        <p style="font:600 16px/1.4 Inter,sans-serif;color:#ffffff;margin-top:10px">Figma · FigJam</p>
+        <p style="font:400 14px/1.55 Inter,sans-serif;color:#888888;margin-top:4px">Annotated specs and tokens</p>
+      </div>
+      <div style="background:#0a0a0a;padding:28px">
+        <p style="font:600 12px/1.4 Inter,sans-serif;letter-spacing:1.5px;text-transform:uppercase;color:#888888">Standard</p>
+        <p style="font:600 16px/1.4 Inter,sans-serif;color:#ffffff;margin-top:10px">WCAG 2.1 AA</p>
+        <p style="font:400 14px/1.55 Inter,sans-serif;color:#888888;margin-top:4px">Designed to, and checked</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="max-width:1280px;margin:0 auto;padding:clamp(64px,8vw,96px) 24px 0">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:clamp(32px,5vw,64px)">
+      <div>
+        <p style="font:600 12px/1.4 Inter,sans-serif;letter-spacing:1.5px;text-transform:uppercase;color:#faff69">03 · The problem</p>
+        <h2 style="font:700 clamp(26px,3.2vw,32px)/1.2 Inter,sans-serif;letter-spacing:-1px;color:#ffffff;margin-top:20px;max-width:22ch">Childcare is built on trust, but trust is hard to verify.</h2>
+        <p style="font:400 16px/1.55 Inter,sans-serif;color:#cccccc;margin-top:20px;max-width:58ch">Parents rely on recommendations, scattered information, and manual communication before making one of their most important decisions.</p>
+        <p style="font:400 16px/1.55 Inter,sans-serif;color:#cccccc;margin-top:16px;max-width:58ch">CareNest puts that information on the first screen and makes the slot itself the thing you tap.</p>
+      </div>
+      <div>
+        <p style="font:600 12px/1.4 Inter,sans-serif;letter-spacing:1.5px;text-transform:uppercase;color:#faff69">04 · Who it is for</p>
+        <h2 style="font:700 clamp(26px,3.2vw,32px)/1.2 Inter,sans-serif;letter-spacing:-1px;color:#ffffff;margin-top:20px;max-width:22ch">Designed for busy families.</h2>
+        <p style="font:400 16px/1.55 Inter,sans-serif;color:#cccccc;margin-top:20px;max-width:58ch">Working parents and single parents who need a faster, safer, and more transparent way to find childcare.</p>
+        <p style="font:400 16px/1.55 Inter,sans-serif;color:#cccccc;margin-top:16px;max-width:58ch">This is why CareNest puts trust first through verified profiles, transparent pricing, and simple booking.</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="max-width:1280px;margin:0 auto;padding:clamp(64px,8vw,96px) 24px 0">
+    <div style="background:#faff69;border-radius:12px;padding:clamp(32px,5vw,64px)">
+      <p style="font:600 12px/1.4 Inter,sans-serif;letter-spacing:1.5px;text-transform:uppercase;color:#0a0a0a;opacity:.6">The part worth your attention</p>
+      <h2 style="font:700 clamp(28px,4vw,40px)/1.15 Inter,sans-serif;letter-spacing:-1.5px;color:#0a0a0a;margin-top:20px;max-width:20ch">Arabic, right to left, built to WCAG 2.1 AA.</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr));gap:32px;margin-top:40px">
+        <div>
+          <h3 style="font:600 18px/1.4 Inter,sans-serif;color:#0a0a0a">RTL is not a mirror</h3>
+          <p style="font:400 16px/1.55 Inter,sans-serif;color:#0a0a0a;opacity:.78;margin-top:12px">Direction flips, but progress indicators, time ranges and numerals do not all flip with it. Each one was decided deliberately rather than left to the layout engine.</p>
+        </div>
+        <div>
+          <h3 style="font:600 18px/1.4 Inter,sans-serif;color:#0a0a0a">Contrast and targets, checked</h3>
+          <p style="font:400 16px/1.55 Inter,sans-serif;color:#0a0a0a;opacity:.78;margin-top:12px">Text contrast, focus order, target size and error messaging were designed against AA and verified, not assumed. The rules are written into the component specs.</p>
+        </div>
+        <div>
+          <h3 style="font:600 18px/1.4 Inter,sans-serif;color:#0a0a0a">Two scripts, one system</h3>
+          <p style="font:400 16px/1.55 Inter,sans-serif;color:#0a0a0a;opacity:.78;margin-top:12px">Arabic and English share one component library. Line heights and spacing tokens carry values for both scripts so neither reads like an afterthought.</p>
+        </div>
+      </div>
+    </div>
+    <figure style="margin:24px 0 0">
+      <div style="border-radius:12px;overflow:hidden;border:1px solid #2a2a2a;background:#1a1a1a">
+        <div style="display:flex;align-items:center;gap:8px;padding:12px 16px;border-bottom:1px solid #2a2a2a">
+          <span style="width:9px;height:9px;border-radius:9999px;background:#3a3a3a;display:block"></span>
+          <span style="width:9px;height:9px;border-radius:9999px;background:#3a3a3a;display:block"></span>
+          <span style="width:9px;height:9px;border-radius:9999px;background:#3a3a3a;display:block"></span>
+          <span style="font:400 12px/1 'JetBrains Mono',ui-monospace,monospace;color:#888888;margin-left:8px">carenest — landing page</span>
+        </div>
+        <div style="height:min(70vh,620px);overflow-y:auto;background:#ffffff">
+          <img src="assets/carenest-site-full.png" alt="Full CareNest landing page, top to bottom" style="display:block;width:100%;height:auto">
+        </div>
+      </div>
+      <figcaption style="font:400 14px/1.5 Inter,sans-serif;color:#888888;margin-top:12px">Scroll inside the frame for the full landing page — hero, trust bar, how it works, nanny results, family stories and booking.</figcaption>
+    </figure>
+  </section>
+
+  <section style="max-width:1280px;margin:0 auto;padding:clamp(64px,8vw,96px) 24px 0">
+    <sc-if value="{{ showDrafts }}" hint-placeholder-val="{{ false }}">
+      
+    </sc-if>
+    <p style="font:600 12px/1.4 Inter,sans-serif;letter-spacing:1.5px;text-transform:uppercase;color:#faff69">06 · Key decisions</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr));gap:24px;margin-top:32px">
+      <figure style="background:#1a1a1a;border:1px solid #2a2a2a;border-radius:12px;padding:24px">
+        <span style="display:inline-block;font:500 13px/1.4 Inter,sans-serif;color:#888888;background:#242424;border-radius:9999px;padding:4px 12px">Before</span>
+        <div style="margin-top:20px;border-radius:8px;overflow:hidden;background:#ffffff;aspect-ratio:4/3">
+          <img src="assets/carenest-search.png" alt="Before — the search-first CareNest results view with filters" style="display:block;width:100%;height:100%;object-fit:cover;object-position:top left">
+        </div>
+        <figcaption style="font:400 15px/1.55 Inter,sans-serif;color:#cccccc;margin-top:20px">Parents had to browse multiple caregiver profiles before knowing if someone was available in their area.</figcaption>
+      </figure>
+      <figure style="background:#1a1a1a;border:1px solid #2a2a2a;border-radius:12px;padding:24px">
+        <span style="display:inline-block;font:600 12px/1.4 Inter,sans-serif;letter-spacing:1.5px;text-transform:uppercase;color:#0a0a0a;background:#faff69;border-radius:9999px;padding:4px 12px">After</span>
+        <div style="margin-top:20px;border-radius:8px;overflow:hidden;background:#ffffff;aspect-ratio:4/3">
+          <img src="assets/carenest-site-full.png" alt="After — availability-first CareNest landing page" style="display:block;width:100%;height:100%;object-fit:cover;object-position:top">
+        </div>
+        <figcaption style="font:400 15px/1.55 Inter,sans-serif;color:#cccccc;margin-top:20px">Users can begin their search immediately, reducing time to first meaningful action.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section style="max-width:1280px;margin:0 auto;padding:clamp(64px,8vw,96px) 24px 0">
+    <p style="font:600 12px/1.4 Inter,sans-serif;letter-spacing:1.5px;text-transform:uppercase;color:#faff69">07 · Flows and design system</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr));gap:clamp(24px,4vw,48px);align-items:start;margin-top:20px">
+      <div>
+        <h2 style="font:700 clamp(26px,3.2vw,32px)/1.2 Inter,sans-serif;letter-spacing:-1px;color:#ffffff;max-width:22ch">Annotated specs and tokens, handed over.</h2>
+        <p style="font:400 16px/1.55 Inter,sans-serif;color:#cccccc;margin-top:20px;max-width:56ch">The library is the deliverable, not a by-product of it. Each component carries its states, its spacing tokens and its accessibility rules in the same place a developer would look for them.</p>
+        <ul style="display:flex;flex-direction:column;gap:12px;margin-top:24px">
+          <li style="font:400 15px/1.55 Inter,sans-serif;color:#cccccc;display:flex;gap:12px"><span style="color:#faff69">·</span><span>Tokens for colour, type, spacing and radius, mirrored across both scripts.</span></li>
+          <li style="font:400 15px/1.55 Inter,sans-serif;color:#cccccc;display:flex;gap:12px"><span style="color:#faff69">·</span><span>Annotations covering focus order, target size and error text.</span></li>
+          <li style="font:400 15px/1.55 Inter,sans-serif;color:#cccccc;display:flex;gap:12px"><span style="color:#faff69">·</span><span>Every state documented — default, active, disabled, error, empty.</span></li>
+        </ul>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:16px">
+        <figure style="margin:0;border-radius:12px;overflow:hidden;border:1px solid #2a2a2a;background:#ffffff">
+          <div style="height:min(60vh,520px);overflow-y:auto">
+            <img src="assets/carenest-tokens-typography.png" alt="Typography token documentation — 46 text styles across headings, body, labels and component groups" style="display:block;width:100%;height:auto">
+          </div>
+        </figure>
+        <figure style="margin:0;border-radius:12px;overflow:hidden;border:1px solid #2a2a2a;background:#ffffff">
+          <img src="assets/carenest-tokens-spacing.png" alt="Spacing token documentation — 13 values from 2px to 120px" style="display:block;width:100%;height:auto">
+        </figure>
+        <figure style="margin:0;border-radius:12px;overflow:hidden;border:1px solid #2a2a2a;background:#ffffff">
+          <img src="assets/carenest-tokens-radius.png" alt="Border radius token documentation — 7 values from none to full" style="display:block;width:100%;height:auto">
+        </figure>
+        <figure style="margin:0;border-radius:12px;overflow:hidden;border:1px solid #2a2a2a;background:#ffffff">
+          <img src="assets/carenest-tokens-elevation.png" alt="Elevation token documentation — 6 shadow levels" style="display:block;width:100%;height:auto">
+        </figure>
+        <p style="font:400 14px/1.5 Inter,sans-serif;color:#888888">Typography, spacing, radius and elevation, documented as tokens and bound to variables. Scroll the type sheet for all 46 styles.</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="max-width:1280px;margin:0 auto;padding:clamp(64px,8vw,96px) 24px 0">
+    <p style="font:600 12px/1.4 Inter,sans-serif;letter-spacing:1.5px;text-transform:uppercase;color:#faff69">08 · What I would test next</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(280px,100%),1fr));gap:24px;margin-top:32px">
+      <div style="background:#1a1a1a;border:1px solid #2a2a2a;border-radius:12px;padding:32px">
+        <div style="font:400 13px/1 'JetBrains Mono',ui-monospace,monospace;color:#faff69;margin-bottom:20px">H1</div>
+        <p style="font:600 18px/1.4 Inter,sans-serif;color:#ffffff">Would AI-recommended caregivers outperform manual browsing?</p>
+        <p style="font:400 15px/1.55 Inter,sans-serif;color:#888888;margin-top:12px">A/B testing comparing the current search flow against an AI-powered recommendation flow to measure which leads to more completed bookings.</p>
+      </div>
+      <div style="background:#1a1a1a;border:1px solid #2a2a2a;border-radius:12px;padding:32px">
+        <div style="font:400 13px/1 'JetBrains Mono',ui-monospace,monospace;color:#faff69;margin-bottom:20px">H2</div>
+        <p style="font:600 18px/1.4 Inter,sans-serif;color:#ffffff">If parents finding the information they need directly from caregiver cards</p>
+        <p style="font:400 15px/1.55 Inter,sans-serif;color:#888888;margin-top:12px">First-click testing to evaluate whether users can confidently select a caregiver without opening multiple profiles</p>
+      </div>
+      <div style="background:#1a1a1a;border:1px solid #2a2a2a;border-radius:12px;padding:32px">
+        <div style="font:400 13px/1 'JetBrains Mono',ui-monospace,monospace;color:#faff69;margin-bottom:20px">H3</div>
+        <p style="font:600 18px/1.4 Inter,sans-serif;color:#ffffff">If parents complete a booking without confusion</p>
+        <p style="font:400 15px/1.55 Inter,sans-serif;color:#888888;margin-top:12px">Prototype usability testing using a high-fidelity Figma prototype to identify friction points before development.</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="max-width:1280px;margin:0 auto;padding:clamp(64px,8vw,96px) 24px 0">
+    <div style="background:#faff69;border-radius:12px;padding:clamp(32px,5vw,64px);display:flex;flex-wrap:wrap;gap:32px;align-items:flex-end;justify-content:space-between">
+      <div style="flex:1 1 420px;max-width:30ch">
+        <p style="font:600 12px/1.4 Inter,sans-serif;letter-spacing:1.5px;text-transform:uppercase;color:#0a0a0a;opacity:.6">Contact</p>
+        <h2 style="font:700 clamp(28px,4vw,40px)/1.15 Inter,sans-serif;letter-spacing:-1.5px;color:#0a0a0a;margin-top:20px">Tell me what you are trying to get people through.</h2>
+        <p style="font:400 16px/1.55 Inter,sans-serif;color:#0a0a0a;opacity:.78;margin-top:16px;max-width:40ch">Product or UX Designer roles. Remote, hybrid, or on site, open to relocation.</p>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center">
+        <a href="mailto:sarahhammad776@gmail.com" style="display:inline-flex;align-items:center;height:44px;padding:0 22px;border-radius:8px;background:#0a0a0a;color:#faff69;font:600 14px/1 Inter,sans-serif;text-decoration:none;transition:opacity .18s ease" style-hover="opacity:.85;color:#faff69">Contact me</a>
+        <a href="https://www.linkedin.com/in/sarah-hammad-b96a1a1a3/" target="_blank" rel="noreferrer noopener" style="display:inline-flex;align-items:center;height:44px;padding:0 22px;border-radius:8px;border:1px solid rgba(10,10,10,.3);color:#0a0a0a;font:600 14px/1 Inter,sans-serif;text-decoration:none;transition:background .18s ease" style-hover="background:rgba(10,10,10,.08);color:#0a0a0a">LinkedIn</a>
+        <a href="https://wa.me/201551327861" target="_blank" rel="noreferrer noopener" style="display:inline-flex;align-items:center;height:44px;padding:0 22px;border-radius:8px;border:1px solid rgba(10,10,10,.3);color:#0a0a0a;font:600 14px/1 Inter,sans-serif;text-decoration:none;transition:background .18s ease" style-hover="background:rgba(10,10,10,.08);color:#0a0a0a">WhatsApp</a>
+        <a href="https://drive.google.com/file/d/1tpr-YDaQdTnKyH2I2g_evaOG6aWZM1VG/view" target="_blank" rel="noreferrer noopener" style="display:inline-flex;align-items:center;height:44px;padding:0 22px;border-radius:8px;border:1px solid rgba(10,10,10,.3);color:#0a0a0a;font:600 14px/1 Inter,sans-serif;text-decoration:none;transition:background .18s ease" style-hover="background:rgba(10,10,10,.08);color:#0a0a0a">Preview CV</a>
+      </div>
+    </div>
+  </section>
+  
+</article>
+</sc-if>
+
+<sc-if value="{{ isVelora }}" hint-placeholder-val="{{ false }}">
+<article data-screen-label="In progress — Velora">
+  <section style="max-width:1280px;margin:0 auto;padding:clamp(40px,6vw,72px) 24px 0">
+    <button onClick="{{ goHome }}" style="background:none;border:0;padding:0;cursor:pointer;font:500 14px/1.4 Inter,sans-serif;color:#888888;transition:color .18s ease" style-hover="color:#ffffff">← All work</button>
+    <div style="display:flex;align-items:center;gap:10px;margin-top:40px">
+      <span style="width:7px;height:7px;border-radius:9999px;background:#22c55e;display:block"></span>
+      <p style="font:600 12px/1.4 Inter,sans-serif;letter-spacing:1.5px;text-transform:uppercase;color:#888888">In progress · Velora</p>
+    </div>
+    <h1 style="font:700 clamp(34px,5.6vw,56px)/1.1 Inter,sans-serif;letter-spacing:-2px;color:#ffffff;margin-top:20px;max-width:18ch">Bicycle rental platform, hybrid ownership model</h1>
+    <p style="font:400 clamp(17px,2vw,20px)/1.55 Inter,sans-serif;color:#cccccc;margin-top:20px;max-width:60ch">The screens are partly done, so this is not a full case study. It is one decision, shown properly — the strongest before and after I own.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:28px">
+      <span style="font:500 13px/1.4 Inter,sans-serif;color:#ffffff;background:#1a1a1a;border:1px solid #2a2a2a;border-radius:9999px;padding:5px 14px">Web</span>
+      <span style="font:500 13px/1.4 Inter,sans-serif;color:#ffffff;background:#1a1a1a;border:1px solid #2a2a2a;border-radius:9999px;padding:5px 14px">{{ veloraContext }}</span>
+    </div>
+  </section>
+
+  <section style="max-width:1280px;margin:0 auto;padding:clamp(48px,6vw,72px) 24px 0">
+    <sc-if value="{{ showDrafts }}" hint-placeholder-val="{{ false }}">
+      <p style="font:400 13px/1.6 'JetBrains Mono',ui-monospace,monospace;color:#faff69;border:1px dashed #3a3a3a;border-radius:8px;padding:12px 16px;margin-bottom:32px">draft · three sentences drafted from your map. Replace with your own.</p>
+    </sc-if>
+    <p style="font:600 12px/1.4 Inter,sans-serif;letter-spacing:1.5px;text-transform:uppercase;color:#faff69">The problem, in three sentences</p>
+    <p style="font:400 clamp(19px,2.4vw,24px)/1.5 Inter,sans-serif;color:#e6e6e6;margin-top:24px;max-width:62ch">Renting a bike on Velora meant working through nine separate steps before you could ride. Each one was reasonable on its own and the sum of them was not. The hybrid ownership model added the questions, but it did not have to add the screens.</p>
+  </section>
+
+  <section style="max-width:1280px;margin:0 auto;padding:clamp(64px,8vw,96px) 24px 0">
+    <p style="font:600 12px/1.4 Inter,sans-serif;letter-spacing:1.5px;text-transform:uppercase;color:#faff69">The whole point of this page</p>
+    <div style="background:#1a1a1a;border:1px solid #2a2a2a;border-radius:12px;padding:clamp(28px,4vw,48px);margin-top:24px">
+      <div style="display:flex;align-items:center;justify-content:center;gap:clamp(24px,5vw,64px);flex-wrap:wrap">
+        <div style="text-align:center">
+          <div style="font:700 clamp(48px,7vw,80px)/1 Inter,sans-serif;letter-spacing:-2px;color:#888888;text-decoration:line-through;text-decoration-thickness:3px">9</div>
+          <p style="font:600 12px/1.4 Inter,sans-serif;letter-spacing:1.5px;text-transform:uppercase;color:#888888;margin-top:12px">Steps before</p>
+        </div>
+        <div style="font:400 clamp(24px,3vw,32px)/1 Inter,sans-serif;color:#3a3a3a">→</div>
+        <div style="text-align:center">
+          <div style="font:700 clamp(48px,7vw,80px)/1 Inter,sans-serif;letter-spacing:-2px;color:#faff69">5</div>
+          <p style="font:600 12px/1.4 Inter,sans-serif;letter-spacing:1.5px;text-transform:uppercase;color:#888888;margin-top:12px">Screens after</p>
+        </div>
+      </div>
+      <p style="font:400 16px/1.55 Inter,sans-serif;color:#cccccc;margin-top:32px;max-width:64ch;margin-left:auto;margin-right:auto;text-align:center">I ran a task analysis on the existing flow, then grouped the steps by what the person had to decide rather than what the system needed to store. Several of the nine turned out to be confirmations of things the person had already told us.</p>
+    </div>
+  </section>
+
+  <section style="max-width:1280px;margin:0 auto;padding:clamp(64px,8vw,96px) 24px 0">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr));gap:clamp(24px,4vw,48px);align-items:start">
+      <div>
+        <p style="font:600 12px/1.4 Inter,sans-serif;letter-spacing:1.5px;text-transform:uppercase;color:#faff69">The heuristic evaluation</p>
+        <div style="display:flex;align-items:baseline;gap:16px;margin-top:20px">
+          <span style="font:700 clamp(40px,5vw,56px)/1 Inter,sans-serif;letter-spacing:-1.5px;color:#faff69">12</span>
+          <span style="font:600 18px/1.4 Inter,sans-serif;color:#ffffff">usability issues found and logged</span>
+        </div>
+        <p style="font:400 16px/1.55 Inter,sans-serif;color:#cccccc;margin-top:20px;max-width:56ch">I walked the flow against Nielsen's heuristics and logged every issue with its severity and the heuristic it broke.</p>
+        <p style="font:400 16px/1.55 Inter,sans-serif;color:#e6e6e6;margin-top:16px;max-width:56ch;border-left:2px solid #3a3a3a;padding-left:16px">To be plain about it: this was a self-audit, not moderated testing. No users were in the room. The list is my judgement against a standard, and it is on this page so you can disagree with it.</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="max-width:1280px;margin:0 auto;padding:clamp(64px,8vw,96px) 24px 0">
+    <div style="background:#121212;border:1px solid #2a2a2a;border-radius:12px;padding:clamp(28px,4vw,48px)">
+      <p style="font:600 12px/1.4 Inter,sans-serif;letter-spacing:1.5px;text-transform:uppercase;color:#888888">Where it stands</p>
+      <h2 style="font:700 clamp(26px,3.2vw,32px)/1.2 Inter,sans-serif;letter-spacing:-1px;color:#ffffff;margin-top:20px;max-width:26ch">Five screens designed. The rest of the flow is next.</h2>
+      <p style="font:400 16px/1.55 Inter,sans-serif;color:#cccccc;margin-top:20px;max-width:60ch">The reduced flow exists as screens and the component set behind it is started. What remains is the return and damage-report path, which is the messiest part and the reason I have not called this finished.</p>
+      <p style="font:400 14px/1.6 'JetBrains Mono',ui-monospace,monospace;color:#faff69;margin-top:28px">next → remaining screens and a clickable prototype, {{ veloraDate }}</p>
+    </div>
+  </section>
+
+  <section style="max-width:1280px;margin:0 auto;padding:clamp(64px,8vw,96px) 24px 0">
+    <div style="background:#faff69;border-radius:12px;padding:clamp(32px,5vw,64px);display:flex;flex-wrap:wrap;gap:32px;align-items:flex-end;justify-content:space-between">
+      <div style="flex:1 1 420px;max-width:30ch">
+        <p style="font:600 12px/1.4 Inter,sans-serif;letter-spacing:1.5px;text-transform:uppercase;color:#0a0a0a;opacity:.6">Contact</p>
+        <h2 style="font:700 clamp(28px,4vw,40px)/1.15 Inter,sans-serif;letter-spacing:-1.5px;color:#0a0a0a;margin-top:20px">Tell me what you are trying to get people through.</h2>
+        <p style="font:400 16px/1.55 Inter,sans-serif;color:#0a0a0a;opacity:.78;margin-top:16px;max-width:40ch">Product or UX Designer roles. Remote, hybrid, or on site, open to relocation.</p>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center">
+        <a href="mailto:sarahhammad776@gmail.com" style="display:inline-flex;align-items:center;height:44px;padding:0 22px;border-radius:8px;background:#0a0a0a;color:#faff69;font:600 14px/1 Inter,sans-serif;text-decoration:none;transition:opacity .18s ease" style-hover="opacity:.85;color:#faff69">Contact me</a>
+        <a href="https://www.linkedin.com/in/sarah-hammad-b96a1a1a3/" target="_blank" rel="noreferrer noopener" style="display:inline-flex;align-items:center;height:44px;padding:0 22px;border-radius:8px;border:1px solid rgba(10,10,10,.3);color:#0a0a0a;font:600 14px/1 Inter,sans-serif;text-decoration:none;transition:background .18s ease" style-hover="background:rgba(10,10,10,.08);color:#0a0a0a">LinkedIn</a>
+        <a href="https://wa.me/201551327861" target="_blank" rel="noreferrer noopener" style="display:inline-flex;align-items:center;height:44px;padding:0 22px;border-radius:8px;border:1px solid rgba(10,10,10,.3);color:#0a0a0a;font:600 14px/1 Inter,sans-serif;text-decoration:none;transition:background .18s ease" style-hover="background:rgba(10,10,10,.08);color:#0a0a0a">WhatsApp</a>
+        <a href="https://drive.google.com/file/d/1tpr-YDaQdTnKyH2I2g_evaOG6aWZM1VG/view" target="_blank" rel="noreferrer noopener" style="display:inline-flex;align-items:center;height:44px;padding:0 22px;border-radius:8px;border:1px solid rgba(10,10,10,.3);color:#0a0a0a;font:600 14px/1 Inter,sans-serif;text-decoration:none;transition:background .18s ease" style-hover="background:rgba(10,10,10,.08);color:#0a0a0a">Preview CV</a>
+      </div>
+    </div>
+  </section>
+  <div style="max-width:1280px;margin:0 auto;padding:0 24px 24px">
+    <button onClick="{{ goTalla }}" style="background:none;border:0;padding:0;cursor:pointer;font:500 15px/1.4 Inter,sans-serif;color:#888888;transition:color .18s ease" style-hover="color:#faff69">Read Talla →</button>
+  </div>
+</article>
+</sc-if>
+
+<sc-if value="{{ isFly }}" hint-placeholder-val="{{ false }}">
+<article data-screen-label="In progress — Flyrank">
+  <section style="max-width:1280px;margin:0 auto;padding:clamp(40px,6vw,72px) 24px 0">
+    <button onClick="{{ goHome }}" style="background:none;border:0;padding:0;cursor:pointer;font:500 14px/1.4 Inter,sans-serif;color:#888888;transition:color .18s ease" style-hover="color:#ffffff">← All work</button>
+    <div style="display:flex;align-items:center;gap:10px;margin-top:40px">
+      <span style="width:7px;height:7px;border-radius:9999px;background:#22c55e;display:block"></span>
+      <p style="font:600 12px/1.4 Inter,sans-serif;letter-spacing:1.5px;text-transform:uppercase;color:#888888">In progress · Flyrank</p>
+    </div>
+    <h1 style="font:700 clamp(34px,5.6vw,56px)/1.1 Inter,sans-serif;letter-spacing:-2px;color:#ffffff;margin-top:20px;max-width:18ch">Trip planning, from the research phase forward</h1>
+    <p style="font:400 clamp(17px,2vw,20px)/1.55 Inter,sans-serif;color:#cccccc;margin-top:20px;max-width:60ch">A UX design internship at an AI startup, started June 2026. I am publishing the research as it happens rather than waiting for a finished case study.</p>
+  </section>
+
+  <section style="max-width:1280px;margin:0 auto;padding:clamp(48px,6vw,72px) 24px 0">
+    <sc-if value="{{ showDrafts }}" hint-placeholder-val="{{ false }}">
+      <p style="font:400 13px/1.6 'JetBrains Mono',ui-monospace,monospace;color:#faff69;border:1px dashed #3a3a3a;border-radius:8px;padding:12px 16px;margin-bottom:32px">draft · drafted. Check against what Flyrank has actually cleared for publication.</p>
+    </sc-if>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:clamp(32px,5vw,64px)">
+      <div>
+        <p style="font:600 12px/1.4 Inter,sans-serif;letter-spacing:1.5px;text-transform:uppercase;color:#faff69">The problem with trip planning today</p>
+        <h2 style="font:700 clamp(26px,3.2vw,32px)/1.2 Inter,sans-serif;letter-spacing:-1px;color:#ffffff;margin-top:20px;max-width:22ch">Planning happens in eleven tabs and ends in a notes app.</h2>
+        <p style="font:400 16px/1.55 Inter,sans-serif;color:#cccccc;margin-top:20px;max-width:58ch">Flights in one place, stays in another, the actual itinerary written by hand somewhere neither of them can see. Every tool is good at its slice and none of them holds the plan.</p>
+        <p style="font:400 16px/1.55 Inter,sans-serif;color:#cccccc;margin-top:16px;max-width:58ch">The interesting question is not whether AI can draft an itinerary. It is what a person is willing to hand over, and what they insist on deciding themselves.</p>
+      </div>
+      <div style="background:#1a1a1a;border:1px solid #2a2a2a;border-radius:12px;padding:32px;align-self:start">
+        <p style="font:600 12px/1.4 Inter,sans-serif;letter-spacing:1.5px;text-transform:uppercase;color:#888888">My part</p>
+        <p style="font:400 16px/1.55 Inter,sans-serif;color:#cccccc;margin-top:16px">Competitive research and survey design for the trip planning product. I build the persona pack from real respondent data and check every AI-drafted trait back against the raw transcripts before it is allowed into the pack.</p>
+        <p style="font:400 14px/1.55 Inter,sans-serif;color:#888888;margin-top:16px">Cleared for publication. Respondents are anonymised — names and ages are pseudonyms.</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="max-width:1280px;margin:0 auto;padding:clamp(64px,8vw,96px) 24px 0">
+    <p style="font:600 12px/1.4 Inter,sans-serif;letter-spacing:1.5px;text-transform:uppercase;color:#faff69">What I am doing right now</p>
+    <h2 style="font:700 clamp(26px,3.2vw,32px)/1.2 Inter,sans-serif;letter-spacing:-1px;color:#ffffff;margin-top:20px;max-width:26ch">The artifacts, not a summary of them.</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:24px;margin-top:40px">
+      <div style="background:#1a1a1a;border:1px solid #2a2a2a;border-radius:12px;padding:24px;display:flex;flex-direction:column;gap:20px">
+        <div>
+          <h3 style="font:600 18px/1.4 Inter,sans-serif;color:#ffffff">Competitor analysis</h3>
+          <p style="font:400 15px/1.55 Inter,sans-serif;color:#888888;margin-top:8px">Where existing planners hand off to the user, and where the plan falls out of the product.</p>
+        </div>
+      </div>
+      <div style="background:#1a1a1a;border:1px solid #2a2a2a;border-radius:12px;padding:24px;display:flex;flex-direction:column;gap:20px">
+        <div>
+          <h3 style="font:600 18px/1.4 Inter,sans-serif;color:#ffffff">A live survey</h3>
+          <p style="font:400 15px/1.55 Inter,sans-serif;color:#888888;margin-top:8px">Still collecting. Written to find out what people delegate and what they refuse to.</p>
+        </div>
+      </div>
+      <div style="background:#1a1a1a;border:1px solid #2a2a2a;border-radius:12px;padding:24px;display:flex;flex-direction:column;gap:20px">
+        <div>
+          <h3 style="font:600 18px/1.4 Inter,sans-serif;color:#ffffff">A persona pack</h3>
+          <p style="font:400 15px/1.55 Inter,sans-serif;color:#888888;margin-top:8px">Built from real submissions. Every AI-drafted trait checked against the transcript it came from.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="max-width:1280px;margin:0 auto;padding:clamp(64px,8vw,96px) 24px 0">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:24px">
+      <div style="background:#121212;border:1px solid #2a2a2a;border-radius:12px;padding:clamp(28px,4vw,40px)">
+        <p style="font:600 12px/1.4 Inter,sans-serif;letter-spacing:1.5px;text-transform:uppercase;color:#888888">Early direction</p>
+        <h2 style="font:700 24px/1.3 Inter,sans-serif;letter-spacing:-0.3px;color:#ffffff;margin-top:16px">Draft the plan, keep the edit cheap.</h2>
+        <p style="font:400 16px/1.55 Inter,sans-serif;color:#cccccc;margin-top:16px">The direction I am arguing for is a plan the product drafts in full and the person edits in place — no wizard, no chat transcript to scroll back through. The AI's job is the first draft, not the conversation.</p>
+      </div>
+      <div style="background:#121212;border:1px solid #2a2a2a;border-radius:12px;padding:clamp(28px,4vw,40px)">
+        <p style="font:600 12px/1.4 Inter,sans-serif;letter-spacing:1.5px;text-transform:uppercase;color:#888888">What comes next</p>
+        <h2 style="font:700 24px/1.3 Inter,sans-serif;letter-spacing:-0.3px;color:#ffffff;margin-top:16px">Close the survey, then design against it.</h2>
+        <p style="font:400 16px/1.55 Inter,sans-serif;color:#cccccc;margin-top:16px">Survey closes and the persona pack is finalised, then the first flows go up here alongside the research that produced them.</p>
+        <p style="font:400 14px/1.6 'JetBrains Mono',ui-monospace,monospace;color:#faff69;margin-top:20px">next → early flows, {{ flyDate }}</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="max-width:1280px;margin:0 auto;padding:clamp(64px,8vw,96px) 24px 0">
+    <div style="background:#faff69;border-radius:12px;padding:clamp(32px,5vw,64px);display:flex;flex-wrap:wrap;gap:32px;align-items:flex-end;justify-content:space-between">
+      <div style="flex:1 1 420px;max-width:30ch">
+        <p style="font:600 12px/1.4 Inter,sans-serif;letter-spacing:1.5px;text-transform:uppercase;color:#0a0a0a;opacity:.6">Contact</p>
+        <h2 style="font:700 clamp(28px,4vw,40px)/1.15 Inter,sans-serif;letter-spacing:-1.5px;color:#0a0a0a;margin-top:20px">Get in touch if you want to see where this lands.</h2>
+        <p style="font:400 16px/1.55 Inter,sans-serif;color:#0a0a0a;opacity:.78;margin-top:16px;max-width:40ch">I am publishing this one as it happens. Happy to walk through the research so far.</p>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center">
+        <a href="mailto:sarahhammad776@gmail.com" style="display:inline-flex;align-items:center;height:44px;padding:0 22px;border-radius:8px;background:#0a0a0a;color:#faff69;font:600 14px/1 Inter,sans-serif;text-decoration:none;transition:opacity .18s ease" style-hover="opacity:.85;color:#faff69">Contact me</a>
+        <a href="https://www.linkedin.com/in/sarah-hammad-b96a1a1a3/" target="_blank" rel="noreferrer noopener" style="display:inline-flex;align-items:center;height:44px;padding:0 22px;border-radius:8px;border:1px solid rgba(10,10,10,.3);color:#0a0a0a;font:600 14px/1 Inter,sans-serif;text-decoration:none;transition:background .18s ease" style-hover="background:rgba(10,10,10,.08);color:#0a0a0a">LinkedIn</a>
+        <a href="https://wa.me/201551327861" target="_blank" rel="noreferrer noopener" style="display:inline-flex;align-items:center;height:44px;padding:0 22px;border-radius:8px;border:1px solid rgba(10,10,10,.3);color:#0a0a0a;font:600 14px/1 Inter,sans-serif;text-decoration:none;transition:background .18s ease" style-hover="background:rgba(10,10,10,.08);color:#0a0a0a">WhatsApp</a>
+        <a href="https://drive.google.com/file/d/1tpr-YDaQdTnKyH2I2g_evaOG6aWZM1VG/view" target="_blank" rel="noreferrer noopener" style="display:inline-flex;align-items:center;height:44px;padding:0 22px;border-radius:8px;border:1px solid rgba(10,10,10,.3);color:#0a0a0a;font:600 14px/1 Inter,sans-serif;text-decoration:none;transition:background .18s ease" style-hover="background:rgba(10,10,10,.08);color:#0a0a0a">Preview CV</a>
+      </div>
+    </div>
+  </section>
+</article>
+</sc-if>
+
+<sc-if value="{{ isAbout }}" hint-placeholder-val="{{ false }}">
+<article data-screen-label="About">
+  <section style="max-width:1280px;margin:0 auto;padding:clamp(40px,6vw,72px) 24px 0">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:clamp(32px,5vw,64px);align-items:center">
+      <div>
+        <p style="font:600 12px/1.4 Inter,sans-serif;letter-spacing:1.5px;text-transform:uppercase;color:#888888">About</p>
+        <h1 style="font:700 clamp(34px,5.6vw,56px)/1.1 Inter,sans-serif;letter-spacing:-2px;color:#ffffff;margin-top:20px">Sarah Hammad</h1>
+        <p style="font:600 clamp(17px,2vw,20px)/1.4 Inter,sans-serif;color:#faff69;margin-top:12px">Product &amp; UX Designer, Cairo</p>
+        <p style="font:400 clamp(17px,2vw,20px)/1.55 Inter,sans-serif;color:#e6e6e6;margin-top:28px;max-width:52ch">I design booking, planning and scheduling products — the ones people open when they are tired and want the thing handled. I work in Arabic and English, right to left and left to right, and I tend to start with the task a person is trying to finish rather than the interface they will finish it in.</p>
+      </div>
+      <div style="position:relative;aspect-ratio:4/5;width:100%;max-width:420px;border-radius:12px;overflow:hidden;background:#1a1a1a;justify-self:end">
+        <img src="uploads/Me.jpeg" alt="Sarah Hammad" style="width:100%;height:100%;object-fit:cover;display:block">
+      </div>
+    </div>
+  </section>
+
+  <section style="max-width:1280px;margin:0 auto;padding:clamp(64px,8vw,96px) 24px 0">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:clamp(32px,5vw,64px)">
+      <div>
+        <p style="font:600 12px/1.4 Inter,sans-serif;letter-spacing:1.5px;text-transform:uppercase;color:#faff69">How I got into design</p>
+        <p style="font:400 16px/1.55 Inter,sans-serif;color:#cccccc;margin-top:20px;max-width:56ch">I studied Business Administration. That is not the usual route into UX, and I have stopped treating it as a gap. It is the reason I ask what a product is for before I ask what it looks like, and the reason I am comfortable in the conversation where a design decision has to survive someone else's constraints.</p>
+        <p style="font:400 16px/1.55 Inter,sans-serif;color:#cccccc;margin-top:16px;max-width:56ch">The design part I learned by doing it, project by project, and by writing down what went wrong each time.</p>
+      </div>
+      <div>
+        <p style="font:600 12px/1.4 Inter,sans-serif;letter-spacing:1.5px;text-transform:uppercase;color:#faff69">What I am still learning</p>
+        <p style="font:400 clamp(19px,2.2vw,24px)/1.5 Inter,sans-serif;color:#e6e6e6;margin-top:20px;max-width:40ch">I care more about whether it works than whether it wins an award.</p>
+        <p style="font:400 16px/1.55 Inter,sans-serif;color:#cccccc;margin-top:20px;max-width:56ch">Which is a nice line, and also the thing I have to keep proving. The honest gap right now is moderated user testing — I have run heuristic evaluations and surveys, and I have not yet sat behind enough people using the thing. That is the next skill I am closing.</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="max-width:1280px;margin:0 auto;padding:clamp(64px,8vw,96px) 24px 0">
+    <p style="font:600 12px/1.4 Inter,sans-serif;letter-spacing:1.5px;text-transform:uppercase;color:#faff69">What I am good at</p>
+    <ul style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(240px,100%),1fr));gap:1px;background:#2a2a2a;border:1px solid #2a2a2a;border-radius:12px;overflow:hidden;margin-top:24px">
+      <li style="background:#0a0a0a;padding:28px">
+        <h3 style="font:600 16px/1.4 Inter,sans-serif;color:#ffffff">Research</h3>
+        <p style="font:400 15px/1.55 Inter,sans-serif;color:#888888;margin-top:8px">Competitive benchmarking, survey design, heuristic evaluation.</p>
+      </li>
+      <li style="background:#0a0a0a;padding:28px">
+        <h3 style="font:600 16px/1.4 Inter,sans-serif;color:#ffffff">Information architecture</h3>
+        <p style="font:400 15px/1.55 Inter,sans-serif;color:#888888;margin-top:8px">Task analysis, flow reduction, getting the sequence right before the screen.</p>
+      </li>
+      <li style="background:#0a0a0a;padding:28px">
+        <h3 style="font:600 16px/1.4 Inter,sans-serif;color:#ffffff">Prototyping</h3>
+        <p style="font:400 15px/1.55 Inter,sans-serif;color:#888888;margin-top:8px">Clickable Figma prototypes that behave enough to be argued with.</p>
+      </li>
+      <li style="background:#0a0a0a;padding:28px">
+        <h3 style="font:600 16px/1.4 Inter,sans-serif;color:#ffffff">Design systems</h3>
+        <p style="font:400 15px/1.55 Inter,sans-serif;color:#888888;margin-top:8px">Component libraries with documented states, tokens and annotated specs.</p>
+      </li>
+      <li style="background:#0a0a0a;padding:28px">
+        <h3 style="font:600 16px/1.4 Inter,sans-serif;color:#ffffff">RTL and accessibility</h3>
+        <p style="font:400 15px/1.55 Inter,sans-serif;color:#888888;margin-top:8px">Arabic interfaces designed to WCAG 2.1 AA, with the rules written into the specs.</p>
+      </li>
+      <li style="background:#0a0a0a;padding:28px">
+        <h3 style="font:600 16px/1.4 Inter,sans-serif;color:#ffffff">Working with AI</h3>
+        <p style="font:400 15px/1.55 Inter,sans-serif;color:#888888;margin-top:8px">Useful for a first draft. Every AI-drafted output gets checked against the source before it counts.</p>
+      </li>
+    </ul>
+  </section>
+
+  <section style="max-width:1280px;margin:0 auto;padding:clamp(64px,8vw,96px) 24px 0">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(280px,100%),1fr));gap:24px">
+      <div style="background:#1a1a1a;border:1px solid #2a2a2a;border-radius:12px;padding:32px">
+        <p style="font:600 12px/1.4 Inter,sans-serif;letter-spacing:1.5px;text-transform:uppercase;color:#888888">Tools</p>
+        <p style="font:400 18px/1.6 Inter,sans-serif;color:#ffffff;margin-top:16px">Figma · FigJam · Maze</p>
+      </div>
+      <div style="background:#1a1a1a;border:1px solid #2a2a2a;border-radius:12px;padding:32px">
+        <p style="font:600 12px/1.4 Inter,sans-serif;letter-spacing:1.5px;text-transform:uppercase;color:#888888">Languages</p>
+        <p style="font:400 18px/1.6 Inter,sans-serif;color:#ffffff;margin-top:16px">Arabic, native · English, professional</p>
+      </div>
+      <div style="background:#1a1a1a;border:1px solid #2a2a2a;border-radius:12px;padding:32px;display:flex;flex-direction:column;justify-content:space-between;gap:20px">
+        <p style="font:600 12px/1.4 Inter,sans-serif;letter-spacing:1.5px;text-transform:uppercase;color:#888888">CV</p>
+        <a href="https://drive.google.com/file/d/1tpr-YDaQdTnKyH2I2g_evaOG6aWZM1VG/view" target="_blank" rel="noreferrer noopener" style="display:inline-flex;align-items:center;justify-content:center;height:40px;padding:0 20px;border-radius:8px;background:#242424;border:1px solid #3a3a3a;color:#ffffff;font:600 14px/1 Inter,sans-serif;text-decoration:none;transition:background .18s ease" style-hover="background:#2a2a2a;color:#ffffff">Preview CV</a>
+      </div>
+    </div>
+  </section>
+
+  <section style="max-width:1280px;margin:0 auto;padding:clamp(64px,8vw,96px) 24px 0">
+    <div style="background:#faff69;border-radius:12px;padding:clamp(32px,5vw,64px);display:flex;flex-wrap:wrap;gap:32px;align-items:flex-end;justify-content:space-between">
+      <div style="flex:1 1 420px;max-width:30ch">
+        <p style="font:600 12px/1.4 Inter,sans-serif;letter-spacing:1.5px;text-transform:uppercase;color:#0a0a0a;opacity:.6">Contact</p>
+        <h2 style="font:700 clamp(28px,4vw,40px)/1.15 Inter,sans-serif;letter-spacing:-1.5px;color:#0a0a0a;margin-top:20px">Tell me what you are trying to get people through.</h2>
+        <p style="font:400 16px/1.55 Inter,sans-serif;color:#0a0a0a;opacity:.78;margin-top:16px;max-width:40ch">Product or UX Designer roles. Remote, hybrid, or on site, open to relocation.</p>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center">
+        <a href="mailto:sarahhammad776@gmail.com" style="display:inline-flex;align-items:center;height:44px;padding:0 22px;border-radius:8px;background:#0a0a0a;color:#faff69;font:600 14px/1 Inter,sans-serif;text-decoration:none;transition:opacity .18s ease" style-hover="opacity:.85;color:#faff69">Contact me</a>
+        <a href="https://www.linkedin.com/in/sarah-hammad-b96a1a1a3/" target="_blank" rel="noreferrer noopener" style="display:inline-flex;align-items:center;height:44px;padding:0 22px;border-radius:8px;border:1px solid rgba(10,10,10,.3);color:#0a0a0a;font:600 14px/1 Inter,sans-serif;text-decoration:none;transition:background .18s ease" style-hover="background:rgba(10,10,10,.08);color:#0a0a0a">LinkedIn</a>
+        <a href="https://wa.me/201551327861" target="_blank" rel="noreferrer noopener" style="display:inline-flex;align-items:center;height:44px;padding:0 22px;border-radius:8px;border:1px solid rgba(10,10,10,.3);color:#0a0a0a;font:600 14px/1 Inter,sans-serif;text-decoration:none;transition:background .18s ease" style-hover="background:rgba(10,10,10,.08);color:#0a0a0a">WhatsApp</a>
+        <a href="https://drive.google.com/file/d/1tpr-YDaQdTnKyH2I2g_evaOG6aWZM1VG/view" target="_blank" rel="noreferrer noopener" style="display:inline-flex;align-items:center;height:44px;padding:0 22px;border-radius:8px;border:1px solid rgba(10,10,10,.3);color:#0a0a0a;font:600 14px/1 Inter,sans-serif;text-decoration:none;transition:background .18s ease" style-hover="background:rgba(10,10,10,.08);color:#0a0a0a">Preview CV</a>
+      </div>
+    </div>
+  </section>
+</article>
+</sc-if>
+
+<sc-if value="{{ isContact }}" hint-placeholder-val="{{ false }}">
+<article data-screen-label="Contact">
+  <section style="max-width:1280px;margin:0 auto;padding:clamp(48px,8vw,96px) 24px 0">
+    <p style="font:600 12px/1.4 Inter,sans-serif;letter-spacing:1.5px;text-transform:uppercase;color:#888888">Contact</p>
+    <h1 style="font:700 clamp(36px,6.2vw,72px)/1.05 Inter,sans-serif;letter-spacing:-2.5px;color:#ffffff;margin-top:24px;max-width:16ch">Looking for Product or UX Designer roles.</h1>
+    <p style="font:400 clamp(17px,2vw,20px)/1.55 Inter,sans-serif;color:#cccccc;margin-top:24px;max-width:52ch">Remote, hybrid, or on site. Open to relocation. If the brief involves booking, planning or scheduling — or an Arabic interface that has to actually work — I would like to hear about it.</p>
+    <a href="https://calendly.com/sarahhammad776/30min" target="_blank" rel="noreferrer noopener" style="display:inline-flex;align-items:center;height:44px;padding:0 22px;border-radius:8px;background:#faff69;color:#0a0a0a;font:600 14px/1 Inter,sans-serif;text-decoration:none;margin-top:28px;transition:background .18s ease" style-hover="background:#e6eb52;color:#0a0a0a">Book a 30 minute call</a>
+  </section>
+
+  <section style="max-width:1280px;margin:0 auto;padding:clamp(40px,6vw,64px) 24px 0">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:24px">
+      <div style="background:#1a1a1a;border:1px solid #2a2a2a;border-radius:12px;padding:clamp(28px,4vw,40px);display:flex;flex-direction:column;gap:24px">
+        <p style="font:600 12px/1.4 Inter,sans-serif;letter-spacing:1.5px;text-transform:uppercase;color:#888888">Email</p>
+        <p style="font:400 clamp(18px,2.2vw,24px)/1.4 'JetBrains Mono',ui-monospace,monospace;color:#ffffff;word-break:break-all">sarahhammad776@gmail.com</p>
+        <a href="mailto:sarahhammad776@gmail.com" style="display:inline-flex;align-items:center;justify-content:center;height:44px;padding:0 22px;border-radius:8px;background:#faff69;color:#0a0a0a;font:600 14px/1 Inter,sans-serif;text-decoration:none;margin-top:auto;transition:background .18s ease" style-hover="background:#e6eb52;color:#0a0a0a">Contact me</a>
+      </div>
+      <div style="display:grid;gap:24px;align-content:start">
+        <a href="https://www.linkedin.com/in/sarah-hammad-b96a1a1a3/" target="_blank" rel="noreferrer noopener" style="background:#1a1a1a;border:1px solid #2a2a2a;border-radius:12px;padding:28px;text-decoration:none;display:flex;align-items:center;justify-content:space-between;gap:16px;transition:border-color .2s ease" style-hover="border-color:#3a3a3a;color:#ffffff">
+          <span>
+            <span style="display:block;font:600 12px/1.4 Inter,sans-serif;letter-spacing:1.5px;text-transform:uppercase;color:#888888">LinkedIn</span>
+            <span style="display:block;font:600 18px/1.4 Inter,sans-serif;color:#ffffff;margin-top:8px">linkedin.com/in/sarah-hammad-b96a1a1a3</span>
+          </span>
+          <span style="font:400 18px/1 Inter,sans-serif;color:#faff69">↗</span>
+        </a>
+        <a href="https://calendly.com/sarahhammad776/30min" target="_blank" rel="noreferrer noopener" style="background:#1a1a1a;border:1px solid #2a2a2a;border-radius:12px;padding:28px;text-decoration:none;display:flex;align-items:center;justify-content:space-between;gap:16px;transition:border-color .2s ease" style-hover="border-color:#3a3a3a;color:#ffffff">
+          <span>
+            <span style="display:block;font:600 12px/1.4 Inter,sans-serif;letter-spacing:1.5px;text-transform:uppercase;color:#888888">Book a call</span>
+            <span style="display:block;font:600 18px/1.4 Inter,sans-serif;color:#ffffff;margin-top:8px">30 minutes, pick a slot</span>
+          </span>
+          <span style="font:400 18px/1 Inter,sans-serif;color:#faff69">↗</span>
+        </a>
+        <a href="https://github.com/sarahhammad776-hub" target="_blank" rel="noreferrer noopener" style="background:#1a1a1a;border:1px solid #2a2a2a;border-radius:12px;padding:28px;text-decoration:none;display:flex;align-items:center;justify-content:space-between;gap:16px;transition:border-color .2s ease" style-hover="border-color:#3a3a3a;color:#ffffff">
+          <span>
+            <span style="display:block;font:600 12px/1.4 Inter,sans-serif;letter-spacing:1.5px;text-transform:uppercase;color:#888888">GitHub</span>
+            <span style="display:block;font:600 18px/1.4 Inter,sans-serif;color:#ffffff;margin-top:8px">github.com/sarahhammad776-hub</span>
+          </span>
+          <span style="font:400 18px/1 Inter,sans-serif;color:#faff69">↗</span>
+        </a>
+        <a href="https://wa.me/201551327861" target="_blank" rel="noreferrer noopener" style="background:#1a1a1a;border:1px solid #2a2a2a;border-radius:12px;padding:28px;text-decoration:none;display:flex;align-items:center;justify-content:space-between;gap:16px;transition:border-color .2s ease" style-hover="border-color:#3a3a3a;color:#ffffff">
+          <span>
+            <span style="display:block;font:600 12px/1.4 Inter,sans-serif;letter-spacing:1.5px;text-transform:uppercase;color:#888888">WhatsApp</span>
+            <span style="display:block;font:600 18px/1.4 Inter,sans-serif;color:#ffffff;margin-top:8px">+20 155 132 7861</span>
+          </span>
+          <span style="font:400 18px/1 Inter,sans-serif;color:#faff69">↗</span>
+        </a>
+        <a href="https://drive.google.com/file/d/1tpr-YDaQdTnKyH2I2g_evaOG6aWZM1VG/view" target="_blank" rel="noreferrer noopener" style="background:#1a1a1a;border:1px solid #2a2a2a;border-radius:12px;padding:28px;text-decoration:none;display:flex;align-items:center;justify-content:space-between;gap:16px;transition:border-color .2s ease" style-hover="border-color:#3a3a3a;color:#ffffff">
+          <span>
+            <span style="display:block;font:600 12px/1.4 Inter,sans-serif;letter-spacing:1.5px;text-transform:uppercase;color:#888888">CV</span>
+            <span style="display:block;font:600 18px/1.4 Inter,sans-serif;color:#ffffff;margin-top:8px">Sarah_Hammad_CV.pdf</span>
+          </span>
+          <span style="font:400 18px/1 Inter,sans-serif;color:#faff69">↗</span>
+        </a>
+      </div>
+    </div>
+
+    <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;margin-top:24px;border-top:1px solid #2a2a2a;padding-top:24px">
+      <p style="font:400 14px/1.55 Inter,sans-serif;color:#888888;max-width:52ch">I read every message. The fastest reply is by email or WhatsApp.</p>
+      <p style="font:400 13px/1.4 'JetBrains Mono',ui-monospace,monospace;color:#888888">Cairo, EG · GMT+2</p>
+    </div>
+  </section>
+
+  <section style="max-width:1280px;margin:0 auto;padding:clamp(64px,8vw,96px) 24px 0">
+    <div style="background:#faff69;border-radius:12px;padding:clamp(32px,5vw,64px);display:flex;flex-wrap:wrap;gap:32px;align-items:flex-end;justify-content:space-between">
+      <div style="flex:1 1 420px;max-width:30ch">
+        <p style="font:600 12px/1.4 Inter,sans-serif;letter-spacing:1.5px;text-transform:uppercase;color:#0a0a0a;opacity:.6">Contact</p>
+        <h2 style="font:700 clamp(28px,4vw,40px)/1.15 Inter,sans-serif;letter-spacing:-1.5px;color:#0a0a0a;margin-top:20px">Tell me what you are trying to get people through.</h2>
+        <p style="font:400 16px/1.55 Inter,sans-serif;color:#0a0a0a;opacity:.78;margin-top:16px;max-width:40ch">Product or UX Designer roles. Remote, hybrid, or on site, open to relocation.</p>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center">
+        <a href="mailto:sarahhammad776@gmail.com" style="display:inline-flex;align-items:center;height:44px;padding:0 22px;border-radius:8px;background:#0a0a0a;color:#faff69;font:600 14px/1 Inter,sans-serif;text-decoration:none;transition:opacity .18s ease" style-hover="opacity:.85;color:#faff69">Contact me</a>
+        <a href="https://www.linkedin.com/in/sarah-hammad-b96a1a1a3/" target="_blank" rel="noreferrer noopener" style="display:inline-flex;align-items:center;height:44px;padding:0 22px;border-radius:8px;border:1px solid rgba(10,10,10,.3);color:#0a0a0a;font:600 14px/1 Inter,sans-serif;text-decoration:none;transition:background .18s ease" style-hover="background:rgba(10,10,10,.08);color:#0a0a0a">LinkedIn</a>
+        <a href="https://wa.me/201551327861" target="_blank" rel="noreferrer noopener" style="display:inline-flex;align-items:center;height:44px;padding:0 22px;border-radius:8px;border:1px solid rgba(10,10,10,.3);color:#0a0a0a;font:600 14px/1 Inter,sans-serif;text-decoration:none;transition:background .18s ease" style-hover="background:rgba(10,10,10,.08);color:#0a0a0a">WhatsApp</a>
+        <a href="https://drive.google.com/file/d/1tpr-YDaQdTnKyH2I2g_evaOG6aWZM1VG/view" target="_blank" rel="noreferrer noopener" style="display:inline-flex;align-items:center;height:44px;padding:0 22px;border-radius:8px;border:1px solid rgba(10,10,10,.3);color:#0a0a0a;font:600 14px/1 Inter,sans-serif;text-decoration:none;transition:background .18s ease" style-hover="background:rgba(10,10,10,.08);color:#0a0a0a">Preview CV</a>
+      </div>
+    </div>
+  </section>
+  <div style="height:clamp(24px,3vw,32px)"></div>
+</article>
+</sc-if>
+
+</main>
+
+<div style="max-width:1280px;margin:0 auto;padding:clamp(40px,5vw,56px) 24px 0">
+  <button onClick="{{ goVelora }}" style="background:none;border:0;padding:0;cursor:pointer;font:500 15px/1.4 Inter,sans-serif;color:#888888;transition:color .18s ease" style-hover="color:#faff69">See what I am working on now →</button></div><footer style="border-top:1px solid #2a2a2a;margin-top:clamp(40px,5vw,56px)">
+  <div style="max-width:1280px;margin:0 auto;padding:64px 24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(240px,100%),1fr));gap:40px">
+    <div>
+      <div style="display:flex;align-items:center;gap:10px">
+        <span style="width:22px;height:22px;border-radius:4px;background:#faff69;display:block"></span>
+        <span style="font:700 15px/1 Inter,sans-serif;letter-spacing:-0.3px;color:#ffffff">Sarah Hammad</span>
+      </div>
+      <p style="font:400 14px/1.55 Inter,sans-serif;color:#888888;margin-top:16px;max-width:34ch">Product &amp; UX Designer, Cairo. Booking, planning and scheduling products.</p>
+    </div>
+    <div>
+      <p style="font:600 12px/1.4 Inter,sans-serif;letter-spacing:1.5px;text-transform:uppercase;color:#888888">Work</p>
+      <ul style="display:flex;flex-direction:column;gap:10px;margin-top:16px">
+        <li><button onClick="{{ goTalla }}" style="background:none;border:0;padding:0;cursor:pointer;font:400 14px/1.55 Inter,sans-serif;color:#888888;transition:color .18s ease" style-hover="color:#ffffff">Talla</button></li>
+        <li><button onClick="{{ goCare }}" style="background:none;border:0;padding:0;cursor:pointer;font:400 14px/1.55 Inter,sans-serif;color:#888888;transition:color .18s ease" style-hover="color:#ffffff">CareNest</button></li>
+        <li><button onClick="{{ goVelora }}" style="background:none;border:0;padding:0;cursor:pointer;font:400 14px/1.55 Inter,sans-serif;color:#888888;transition:color .18s ease" style-hover="color:#ffffff">Velora</button></li>
+        <li><button onClick="{{ goFly }}" style="background:none;border:0;padding:0;cursor:pointer;font:400 14px/1.55 Inter,sans-serif;color:#888888;transition:color .18s ease" style-hover="color:#ffffff">Flyrank</button></li>
+      </ul>
+    </div>
+    <div>
+      <p style="font:600 12px/1.4 Inter,sans-serif;letter-spacing:1.5px;text-transform:uppercase;color:#888888">Site</p>
+      <ul style="display:flex;flex-direction:column;gap:10px;margin-top:16px">
+        <li><button onClick="{{ goAbout }}" style="background:none;border:0;padding:0;cursor:pointer;font:400 14px/1.55 Inter,sans-serif;color:#888888;transition:color .18s ease" style-hover="color:#ffffff">About</button></li>
+        <li><button onClick="{{ goContact }}" style="background:none;border:0;padding:0;cursor:pointer;font:400 14px/1.55 Inter,sans-serif;color:#888888;transition:color .18s ease" style-hover="color:#ffffff">Contact</button></li>
+        <li><a href="https://drive.google.com/file/d/1tpr-YDaQdTnKyH2I2g_evaOG6aWZM1VG/view" target="_blank" rel="noreferrer noopener" style="font:400 14px/1.55 Inter,sans-serif;color:#888888;text-decoration:none;transition:color .18s ease" style-hover="color:#ffffff">Preview CV</a></li>
+      </ul>
+    </div>
+    <div>
+      <p style="font:600 12px/1.4 Inter,sans-serif;letter-spacing:1.5px;text-transform:uppercase;color:#888888">Elsewhere</p>
+      <ul style="display:flex;flex-direction:column;gap:10px;margin-top:16px">
+        <li><a href="https://www.linkedin.com/in/sarah-hammad-b96a1a1a3/" target="_blank" rel="noreferrer noopener" style="font:400 14px/1.55 Inter,sans-serif;color:#888888;text-decoration:none;transition:color .18s ease" style-hover="color:#ffffff">LinkedIn</a></li>
+        <li><a href="https://github.com/sarahhammad776-hub" target="_blank" rel="noreferrer noopener" style="font:400 14px/1.55 Inter,sans-serif;color:#888888;text-decoration:none;transition:color .18s ease" style-hover="color:#ffffff">GitHub</a></li>
+        <li><a href="https://calendly.com/sarahhammad776/30min" target="_blank" rel="noreferrer noopener" style="font:400 14px/1.55 Inter,sans-serif;color:#888888;text-decoration:none;transition:color .18s ease" style-hover="color:#ffffff">Book a call</a></li>
+        <li><a href="https://wa.me/201551327861" target="_blank" rel="noreferrer noopener" style="font:400 14px/1.55 Inter,sans-serif;color:#888888;text-decoration:none;transition:color .18s ease" style-hover="color:#ffffff">WhatsApp</a></li>
+        <li><a href="mailto:sarahhammad776@gmail.com" style="font:400 14px/1.55 Inter,sans-serif;color:#888888;text-decoration:none;transition:color .18s ease" style-hover="color:#ffffff">sarahhammad776@gmail.com</a></li>
+      </ul>
+    </div>
+  </div>
+  <div style="border-top:1px solid #1a1a1a">
+    <div style="max-width:1280px;margin:0 auto;padding:24px;display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between">
+      <p style="font:400 13px/1.4 'JetBrains Mono',ui-monospace,monospace;color:#888888">© 2026 Sarah Hammad</p>
+      <p style="font:400 13px/1.4 'JetBrains Mono',ui-monospace,monospace;color:#888888">Designed and built in Cairo</p>
+    </div>
+  </div>
+</footer>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showDraftMarkers&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Publishing&quot;},&quot;motion&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Publishing&quot;},&quot;tallaContext&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Self-initiated concept&quot;,&quot;Client work&quot;,&quot;Freelance client&quot;],&quot;default&quot;:&quot;Client work&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Project labels&quot;},&quot;carenestContext&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Self-initiated concept&quot;,&quot;Client work&quot;,&quot;Freelance client&quot;],&quot;default&quot;:&quot;Self-initiated concept&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Project labels&quot;},&quot;veloraContext&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Self-initiated concept&quot;,&quot;Client work&quot;,&quot;Freelance client&quot;],&quot;default&quot;:&quot;Client work&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Project labels&quot;},&quot;tallaTimeline&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;2025&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Project labels&quot;},&quot;carenestTimeline&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;2025&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Project labels&quot;},&quot;veloraDate&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;September 2026&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;In-progress dates&quot;},&quot;flyrankDate&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;October 2026&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;In-progress dates&quot;}}">
+class Component extends DCLogic {
+  state = { page: 'home', menu: false, w: typeof window !== 'undefined' ? window.innerWidth : 1280 };
+
+  componentDidMount() {
+    this._onResize = () => this.setState({ w: window.innerWidth });
+    window.addEventListener('resize', this._onResize);
+    this._onResize();
+  }
+  componentWillUnmount() { window.removeEventListener('resize', this._onResize); }
+
+  go(page) {
+    this.setState({ page, menu: false });
+    if (typeof window !== 'undefined') window.scrollTo({ top: 0, behavior: 'auto' });
+  }
+
+  goWork = () => {
+    if (this.state.page !== 'home') { this.go('home'); setTimeout(() => this.scrollWork(), 60); }
+    else { this.setState({ menu: false }); this.scrollWork(); }
+  };
+  scrollWork() {
+    const el = document.getElementById('work');
+    if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 80, behavior: 'smooth' });
+  }
+
+  renderVals() {
+    const p = this.state.page;
+    const w = this.state.w;
+    const drafts = this.props.showDraftMarkers ?? false;
+    const label = (v) => drafts ? v + ' · confirm before publishing' : v;
+    return {
+      isHome: p === 'home', isTalla: p === 'talla', isCare: p === 'carenest',
+      isVelora: p === 'velora', isFly: p === 'flyrank', isAbout: p === 'about', isContact: p === 'contact',
+      isWide: w >= 860, isNarrow: w < 860,
+      menuOpen: this.state.menu,
+      toggleMenu: () => this.setState(s => ({ menu: !s.menu })),
+      goHome: () => this.go('home'),
+      goTalla: () => this.go('talla'),
+      goCare: () => this.go('carenest'),
+      goVelora: () => this.go('velora'),
+      goFly: () => this.go('flyrank'),
+      goAbout: () => this.go('about'),
+      goContact: () => this.go('contact'),
+      goWork: this.goWork,
+      showDrafts: drafts,
+      motionAttr: (this.props.motion ?? true) ? 'on' : 'off',
+      veloraDate: this.props.veloraDate ?? 'September 2026',
+      flyDate: this.props.flyrankDate ?? 'October 2026',
+      tallaContext: label(this.props.tallaContext ?? 'Self-initiated concept'),
+      careContext: label(this.props.carenestContext ?? 'Self-initiated concept'),
+      veloraContext: label(this.props.veloraContext ?? 'Self-initiated concept'),
+      tallaTimeline: this.props.tallaTimeline ?? '2025',
+      careTimeline: this.props.carenestTimeline ?? '2025'
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<section style="max-width:1280px;margin:0 auto;padding:clamp(64px,8vw,96px) 24px 0">
+  <div style="background:#faff69;border-radius:12px;padding:clamp(32px,5vw,64px);display:flex;flex-wrap:wrap;gap:32px;align-items:flex-end;justify-content:space-between">
+    <div style="flex:1 1 420px;max-width:30ch">
+      <p style="font:600 12px/1.4 Inter,sans-serif;letter-spacing:1.5px;text-transform:uppercase;color:#0a0a0a;opacity:.6">Contact</p>
+      <h2 style="font:700 clamp(28px,4vw,40px)/1.15 Inter,sans-serif;letter-spacing:-1.5px;color:#0a0a0a;margin-top:20px">{{ heading }}</h2>
+      <p style="font:400 16px/1.55 Inter,sans-serif;color:#0a0a0a;opacity:.78;margin-top:16px;max-width:40ch">{{ sub }}</p>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center">
+      <a href="mailto:sarahhammad776@gmail.com" style="display:inline-flex;align-items:center;height:44px;padding:0 22px;border-radius:8px;background:#0a0a0a;color:#faff69;font:600 14px/1 Inter,sans-serif;text-decoration:none;transition:opacity .18s ease" style-hover="opacity:.85;color:#faff69">Contact me</a>
+      <a href="https://www.linkedin.com/in/sarah-hammad-b96a1a1a3/" target="_blank" rel="noreferrer noopener" style="display:inline-flex;align-items:center;height:44px;padding:0 22px;border-radius:8px;border:1px solid rgba(10,10,10,.3);color:#0a0a0a;font:600 14px/1 Inter,sans-serif;text-decoration:none;transition:background .18s ease" style-hover="background:rgba(10,10,10,.08);color:#0a0a0a">LinkedIn</a>
+      <a href="https://wa.me/201551327861" target="_blank" rel="noreferrer noopener" style="display:inline-flex;align-items:center;height:44px;padding:0 22px;border-radius:8px;border:1px solid rgba(10,10,10,.3);color:#0a0a0a;font:600 14px/1 Inter,sans-serif;text-decoration:none;transition:background .18s ease" style-hover="background:rgba(10,10,10,.08);color:#0a0a0a">WhatsApp</a>
+      <a href="https://drive.google.com/file/d/1tpr-YDaQdTnKyH2I2g_evaOG6aWZM1VG/view" target="_blank" rel="noreferrer noopener" style="display:inline-flex;align-items:center;height:44px;padding:0 22px;border-radius:8px;border:1px solid rgba(10,10,10,.3);color:#0a0a0a;font:600 14px/1 Inter,sans-serif;text-decoration:none;transition:background .18s ease" style-hover="background:rgba(10,10,10,.08);color:#0a0a0a">Preview CV</a>
+    </div>
+  </div>
+</section>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{
+  &quot;heading&quot;: { &quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;Tell me what you are trying to get people through.&quot;, &quot;tsType&quot;: &quot;string&quot; },
+  &quot;sub&quot;: { &quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;Product or UX Designer roles. Remote, hybrid, or on site, open to relocation.&quot;, &quot;tsType&quot;: &quot;string&quot; }
+}">
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      heading: this.props.heading ?? 'Tell me what you are trying to get people through.',
+      sub: this.props.sub ?? 'Product or UX Designer roles. Remote, hybrid, or on site, open to relocation.'
+    };
+  }
+}
+</script>
+</body>
+</html>
